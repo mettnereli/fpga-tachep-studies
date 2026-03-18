@@ -1,0 +1,6 @@
+<annotationInfo>
+<item  id="11" filename="vector_add.cpp" linenumber="6" name="icmp_ln6" contextFuncName="vector_add" moduleName="vector_add" rtlName="icmp_ln6_fu_88_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/scratch/emettner/fpga-tachep-studies/HW1"><\/item>
+<item  id="13" filename="vector_add.cpp" linenumber="6" name="i" contextFuncName="vector_add" moduleName="vector_add" rtlName="i_fu_94_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="/scratch/emettner/fpga-tachep-studies/HW1"><\/item>
+<item  id="18" filename="vector_add.cpp" linenumber="8" name="zext_ln8" contextFuncName="vector_add" moduleName="vector_add" rtlName="zext_ln8_fu_100_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/scratch/emettner/fpga-tachep-studies/HW1"><\/item>
+<item  id="23" filename="vector_add.cpp" linenumber="8" name="add_ln8" contextFuncName="vector_add" moduleName="vector_add" rtlName="C_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/scratch/emettner/fpga-tachep-studies/HW1"><\/item>
+</annotationInfo>

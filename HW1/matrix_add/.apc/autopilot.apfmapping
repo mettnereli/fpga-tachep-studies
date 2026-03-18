@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrix_add.cpp" path="/scratch/emettner/fpga-tachep-studies/HW1/matrix_add.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="matrix_add_tb.cpp" path="/scratch/emettner/fpga-tachep-studies/HW1/matrix_add_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

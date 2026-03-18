@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /scratch/emettner/fpga-tachep-studies/HW1/matrix_mult/solution1/.autopilot/db/a.g.bc ${1+"$@"}
