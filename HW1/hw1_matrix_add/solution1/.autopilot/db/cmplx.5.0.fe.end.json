@@ -1,0 +1,22 @@
+{
+    "0": {
+        "name": "matrix_add",
+        "file": "hw1_ops.cpp",
+        "fileloc": "17",
+        "instructions": "47",
+        "total_instructions": "47",
+        "calls": "",
+        "basicblocks": "3",
+        "loads": {
+            "L": "3",
+            "T": "2"
+        },
+        "stores": {
+            "L": "6",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

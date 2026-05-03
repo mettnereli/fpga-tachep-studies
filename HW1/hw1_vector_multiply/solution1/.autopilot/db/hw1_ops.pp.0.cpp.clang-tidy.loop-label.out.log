@@ -1,0 +1,35 @@
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:173:5: warning: Added loop label VITIS_LOOP_5_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 10; i++) {
+    ^~~
+    VITIS_LOOP_5_1: 
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:173:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:184:5: warning: Added loop label VITIS_LOOP_12_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 10; i++) {
+    ^~~
+    VITIS_LOOP_12_1: 
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:184:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:191:5: warning: Added loop label VITIS_LOOP_19_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 10; i++) {
+    ^~~
+    VITIS_LOOP_19_1: 
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:191:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:192:9: warning: Added loop label VITIS_LOOP_20_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 10; j++) {
+        ^~~
+        VITIS_LOOP_20_2: 
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:192:9: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:201:5: warning: Added loop label VITIS_LOOP_29_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 10; i++) {
+    ^~~
+    VITIS_LOOP_29_1: 
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:201:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:202:9: warning: Added loop label VITIS_LOOP_30_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 10; j++) {
+        ^~~
+        VITIS_LOOP_30_2: 
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:202:9: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:204:13: warning: Added loop label VITIS_LOOP_32_3:   [xilinx-label-all-loops]
+            for (int k = 0; k < 10; k++) {
+            ^~~
+            VITIS_LOOP_32_3: 
+/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp:204:13: note: FIX-IT applied suggested code changes

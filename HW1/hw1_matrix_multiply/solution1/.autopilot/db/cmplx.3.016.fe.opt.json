@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "hw1_ops.cpp",
+    "fileloc": 27,
+    "instructions": 86,
+    "loads": {
+      "T": 20
+    },
+    "name": "matrix_multiply",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 86
+  }
+}

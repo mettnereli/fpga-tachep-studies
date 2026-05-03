@@ -1,0 +1,492 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat May  2 23:33:10 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'emettner' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 6.1.166-1.el9.elrepo.x86_64) on Sat May 02 23:33:14 CDT 2026
+INFO: [HLS 200-10] In directory '/scratch/emettner/fpga-tachep-studies/HW1'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset hw1_vector_add 
+INFO: [HLS 200-10] Opening and resetting project '/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add'.
+INFO: [HLS 200-1510] Running: set_top vector_add 
+INFO: [HLS 200-1510] Running: add_files hw1_ops.cpp 
+INFO: [HLS 200-10] Adding design file 'hw1_ops.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw1_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw1_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p-fsga2577-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw1_tb.cpp in debug mode
+   Compiling ../../../../hw1_ops.cpp in debug mode
+   Generating csim.exe
+Vector addition result: 11 11 11 11 11 11 11 11 11 11 
+Vector multiplication result: 10 18 24 28 30 30 28 24 18 10 
+Matrix addition result:
+1 3 5 7 9 11 13 15 17 19 
+3 5 7 9 11 13 15 17 19 21 
+5 7 9 11 13 15 17 19 21 23 
+7 9 11 13 15 17 19 21 23 25 
+9 11 13 15 17 19 21 23 25 27 
+11 13 15 17 19 21 23 25 27 29 
+13 15 17 19 21 23 25 27 29 31 
+15 17 19 21 23 25 27 29 31 33 
+17 19 21 23 25 27 29 31 33 35 
+19 21 23 25 27 29 31 33 35 37 
+
+Matrix multiplication result:
+330 375 420 465 510 555 600 645 690 735 
+385 440 495 550 605 660 715 770 825 880 
+440 505 570 635 700 765 830 895 960 1025 
+495 570 645 720 795 870 945 1020 1095 1170 
+550 635 720 805 890 975 1060 1145 1230 1315 
+605 700 795 890 985 1080 1175 1270 1365 1460 
+660 765 870 975 1080 1185 1290 1395 1500 1605 
+715 830 945 1060 1175 1290 1405 1520 1635 1750 
+770 895 1020 1145 1270 1395 1520 1645 1770 1895 
+825 960 1095 1230 1365 1500 1635 1770 1905 2040 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.195 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 325.211 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw1_ops.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.69 seconds. CPU system time: 0.78 seconds. Elapsed time: 2.01 seconds; current allocated memory: 327.141 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 24 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.59 seconds. CPU system time: 0.72 seconds. Elapsed time: 9.12 seconds; current allocated memory: 336.703 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 336.703 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 336.703 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 336.703 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 358.016 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 358.016 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_add' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_5_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_5_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.18 seconds; current allocated memory: 358.016 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 358.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_add/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_add' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_add' pipeline 'VITIS_LOOP_5_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_add'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 358.016 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.29 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.44 seconds; current allocated memory: 358.016 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.42 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.46 seconds; current allocated memory: 358.016 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_add.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_add.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 438.98 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:13; Allocated memory: 33.242 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-1510] Running: open_project -reset hw1_vector_multiply 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply'.
+INFO: [HLS 200-1510] Running: set_top vector_multiply 
+INFO: [HLS 200-1510] Running: add_files hw1_ops.cpp 
+INFO: [HLS 200-10] Adding design file 'hw1_ops.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw1_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw1_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw1_tb.cpp in debug mode
+   Compiling ../../../../hw1_ops.cpp in debug mode
+   Generating csim.exe
+Vector addition result: 11 11 11 11 11 11 11 11 11 11 
+Vector multiplication result: 10 18 24 28 30 30 28 24 18 10 
+Matrix addition result:
+1 3 5 7 9 11 13 15 17 19 
+3 5 7 9 11 13 15 17 19 21 
+5 7 9 11 13 15 17 19 21 23 
+7 9 11 13 15 17 19 21 23 25 
+9 11 13 15 17 19 21 23 25 27 
+11 13 15 17 19 21 23 25 27 29 
+13 15 17 19 21 23 25 27 29 31 
+15 17 19 21 23 25 27 29 31 33 
+17 19 21 23 25 27 29 31 33 35 
+19 21 23 25 27 29 31 33 35 37 
+
+Matrix multiplication result:
+330 375 420 465 510 555 600 645 690 735 
+385 440 495 550 605 660 715 770 825 880 
+440 505 570 635 700 765 830 895 960 1025 
+495 570 645 720 795 870 945 1020 1095 1170 
+550 635 720 805 890 975 1060 1145 1230 1315 
+605 700 795 890 985 1080 1175 1270 1365 1460 
+660 765 870 975 1080 1185 1290 1395 1500 1605 
+715 830 945 1060 1175 1290 1405 1520 1635 1750 
+770 895 1020 1145 1270 1395 1520 1645 1770 1895 
+825 960 1095 1230 1365 1500 1635 1770 1905 2040 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.21 seconds; current allocated memory: 396.344 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw1_ops.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.66 seconds. CPU system time: 0.77 seconds. Elapsed time: 1.95 seconds; current allocated memory: 396.344 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 24 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_vector_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_12_1> at hw1_ops.cpp:12:22 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.6 seconds. CPU system time: 0.75 seconds. Elapsed time: 10.24 seconds; current allocated memory: 396.344 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 396.344 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 396.344 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 396.344 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 416.094 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 416.094 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_multiply' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_12_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_12_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.59 seconds; current allocated memory: 416.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 416.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_multiply/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_multiply/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_multiply/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_multiply' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_multiply' pipeline 'VITIS_LOOP_12_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_multiply'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 416.094 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 416.094 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.45 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.47 seconds; current allocated memory: 416.094 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_multiply.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_multiply.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 218.91 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:14; Allocated memory: 19.750 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-1510] Running: open_project -reset hw1_matrix_add 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add'.
+INFO: [HLS 200-1510] Running: set_top matrix_add 
+INFO: [HLS 200-1510] Running: add_files hw1_ops.cpp 
+INFO: [HLS 200-10] Adding design file 'hw1_ops.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw1_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw1_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw1_tb.cpp in debug mode
+   Compiling ../../../../hw1_ops.cpp in debug mode
+   Generating csim.exe
+Vector addition result: 11 11 11 11 11 11 11 11 11 11 
+Vector multiplication result: 10 18 24 28 30 30 28 24 18 10 
+Matrix addition result:
+1 3 5 7 9 11 13 15 17 19 
+3 5 7 9 11 13 15 17 19 21 
+5 7 9 11 13 15 17 19 21 23 
+7 9 11 13 15 17 19 21 23 25 
+9 11 13 15 17 19 21 23 25 27 
+11 13 15 17 19 21 23 25 27 29 
+13 15 17 19 21 23 25 27 29 31 
+15 17 19 21 23 25 27 29 31 33 
+17 19 21 23 25 27 29 31 33 35 
+19 21 23 25 27 29 31 33 35 37 
+
+Matrix multiplication result:
+330 375 420 465 510 555 600 645 690 735 
+385 440 495 550 605 660 715 770 825 880 
+440 505 570 635 700 765 830 895 960 1025 
+495 570 645 720 795 870 945 1020 1095 1170 
+550 635 720 805 890 975 1060 1145 1230 1315 
+605 700 795 890 985 1080 1175 1270 1365 1460 
+660 765 870 975 1080 1185 1290 1395 1500 1605 
+715 830 945 1060 1175 1290 1405 1520 1635 1750 
+770 895 1020 1145 1270 1395 1520 1645 1770 1895 
+825 960 1095 1230 1365 1500 1635 1770 1905 2040 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 452.086 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw1_ops.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.66 seconds. CPU system time: 0.79 seconds. Elapsed time: 1.83 seconds; current allocated memory: 452.086 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 24 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_add/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_20_2> at hw1_ops.cpp:20:26 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.65 seconds. CPU system time: 0.8 seconds. Elapsed time: 9.01 seconds; current allocated memory: 452.086 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 452.086 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 452.086 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 452.086 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 471.035 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_19_1'(hw1_ops.cpp:19:22) and 'VITIS_LOOP_20_2'(hw1_ops.cpp:20:26) in function 'matrix_add' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_19_1' (hw1_ops.cpp:19:22) in function 'matrix_add'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 468.660 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_add' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1_VITIS_LOOP_20_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_19_1_VITIS_LOOP_20_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.25 seconds; current allocated memory: 468.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 468.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_add/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_add/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_add/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_add' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_add' pipeline 'VITIS_LOOP_19_1_VITIS_LOOP_20_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_add'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 468.660 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.26 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.4 seconds; current allocated memory: 468.660 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.47 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.51 seconds; current allocated memory: 468.660 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_add.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_add.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 361.14 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 16.574 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-1510] Running: open_project -reset hw1_matrix_multiply 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply'.
+INFO: [HLS 200-1510] Running: set_top matrix_multiply 
+INFO: [HLS 200-1510] Running: add_files hw1_ops.cpp 
+INFO: [HLS 200-10] Adding design file 'hw1_ops.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw1_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw1_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw1_tb.cpp in debug mode
+   Compiling ../../../../hw1_ops.cpp in debug mode
+   Generating csim.exe
+Vector addition result: 11 11 11 11 11 11 11 11 11 11 
+Vector multiplication result: 10 18 24 28 30 30 28 24 18 10 
+Matrix addition result:
+1 3 5 7 9 11 13 15 17 19 
+3 5 7 9 11 13 15 17 19 21 
+5 7 9 11 13 15 17 19 21 23 
+7 9 11 13 15 17 19 21 23 25 
+9 11 13 15 17 19 21 23 25 27 
+11 13 15 17 19 21 23 25 27 29 
+13 15 17 19 21 23 25 27 29 31 
+15 17 19 21 23 25 27 29 31 33 
+17 19 21 23 25 27 29 31 33 35 
+19 21 23 25 27 29 31 33 35 37 
+
+Matrix multiplication result:
+330 375 420 465 510 555 600 645 690 735 
+385 440 495 550 605 660 715 770 825 880 
+440 505 570 635 700 765 830 895 960 1025 
+495 570 645 720 795 870 945 1020 1095 1170 
+550 635 720 805 890 975 1060 1145 1230 1315 
+605 700 795 890 985 1080 1175 1270 1365 1460 
+660 765 870 975 1080 1185 1290 1395 1500 1605 
+715 830 945 1060 1175 1290 1405 1520 1635 1750 
+770 895 1020 1145 1270 1395 1520 1645 1770 1895 
+825 960 1095 1230 1365 1500 1635 1770 1905 2040 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 508.328 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw1_ops.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.64 seconds. CPU system time: 0.84 seconds. Elapsed time: 1.95 seconds; current allocated memory: 508.328 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 86 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_30_2> at hw1_ops.cpp:30:26 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_32_3' is marked as complete unroll implied by the pipeline pragma (hw1_ops.cpp:32:30)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_32_3' (hw1_ops.cpp:32:30) in function 'matrix_multiply' completely with a factor of 10 (hw1_ops.cpp:27:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.69 seconds. CPU system time: 0.76 seconds. Elapsed time: 9.12 seconds; current allocated memory: 508.328 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 508.328 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 508.328 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 508.328 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_multiply' (hw1_ops.cpp:27:26)...9 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 527.867 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_29_1'(hw1_ops.cpp:29:22) and 'VITIS_LOOP_30_2'(hw1_ops.cpp:30:26) in function 'matrix_multiply' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_29_1' (hw1_ops.cpp:29:22) in function 'matrix_multiply'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 518.613 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_multiply' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_29_1_VITIS_LOOP_30_2'.
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply' (loop 'VITIS_LOOP_29_1_VITIS_LOOP_30_2'): Unable to schedule 'load' operation 32 bit ('A_load_1', hw1_ops.cpp:29) on array 'A' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply' (loop 'VITIS_LOOP_29_1_VITIS_LOOP_30_2'): Unable to schedule 'load' operation 32 bit ('A_load_3', hw1_ops.cpp:29) on array 'A' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply' (loop 'VITIS_LOOP_29_1_VITIS_LOOP_30_2'): Unable to schedule 'load' operation 32 bit ('A_load_5', hw1_ops.cpp:29) on array 'A' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'matrix_multiply' (loop 'VITIS_LOOP_29_1_VITIS_LOOP_30_2'): Unable to schedule 'load' operation 32 bit ('A_load_7', hw1_ops.cpp:29) on array 'A' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 6, loop 'VITIS_LOOP_29_1_VITIS_LOOP_30_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.6 seconds; current allocated memory: 519.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 519.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_multiply/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_multiply' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_multiply' pipeline 'VITIS_LOOP_29_1_VITIS_LOOP_30_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_multiply'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.44 seconds; current allocated memory: 519.500 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.35 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.51 seconds; current allocated memory: 521.641 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.62 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.66 seconds; current allocated memory: 523.105 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_multiply.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_multiply.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 152.37 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:14; Allocated memory: 14.777 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 34.8 seconds. Total CPU system time: 9.54 seconds. Total elapsed time: 70.65 seconds; peak allocated memory: 527.867 MB.

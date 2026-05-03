@@ -1,0 +1,67 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_5_1:  '
+    FileOffset:      5
+    FilePath:        hw1_ops.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+        Offset:          9837
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_5_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_12_1:  '
+    FileOffset:      12
+    FilePath:        hw1_ops.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+        Offset:          9984
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_12_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_19_1:  '
+    FileOffset:      19
+    FilePath:        hw1_ops.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+        Offset:          10120
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_19_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_20_2:  '
+    FileOffset:      20
+    FilePath:        hw1_ops.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+        Offset:          10159
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_20_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_1:  '
+    FileOffset:      29
+    FilePath:        hw1_ops.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+        Offset:          10505
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_30_2:  '
+    FileOffset:      30
+    FilePath:        hw1_ops.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+        Offset:          10544
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_30_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_32_3:  '
+    FileOffset:      32
+    FilePath:        hw1_ops.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW1/hw1_matrix_multiply/solution1/.autopilot/db/hw1_ops.pp.0.cpp
+        Offset:          10612
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_32_3: '
+...
