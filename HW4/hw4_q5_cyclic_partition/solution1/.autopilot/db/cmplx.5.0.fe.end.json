@@ -1,0 +1,22 @@
+{
+    "0": {
+        "name": "q5_cyclic_partition",
+        "file": "q5_kernel.cpp",
+        "fileloc": "102",
+        "instructions": "112",
+        "total_instructions": "112",
+        "calls": "",
+        "basicblocks": "3",
+        "loads": {
+            "L": "1",
+            "T": "8"
+        },
+        "stores": {
+            "L": "2",
+            "T": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

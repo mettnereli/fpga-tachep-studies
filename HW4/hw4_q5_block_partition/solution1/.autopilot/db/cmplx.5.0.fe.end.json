@@ -1,0 +1,22 @@
+{
+    "0": {
+        "name": "q5_block_partition",
+        "file": "q5_kernel.cpp",
+        "fileloc": "129",
+        "instructions": "309",
+        "total_instructions": "309",
+        "calls": "",
+        "basicblocks": "63",
+        "loads": {
+            "L": "1",
+            "T": "32"
+        },
+        "stores": {
+            "L": "2",
+            "T": "48"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

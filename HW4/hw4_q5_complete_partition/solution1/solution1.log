@@ -1,0 +1,412 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+Tool Version Limit: 2024.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 575.586 MB.
+INFO: [HLS 200-10] Analyzing design file 'q5_kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.82 seconds. CPU system time: 0.84 seconds. Elapsed time: 1.73 seconds; current allocated memory: 575.586 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 52 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 141 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 75 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,109 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 882 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 562 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 562 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 562 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 562 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 562 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 562 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 562 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,202 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,207 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_complete_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_90_1' (q5_kernel.cpp:90:19) in function 'q5_complete_partition' partially with a factor of 4 (q5_kernel.cpp:76:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 1. (q5_kernel.cpp:76:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. (q5_kernel.cpp:76:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Complete partitioning on dimension 1. (q5_kernel.cpp:76:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Complete partitioning on dimension 1. (q5_kernel.cpp:76:0)
+INFO: [HLS 214-248] Applying array_partition to 'E': Complete partitioning on dimension 1. (q5_kernel.cpp:76:0)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. (q5_kernel.cpp:77:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. (q5_kernel.cpp:78:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. (q5_kernel.cpp:79:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. (q5_kernel.cpp:80:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. (q5_kernel.cpp:81:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.63 seconds. CPU system time: 0.84 seconds. Elapsed time: 12.24 seconds; current allocated memory: 576.312 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 576.312 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 576.949 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 577.156 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.53 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.56 seconds; current allocated memory: 601.270 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.69 seconds. CPU system time: 0 seconds. Elapsed time: 0.7 seconds; current allocated memory: 590.516 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'q5_complete_partition' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'q5_complete_partition' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_90_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_90_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.39 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.56 seconds; current allocated memory: 593.914 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.15 seconds; current allocated memory: 593.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'q5_complete_partition' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_32' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_33' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_34' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_35' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_36' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_37' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_38' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_39' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_40' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_41' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_42' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_43' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_44' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_45' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_46' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_47' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_48' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_49' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_50' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_51' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_52' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_53' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_54' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_55' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_56' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_57' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_58' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_59' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_60' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_61' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_62' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/A_63' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_32' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_33' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_34' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_35' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_36' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_37' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_38' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_39' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_40' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_41' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_42' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_43' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_44' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_45' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_46' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_47' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_48' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_49' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_50' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_51' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_52' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_53' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_54' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_55' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_56' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_57' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_58' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_59' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_60' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_61' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_62' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/B_63' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_44' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_45' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_46' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_47' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_48' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_49' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_50' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_51' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_52' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_53' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_54' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_55' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_56' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_57' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_58' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_59' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_60' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_61' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_62' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/C_63' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_44' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_45' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_46' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_47' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_48' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_49' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_50' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_51' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_52' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_53' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_54' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_55' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_56' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_57' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_58' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_59' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_60' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_61' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_62' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/D_63' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_44' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_45' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_46' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_47' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_48' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_49' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_50' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_51' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_52' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_53' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_54' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_55' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_56' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_57' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_58' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_59' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_60' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_61' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_62' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_complete_partition/E_63' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'q5_complete_partition' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_6_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'q5_complete_partition'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.48 seconds. CPU system time: 0.14 seconds. Elapsed time: 4 seconds; current allocated memory: 597.176 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.62 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.69 seconds; current allocated memory: 605.930 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 29.06 seconds. CPU system time: 0.11 seconds. Elapsed time: 29.18 seconds; current allocated memory: 622.562 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for q5_complete_partition.
+INFO: [VLOG 209-307] Generating Verilog RTL for q5_complete_partition.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 202.84 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:52; Allocated memory: 46.977 MB.
+INFO: [HLS 200-1510] Running: close_project 

@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vitis HLS Report for 'q5_reshape'
+================================================================
+* Date:           Sun May  3 16:03:58 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        hw4_q5_reshape
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p-fsga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  25.00 ns|  5.510 ns|     6.75 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       18|       18|  0.450 us|  0.450 us|   16|   16|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_171_1  |       16|       16|         2|          1|          1|    16|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|      330|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        0|     24|       36|      200|     0|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       36|     -|
+|Register             |        -|      -|       15|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|     24|       51|      566|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|     ~0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|     ~0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+--------------------+---------+----+----+----+-----+
+    |        Instance       |       Module       | BRAM_18K| DSP| FF | LUT| URAM|
+    +-----------------------+--------------------+---------+----+----+----+-----+
+    |control_s_axi_U        |control_s_axi       |        0|   0|  36|  40|    0|
+    |mul_32s_32s_32_1_1_U1  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    |mul_32s_32s_32_1_1_U2  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    |mul_32s_32s_32_1_1_U3  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    |mul_32s_32s_32_1_1_U4  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    |mul_32s_32s_32_1_1_U5  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    |mul_32s_32s_32_1_1_U6  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    |mul_32s_32s_32_1_1_U7  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    |mul_32s_32s_32_1_1_U8  |mul_32s_32s_32_1_1  |        0|   3|   0|  20|    0|
+    +-----------------------+--------------------+---------+----+----+----+-----+
+    |Total                  |                    |        0|  24|  36| 200|    0|
+    +-----------------------+--------------------+---------+----+----+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |i_fu_199_p2            |         +|   0|  0|  14|           7|           3|
+    |sum_1_fu_264_p2        |         +|   0|  0|  39|          32|          32|
+    |sum_2_fu_300_p2        |         +|   0|  0|  39|          32|          32|
+    |sum_3_fu_336_p2        |         +|   0|  0|  39|          32|          32|
+    |sum_fu_228_p2          |         +|   0|  0|  39|          32|          32|
+    |mul_ln179_1_fu_155_p1  |         -|   0|  0|  39|          32|          32|
+    |mul_ln179_2_fu_163_p1  |         -|   0|  0|  39|          32|          32|
+    |mul_ln179_3_fu_171_p1  |         -|   0|  0|  39|          32|          32|
+    |mul_ln179_fu_147_p1    |         -|   0|  0|  39|          32|          32|
+    |ap_condition_143       |       and|   0|  0|   2|           1|           1|
+    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 330|         265|         262|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i1_load          |   9|          2|    7|         14|
+    |i1_fu_74                          |   9|          2|    7|         14|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  36|          8|   16|         32|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                         |  1|   0|    1|          0|
+    |ap_done_reg                       |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
+    |i1_fu_74                          |  7|   0|    7|          0|
+    |zext_ln171_reg_396                |  4|   0|   64|         60|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             | 15|   0|   75|         60|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|   return void|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|   return void|
+|s_axi_control_AWADDR   |   in|    4|       s_axi|       control|   return void|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|   return void|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|   return void|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|   return void|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|   return void|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|   return void|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|   return void|
+|s_axi_control_ARADDR   |   in|    4|       s_axi|       control|   return void|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|   return void|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|   return void|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|   return void|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|   return void|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|   return void|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|   return void|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|   return void|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|    q5_reshape|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|    q5_reshape|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|    q5_reshape|  return value|
+|A_address0             |  out|    4|   ap_memory|             A|         array|
+|A_ce0                  |  out|    1|   ap_memory|             A|         array|
+|A_q0                   |   in|  128|   ap_memory|             A|         array|
+|B_address0             |  out|    4|   ap_memory|             B|         array|
+|B_ce0                  |  out|    1|   ap_memory|             B|         array|
+|B_q0                   |   in|  128|   ap_memory|             B|         array|
+|C_address0             |  out|    4|   ap_memory|             C|         array|
+|C_ce0                  |  out|    1|   ap_memory|             C|         array|
+|C_we0                  |  out|    1|   ap_memory|             C|         array|
+|C_d0                   |  out|  128|   ap_memory|             C|         array|
+|D_address0             |  out|    4|   ap_memory|             D|         array|
+|D_ce0                  |  out|    1|   ap_memory|             D|         array|
+|D_we0                  |  out|    1|   ap_memory|             D|         array|
+|D_d0                   |  out|  128|   ap_memory|             D|         array|
+|E_address0             |  out|    4|   ap_memory|             E|         array|
+|E_ce0                  |  out|    1|   ap_memory|             E|         array|
+|E_we0                  |  out|    1|   ap_memory|             E|         array|
+|E_d0                   |  out|  128|   ap_memory|             E|         array|
++-----------------------+-----+-----+------------+--------------+--------------+
+

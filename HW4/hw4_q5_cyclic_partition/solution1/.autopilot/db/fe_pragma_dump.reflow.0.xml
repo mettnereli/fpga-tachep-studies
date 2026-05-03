@@ -1,0 +1,15 @@
+<pragmas>
+<pragma file="q5_kernel.cpp" line="119" pragmaType="unroll" parentfunction="q5_cyclic_partition" factor="4" skip_exit_check="0"/>
+<pragma file="q5_kernel.cpp" line="118" pragmaType="pipeline" parentfunction="q5_cyclic_partition" off="0" ii="1" rewind="0" style=""/>
+<pragma file="q5_kernel.cpp" line="104" pragmaType="interface" parentfunction="q5_cyclic_partition" mode="ap_memory" port="A" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="105" pragmaType="interface" parentfunction="q5_cyclic_partition" mode="ap_memory" port="B" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="106" pragmaType="interface" parentfunction="q5_cyclic_partition" mode="ap_memory" port="C" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="107" pragmaType="interface" parentfunction="q5_cyclic_partition" mode="ap_memory" port="D" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="108" pragmaType="interface" parentfunction="q5_cyclic_partition" mode="ap_memory" port="E" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="109" pragmaType="interface" parentfunction="q5_cyclic_partition" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="q5_kernel.cpp" line="111" pragmaType="array_partition" parentfunction="q5_cyclic_partition" dim="1" factor="4" mode="cyclic" dynamic="0" variable="A"/>
+<pragma file="q5_kernel.cpp" line="112" pragmaType="array_partition" parentfunction="q5_cyclic_partition" dim="1" factor="4" mode="cyclic" dynamic="0" variable="B"/>
+<pragma file="q5_kernel.cpp" line="113" pragmaType="array_partition" parentfunction="q5_cyclic_partition" dim="1" factor="4" mode="cyclic" dynamic="0" variable="C"/>
+<pragma file="q5_kernel.cpp" line="114" pragmaType="array_partition" parentfunction="q5_cyclic_partition" dim="1" factor="4" mode="cyclic" dynamic="0" variable="D"/>
+<pragma file="q5_kernel.cpp" line="115" pragmaType="array_partition" parentfunction="q5_cyclic_partition" dim="1" factor="4" mode="cyclic" dynamic="0" variable="E"/>
+</pragmas>

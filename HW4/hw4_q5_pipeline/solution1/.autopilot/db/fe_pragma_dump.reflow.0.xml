@@ -1,0 +1,9 @@
+<pragmas>
+<pragma file="q5_kernel.cpp" line="44" pragmaType="pipeline" parentfunction="q5_pipeline" off="0" ii="1" rewind="0" style=""/>
+<pragma file="q5_kernel.cpp" line="36" pragmaType="interface" parentfunction="q5_pipeline" mode="ap_memory" port="A" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="37" pragmaType="interface" parentfunction="q5_pipeline" mode="ap_memory" port="B" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="38" pragmaType="interface" parentfunction="q5_pipeline" mode="ap_memory" port="C" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="39" pragmaType="interface" parentfunction="q5_pipeline" mode="ap_memory" port="D" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="40" pragmaType="interface" parentfunction="q5_pipeline" mode="ap_memory" port="E" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="41" pragmaType="interface" parentfunction="q5_pipeline" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

@@ -1,0 +1,22 @@
+{
+    "0": {
+        "name": "q5_simple",
+        "file": "q5_kernel.cpp",
+        "fileloc": "3",
+        "instructions": "38",
+        "total_instructions": "38",
+        "calls": "",
+        "basicblocks": "3",
+        "loads": {
+            "L": "1",
+            "T": "2"
+        },
+        "stores": {
+            "L": "2",
+            "T": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

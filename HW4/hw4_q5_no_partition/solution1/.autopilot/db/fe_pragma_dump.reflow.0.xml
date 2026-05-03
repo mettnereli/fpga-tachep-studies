@@ -1,0 +1,10 @@
+<pragmas>
+<pragma file="q5_kernel.cpp" line="65" pragmaType="unroll" parentfunction="q5_no_partition" factor="4" skip_exit_check="0"/>
+<pragma file="q5_kernel.cpp" line="64" pragmaType="pipeline" parentfunction="q5_no_partition" off="0" ii="1" rewind="0" style=""/>
+<pragma file="q5_kernel.cpp" line="56" pragmaType="interface" parentfunction="q5_no_partition" mode="ap_memory" port="A" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="57" pragmaType="interface" parentfunction="q5_no_partition" mode="ap_memory" port="B" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="58" pragmaType="interface" parentfunction="q5_no_partition" mode="ap_memory" port="C" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="59" pragmaType="interface" parentfunction="q5_no_partition" mode="ap_memory" port="D" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="60" pragmaType="interface" parentfunction="q5_no_partition" mode="ap_memory" port="E" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="61" pragmaType="interface" parentfunction="q5_no_partition" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

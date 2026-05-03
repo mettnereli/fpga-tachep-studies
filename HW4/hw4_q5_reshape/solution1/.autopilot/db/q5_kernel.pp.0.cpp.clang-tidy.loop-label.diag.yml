@@ -1,0 +1,76 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_5_1:  '
+    FileOffset:      5
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          10419
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_5_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_24_1:  '
+    FileOffset:      24
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          10932
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_24_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_43_1:  '
+    FileOffset:      43
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          11443
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_43_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_63_1:  '
+    FileOffset:      63
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          11981
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_63_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_90_1:  '
+    FileOffset:      90
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          12830
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_90_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_117_1:  '
+    FileOffset:      117
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          13710
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_117_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_144_1:  '
+    FileOffset:      144
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          14583
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_144_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_1:  '
+    FileOffset:      171
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW4/hw4_q5_reshape/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          15608
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_1: '
+...

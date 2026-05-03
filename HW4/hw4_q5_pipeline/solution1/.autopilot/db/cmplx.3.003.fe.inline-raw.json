@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "q5_kernel.cpp",
+    "fileloc": 34,
+    "instructions": 26,
+    "loads": {
+      "T": 2
+    },
+    "name": "q5_pipeline",
+    "stores": {
+      "T": 3
+    },
+    "total_instructions": 26
+  }
+}

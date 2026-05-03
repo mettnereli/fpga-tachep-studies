@@ -1,0 +1,234 @@
+
+
+================================================================
+== Synthesis Summary Report of 'q5_reshape'
+================================================================
++ General Information: 
+    * Date:           Sun May  3 16:03:58 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        hw4_q5_reshape
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p-fsga2577-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+-----------+-----+
+    |       Modules       | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |          |          |           |     |
+    |       & Loops       | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |    FF    |    LUT    | URAM|
+    +---------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+-----------+-----+
+    |+ q5_reshape         |    II|  12.74|       18|  450.000|         -|       16|     -|    rewind|     -|  24 (~0%)|  51 (~0%)|  566 (~0%)|    -|
+    | o VITIS_LOOP_171_1  |     -|  18.25|       16|  400.000|         2|        1|    16|       yes|     -|         -|         -|          -|    -|
+    +---------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AP_MEMORY
++------------+-----------+----------+
+| Port       | Direction | Bitwidth |
++------------+-----------+----------+
+| A_address0 | out       | 4        |
+| A_q0       | in        | 128      |
+| B_address0 | out       | 4        |
+| B_q0       | in        | 128      |
+| C_address0 | out       | 4        |
+| C_d0       | out       | 128      |
+| D_address0 | out       | 4        |
+| D_d0       | out       | 128      |
+| E_address0 | out       | 4        |
+| E_d0       | out       | 128      |
++------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | int*     |
+| B        | in        | int*     |
+| C        | out       | int*     |
+| D        | out       | int*     |
+| E        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| A        | A_address0   | port    | offset   |
+| A        | A_ce0        | port    |          |
+| A        | A_q0         | port    |          |
+| B        | B_address0   | port    | offset   |
+| B        | B_ce0        | port    |          |
+| B        | B_q0         | port    |          |
+| C        | C_address0   | port    | offset   |
+| C        | C_ce0        | port    |          |
+| C        | C_we0        | port    |          |
+| C        | C_d0         | port    |          |
+| D        | D_address0   | port    | offset   |
+| D        | D_ce0        | port    |          |
+| D        | D_we0        | port    |          |
+| D        | D_d0         | port    |          |
+| E        | E_address0   | port    | offset   |
+| E        | E_ce0        | port    |          |
+| E        | E_we0        | port    |          |
+| E        | E_d0         | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                    | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++-------------------------+-----+--------+-------------+-----+--------+---------+
+| + q5_reshape            | 24  |        |             |     |        |         |
+|   sum_fu_228_p2         |     |        | sum         | add | fabric | 0       |
+|   mul_ln179_fu_147_p1   |     |        | diff        | sub | fabric | 0       |
+|   mul_32s_32s_32_1_1_U1 | 3   |        | mul_ln178   | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U2 | 3   |        | mul_ln179   | mul | auto   | 0       |
+|   sum_1_fu_264_p2       |     |        | sum_1       | add | fabric | 0       |
+|   mul_ln179_1_fu_155_p1 |     |        | diff_1      | sub | fabric | 0       |
+|   mul_32s_32s_32_1_1_U3 | 3   |        | mul_ln178_1 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U4 | 3   |        | mul_ln179_1 | mul | auto   | 0       |
+|   sum_2_fu_300_p2       |     |        | sum_2       | add | fabric | 0       |
+|   mul_ln179_2_fu_163_p1 |     |        | diff_2      | sub | fabric | 0       |
+|   mul_32s_32s_32_1_1_U5 | 3   |        | mul_ln178_2 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U6 | 3   |        | mul_ln179_2 | mul | auto   | 0       |
+|   sum_3_fu_336_p2       |     |        | sum_3       | add | fabric | 0       |
+|   mul_ln179_3_fu_171_p1 |     |        | diff_3      | sub | fabric | 0       |
+|   mul_32s_32s_32_1_1_U7 | 3   |        | mul_ln178_3 | mul | auto   | 0       |
+|   mul_32s_32s_32_1_1_U8 | 3   |        | mul_ln179_3 | mul | auto   | 0       |
+|   i_fu_199_p2           |     |        | i           | add | fabric | 0       |
++-------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + q5_reshape      |           |           | 0    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+---------------------------------------------------+
+| Type            | Options                          | Location                                          |
++-----------------+----------------------------------+---------------------------------------------------+
+| interface       | ap_memory port=A                 | q5_kernel.cpp:17 in q5_interface, A               |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:18 in q5_interface, B               |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:19 in q5_interface, C               |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:20 in q5_interface, D               |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:21 in q5_interface, E               |
+| interface       | s_axilite port=return            | q5_kernel.cpp:22 in q5_interface, return          |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:36 in q5_pipeline, A                |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:37 in q5_pipeline, B                |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:38 in q5_pipeline, C                |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:39 in q5_pipeline, D                |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:40 in q5_pipeline, E                |
+| interface       | s_axilite port=return            | q5_kernel.cpp:41 in q5_pipeline, return           |
+| pipeline        | II=1                             | q5_kernel.cpp:44 in q5_pipeline                   |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:56 in q5_no_partition, A            |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:57 in q5_no_partition, B            |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:58 in q5_no_partition, C            |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:59 in q5_no_partition, D            |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:60 in q5_no_partition, E            |
+| interface       | s_axilite port=return            | q5_kernel.cpp:61 in q5_no_partition, return       |
+| pipeline        | II=1                             | q5_kernel.cpp:64 in q5_no_partition               |
+| unroll          | factor=4                         | q5_kernel.cpp:65 in q5_no_partition               |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:77 in q5_complete_partition, A      |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:78 in q5_complete_partition, B      |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:79 in q5_complete_partition, C      |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:80 in q5_complete_partition, D      |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:81 in q5_complete_partition, E      |
+| interface       | s_axilite port=return            | q5_kernel.cpp:82 in q5_complete_partition, return |
+| array_partition | variable=A complete dim=1        | q5_kernel.cpp:84 in q5_complete_partition, A      |
+| array_partition | variable=B complete dim=1        | q5_kernel.cpp:85 in q5_complete_partition, B      |
+| array_partition | variable=C complete dim=1        | q5_kernel.cpp:86 in q5_complete_partition, C      |
+| array_partition | variable=D complete dim=1        | q5_kernel.cpp:87 in q5_complete_partition, D      |
+| array_partition | variable=E complete dim=1        | q5_kernel.cpp:88 in q5_complete_partition, E      |
+| pipeline        | II=1                             | q5_kernel.cpp:91 in q5_complete_partition         |
+| unroll          | factor=4                         | q5_kernel.cpp:92 in q5_complete_partition         |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:104 in q5_cyclic_partition, A       |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:105 in q5_cyclic_partition, B       |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:106 in q5_cyclic_partition, C       |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:107 in q5_cyclic_partition, D       |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:108 in q5_cyclic_partition, E       |
+| interface       | s_axilite port=return            | q5_kernel.cpp:109 in q5_cyclic_partition, return  |
+| array_partition | variable=A cyclic factor=4 dim=1 | q5_kernel.cpp:111 in q5_cyclic_partition, A       |
+| array_partition | variable=B cyclic factor=4 dim=1 | q5_kernel.cpp:112 in q5_cyclic_partition, B       |
+| array_partition | variable=C cyclic factor=4 dim=1 | q5_kernel.cpp:113 in q5_cyclic_partition, C       |
+| array_partition | variable=D cyclic factor=4 dim=1 | q5_kernel.cpp:114 in q5_cyclic_partition, D       |
+| array_partition | variable=E cyclic factor=4 dim=1 | q5_kernel.cpp:115 in q5_cyclic_partition, E       |
+| pipeline        | II=1                             | q5_kernel.cpp:118 in q5_cyclic_partition          |
+| unroll          | factor=4                         | q5_kernel.cpp:119 in q5_cyclic_partition          |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:131 in q5_block_partition, A        |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:132 in q5_block_partition, B        |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:133 in q5_block_partition, C        |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:134 in q5_block_partition, D        |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:135 in q5_block_partition, E        |
+| interface       | s_axilite port=return            | q5_kernel.cpp:136 in q5_block_partition, return   |
+| array_partition | variable=A block factor=4 dim=1  | q5_kernel.cpp:138 in q5_block_partition, A        |
+| array_partition | variable=B block factor=4 dim=1  | q5_kernel.cpp:139 in q5_block_partition, B        |
+| array_partition | variable=C block factor=4 dim=1  | q5_kernel.cpp:140 in q5_block_partition, C        |
+| array_partition | variable=D block factor=4 dim=1  | q5_kernel.cpp:141 in q5_block_partition, D        |
+| array_partition | variable=E block factor=4 dim=1  | q5_kernel.cpp:142 in q5_block_partition, E        |
+| pipeline        | II=1                             | q5_kernel.cpp:145 in q5_block_partition           |
+| unroll          | factor=4                         | q5_kernel.cpp:146 in q5_block_partition           |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:158 in q5_reshape, A                |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:159 in q5_reshape, B                |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:160 in q5_reshape, C                |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:161 in q5_reshape, D                |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:162 in q5_reshape, E                |
+| interface       | s_axilite port=return            | q5_kernel.cpp:163 in q5_reshape, return           |
+| array_reshape   | variable=A cyclic factor=4 dim=1 | q5_kernel.cpp:165 in q5_reshape, A                |
+| array_reshape   | variable=B cyclic factor=4 dim=1 | q5_kernel.cpp:166 in q5_reshape, B                |
+| array_reshape   | variable=C cyclic factor=4 dim=1 | q5_kernel.cpp:167 in q5_reshape, C                |
+| array_reshape   | variable=D cyclic factor=4 dim=1 | q5_kernel.cpp:168 in q5_reshape, D                |
+| array_reshape   | variable=E cyclic factor=4 dim=1 | q5_kernel.cpp:169 in q5_reshape, E                |
+| pipeline        | II=1                             | q5_kernel.cpp:172 in q5_reshape                   |
+| unroll          | factor=4                         | q5_kernel.cpp:173 in q5_reshape                   |
++-----------------+----------------------------------+---------------------------------------------------+
+
+

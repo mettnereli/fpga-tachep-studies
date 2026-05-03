@@ -1,0 +1,18 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: q5_kernel.cpp, Line: 55, Column: 0 }
+Function:        _Z15q5_no_partitionPiS_S_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_63_1
+  - String:          ''' ('
+  - LoopLoc:         'q5_kernel.cpp:63:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          q5_no_partition
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '4'
+...

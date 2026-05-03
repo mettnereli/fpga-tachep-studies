@@ -1,0 +1,1052 @@
+
+
+================================================================
+== Synthesis Summary Report of 'q5_complete_partition'
+================================================================
++ General Information: 
+    * Date:           Sun May  3 16:02:31 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        hw4_q5_complete_partition
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p-fsga2577-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+------------+-----+
+    |         Modules         | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |          |          |            |     |
+    |         & Loops         | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |    FF    |     LUT    | URAM|
+    +-------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+------------+-----+
+    |+ q5_complete_partition  |    II|  13.32|       17|  425.000|         -|       16|     -|    rewind|     -|  24 (~0%)|  45 (~0%)|  1073 (~0%)|    -|
+    | o VITIS_LOOP_90_1       |     -|  18.25|       15|  375.000|         1|        1|    16|       yes|     -|         -|         -|           -|    -|
+    +-------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* Other Ports
++------+---------+-----------+----------+
+| Port | Mode    | Direction | Bitwidth |
++------+---------+-----------+----------+
+| A_0  | ap_none | in        | 32       |
+| A_1  | ap_none | in        | 32       |
+| A_10 | ap_none | in        | 32       |
+| A_11 | ap_none | in        | 32       |
+| A_12 | ap_none | in        | 32       |
+| A_13 | ap_none | in        | 32       |
+| A_14 | ap_none | in        | 32       |
+| A_15 | ap_none | in        | 32       |
+| A_16 | ap_none | in        | 32       |
+| A_17 | ap_none | in        | 32       |
+| A_18 | ap_none | in        | 32       |
+| A_19 | ap_none | in        | 32       |
+| A_2  | ap_none | in        | 32       |
+| A_20 | ap_none | in        | 32       |
+| A_21 | ap_none | in        | 32       |
+| A_22 | ap_none | in        | 32       |
+| A_23 | ap_none | in        | 32       |
+| A_24 | ap_none | in        | 32       |
+| A_25 | ap_none | in        | 32       |
+| A_26 | ap_none | in        | 32       |
+| A_27 | ap_none | in        | 32       |
+| A_28 | ap_none | in        | 32       |
+| A_29 | ap_none | in        | 32       |
+| A_3  | ap_none | in        | 32       |
+| A_30 | ap_none | in        | 32       |
+| A_31 | ap_none | in        | 32       |
+| A_32 | ap_none | in        | 32       |
+| A_33 | ap_none | in        | 32       |
+| A_34 | ap_none | in        | 32       |
+| A_35 | ap_none | in        | 32       |
+| A_36 | ap_none | in        | 32       |
+| A_37 | ap_none | in        | 32       |
+| A_38 | ap_none | in        | 32       |
+| A_39 | ap_none | in        | 32       |
+| A_4  | ap_none | in        | 32       |
+| A_40 | ap_none | in        | 32       |
+| A_41 | ap_none | in        | 32       |
+| A_42 | ap_none | in        | 32       |
+| A_43 | ap_none | in        | 32       |
+| A_44 | ap_none | in        | 32       |
+| A_45 | ap_none | in        | 32       |
+| A_46 | ap_none | in        | 32       |
+| A_47 | ap_none | in        | 32       |
+| A_48 | ap_none | in        | 32       |
+| A_49 | ap_none | in        | 32       |
+| A_5  | ap_none | in        | 32       |
+| A_50 | ap_none | in        | 32       |
+| A_51 | ap_none | in        | 32       |
+| A_52 | ap_none | in        | 32       |
+| A_53 | ap_none | in        | 32       |
+| A_54 | ap_none | in        | 32       |
+| A_55 | ap_none | in        | 32       |
+| A_56 | ap_none | in        | 32       |
+| A_57 | ap_none | in        | 32       |
+| A_58 | ap_none | in        | 32       |
+| A_59 | ap_none | in        | 32       |
+| A_6  | ap_none | in        | 32       |
+| A_60 | ap_none | in        | 32       |
+| A_61 | ap_none | in        | 32       |
+| A_62 | ap_none | in        | 32       |
+| A_63 | ap_none | in        | 32       |
+| A_7  | ap_none | in        | 32       |
+| A_8  | ap_none | in        | 32       |
+| A_9  | ap_none | in        | 32       |
+| B_0  | ap_none | in        | 32       |
+| B_1  | ap_none | in        | 32       |
+| B_10 | ap_none | in        | 32       |
+| B_11 | ap_none | in        | 32       |
+| B_12 | ap_none | in        | 32       |
+| B_13 | ap_none | in        | 32       |
+| B_14 | ap_none | in        | 32       |
+| B_15 | ap_none | in        | 32       |
+| B_16 | ap_none | in        | 32       |
+| B_17 | ap_none | in        | 32       |
+| B_18 | ap_none | in        | 32       |
+| B_19 | ap_none | in        | 32       |
+| B_2  | ap_none | in        | 32       |
+| B_20 | ap_none | in        | 32       |
+| B_21 | ap_none | in        | 32       |
+| B_22 | ap_none | in        | 32       |
+| B_23 | ap_none | in        | 32       |
+| B_24 | ap_none | in        | 32       |
+| B_25 | ap_none | in        | 32       |
+| B_26 | ap_none | in        | 32       |
+| B_27 | ap_none | in        | 32       |
+| B_28 | ap_none | in        | 32       |
+| B_29 | ap_none | in        | 32       |
+| B_3  | ap_none | in        | 32       |
+| B_30 | ap_none | in        | 32       |
+| B_31 | ap_none | in        | 32       |
+| B_32 | ap_none | in        | 32       |
+| B_33 | ap_none | in        | 32       |
+| B_34 | ap_none | in        | 32       |
+| B_35 | ap_none | in        | 32       |
+| B_36 | ap_none | in        | 32       |
+| B_37 | ap_none | in        | 32       |
+| B_38 | ap_none | in        | 32       |
+| B_39 | ap_none | in        | 32       |
+| B_4  | ap_none | in        | 32       |
+| B_40 | ap_none | in        | 32       |
+| B_41 | ap_none | in        | 32       |
+| B_42 | ap_none | in        | 32       |
+| B_43 | ap_none | in        | 32       |
+| B_44 | ap_none | in        | 32       |
+| B_45 | ap_none | in        | 32       |
+| B_46 | ap_none | in        | 32       |
+| B_47 | ap_none | in        | 32       |
+| B_48 | ap_none | in        | 32       |
+| B_49 | ap_none | in        | 32       |
+| B_5  | ap_none | in        | 32       |
+| B_50 | ap_none | in        | 32       |
+| B_51 | ap_none | in        | 32       |
+| B_52 | ap_none | in        | 32       |
+| B_53 | ap_none | in        | 32       |
+| B_54 | ap_none | in        | 32       |
+| B_55 | ap_none | in        | 32       |
+| B_56 | ap_none | in        | 32       |
+| B_57 | ap_none | in        | 32       |
+| B_58 | ap_none | in        | 32       |
+| B_59 | ap_none | in        | 32       |
+| B_6  | ap_none | in        | 32       |
+| B_60 | ap_none | in        | 32       |
+| B_61 | ap_none | in        | 32       |
+| B_62 | ap_none | in        | 32       |
+| B_63 | ap_none | in        | 32       |
+| B_7  | ap_none | in        | 32       |
+| B_8  | ap_none | in        | 32       |
+| B_9  | ap_none | in        | 32       |
+| C_0  | ap_vld  | out       | 32       |
+| C_1  | ap_vld  | out       | 32       |
+| C_10 | ap_vld  | out       | 32       |
+| C_11 | ap_vld  | out       | 32       |
+| C_12 | ap_vld  | out       | 32       |
+| C_13 | ap_vld  | out       | 32       |
+| C_14 | ap_vld  | out       | 32       |
+| C_15 | ap_vld  | out       | 32       |
+| C_16 | ap_vld  | out       | 32       |
+| C_17 | ap_vld  | out       | 32       |
+| C_18 | ap_vld  | out       | 32       |
+| C_19 | ap_vld  | out       | 32       |
+| C_2  | ap_vld  | out       | 32       |
+| C_20 | ap_vld  | out       | 32       |
+| C_21 | ap_vld  | out       | 32       |
+| C_22 | ap_vld  | out       | 32       |
+| C_23 | ap_vld  | out       | 32       |
+| C_24 | ap_vld  | out       | 32       |
+| C_25 | ap_vld  | out       | 32       |
+| C_26 | ap_vld  | out       | 32       |
+| C_27 | ap_vld  | out       | 32       |
+| C_28 | ap_vld  | out       | 32       |
+| C_29 | ap_vld  | out       | 32       |
+| C_3  | ap_vld  | out       | 32       |
+| C_30 | ap_vld  | out       | 32       |
+| C_31 | ap_vld  | out       | 32       |
+| C_32 | ap_vld  | out       | 32       |
+| C_33 | ap_vld  | out       | 32       |
+| C_34 | ap_vld  | out       | 32       |
+| C_35 | ap_vld  | out       | 32       |
+| C_36 | ap_vld  | out       | 32       |
+| C_37 | ap_vld  | out       | 32       |
+| C_38 | ap_vld  | out       | 32       |
+| C_39 | ap_vld  | out       | 32       |
+| C_4  | ap_vld  | out       | 32       |
+| C_40 | ap_vld  | out       | 32       |
+| C_41 | ap_vld  | out       | 32       |
+| C_42 | ap_vld  | out       | 32       |
+| C_43 | ap_vld  | out       | 32       |
+| C_44 | ap_vld  | out       | 32       |
+| C_45 | ap_vld  | out       | 32       |
+| C_46 | ap_vld  | out       | 32       |
+| C_47 | ap_vld  | out       | 32       |
+| C_48 | ap_vld  | out       | 32       |
+| C_49 | ap_vld  | out       | 32       |
+| C_5  | ap_vld  | out       | 32       |
+| C_50 | ap_vld  | out       | 32       |
+| C_51 | ap_vld  | out       | 32       |
+| C_52 | ap_vld  | out       | 32       |
+| C_53 | ap_vld  | out       | 32       |
+| C_54 | ap_vld  | out       | 32       |
+| C_55 | ap_vld  | out       | 32       |
+| C_56 | ap_vld  | out       | 32       |
+| C_57 | ap_vld  | out       | 32       |
+| C_58 | ap_vld  | out       | 32       |
+| C_59 | ap_vld  | out       | 32       |
+| C_6  | ap_vld  | out       | 32       |
+| C_60 | ap_vld  | out       | 32       |
+| C_61 | ap_vld  | out       | 32       |
+| C_62 | ap_vld  | out       | 32       |
+| C_63 | ap_vld  | out       | 32       |
+| C_7  | ap_vld  | out       | 32       |
+| C_8  | ap_vld  | out       | 32       |
+| C_9  | ap_vld  | out       | 32       |
+| D_0  | ap_vld  | out       | 32       |
+| D_1  | ap_vld  | out       | 32       |
+| D_10 | ap_vld  | out       | 32       |
+| D_11 | ap_vld  | out       | 32       |
+| D_12 | ap_vld  | out       | 32       |
+| D_13 | ap_vld  | out       | 32       |
+| D_14 | ap_vld  | out       | 32       |
+| D_15 | ap_vld  | out       | 32       |
+| D_16 | ap_vld  | out       | 32       |
+| D_17 | ap_vld  | out       | 32       |
+| D_18 | ap_vld  | out       | 32       |
+| D_19 | ap_vld  | out       | 32       |
+| D_2  | ap_vld  | out       | 32       |
+| D_20 | ap_vld  | out       | 32       |
+| D_21 | ap_vld  | out       | 32       |
+| D_22 | ap_vld  | out       | 32       |
+| D_23 | ap_vld  | out       | 32       |
+| D_24 | ap_vld  | out       | 32       |
+| D_25 | ap_vld  | out       | 32       |
+| D_26 | ap_vld  | out       | 32       |
+| D_27 | ap_vld  | out       | 32       |
+| D_28 | ap_vld  | out       | 32       |
+| D_29 | ap_vld  | out       | 32       |
+| D_3  | ap_vld  | out       | 32       |
+| D_30 | ap_vld  | out       | 32       |
+| D_31 | ap_vld  | out       | 32       |
+| D_32 | ap_vld  | out       | 32       |
+| D_33 | ap_vld  | out       | 32       |
+| D_34 | ap_vld  | out       | 32       |
+| D_35 | ap_vld  | out       | 32       |
+| D_36 | ap_vld  | out       | 32       |
+| D_37 | ap_vld  | out       | 32       |
+| D_38 | ap_vld  | out       | 32       |
+| D_39 | ap_vld  | out       | 32       |
+| D_4  | ap_vld  | out       | 32       |
+| D_40 | ap_vld  | out       | 32       |
+| D_41 | ap_vld  | out       | 32       |
+| D_42 | ap_vld  | out       | 32       |
+| D_43 | ap_vld  | out       | 32       |
+| D_44 | ap_vld  | out       | 32       |
+| D_45 | ap_vld  | out       | 32       |
+| D_46 | ap_vld  | out       | 32       |
+| D_47 | ap_vld  | out       | 32       |
+| D_48 | ap_vld  | out       | 32       |
+| D_49 | ap_vld  | out       | 32       |
+| D_5  | ap_vld  | out       | 32       |
+| D_50 | ap_vld  | out       | 32       |
+| D_51 | ap_vld  | out       | 32       |
+| D_52 | ap_vld  | out       | 32       |
+| D_53 | ap_vld  | out       | 32       |
+| D_54 | ap_vld  | out       | 32       |
+| D_55 | ap_vld  | out       | 32       |
+| D_56 | ap_vld  | out       | 32       |
+| D_57 | ap_vld  | out       | 32       |
+| D_58 | ap_vld  | out       | 32       |
+| D_59 | ap_vld  | out       | 32       |
+| D_6  | ap_vld  | out       | 32       |
+| D_60 | ap_vld  | out       | 32       |
+| D_61 | ap_vld  | out       | 32       |
+| D_62 | ap_vld  | out       | 32       |
+| D_63 | ap_vld  | out       | 32       |
+| D_7  | ap_vld  | out       | 32       |
+| D_8  | ap_vld  | out       | 32       |
+| D_9  | ap_vld  | out       | 32       |
+| E_0  | ap_vld  | out       | 32       |
+| E_1  | ap_vld  | out       | 32       |
+| E_10 | ap_vld  | out       | 32       |
+| E_11 | ap_vld  | out       | 32       |
+| E_12 | ap_vld  | out       | 32       |
+| E_13 | ap_vld  | out       | 32       |
+| E_14 | ap_vld  | out       | 32       |
+| E_15 | ap_vld  | out       | 32       |
+| E_16 | ap_vld  | out       | 32       |
+| E_17 | ap_vld  | out       | 32       |
+| E_18 | ap_vld  | out       | 32       |
+| E_19 | ap_vld  | out       | 32       |
+| E_2  | ap_vld  | out       | 32       |
+| E_20 | ap_vld  | out       | 32       |
+| E_21 | ap_vld  | out       | 32       |
+| E_22 | ap_vld  | out       | 32       |
+| E_23 | ap_vld  | out       | 32       |
+| E_24 | ap_vld  | out       | 32       |
+| E_25 | ap_vld  | out       | 32       |
+| E_26 | ap_vld  | out       | 32       |
+| E_27 | ap_vld  | out       | 32       |
+| E_28 | ap_vld  | out       | 32       |
+| E_29 | ap_vld  | out       | 32       |
+| E_3  | ap_vld  | out       | 32       |
+| E_30 | ap_vld  | out       | 32       |
+| E_31 | ap_vld  | out       | 32       |
+| E_32 | ap_vld  | out       | 32       |
+| E_33 | ap_vld  | out       | 32       |
+| E_34 | ap_vld  | out       | 32       |
+| E_35 | ap_vld  | out       | 32       |
+| E_36 | ap_vld  | out       | 32       |
+| E_37 | ap_vld  | out       | 32       |
+| E_38 | ap_vld  | out       | 32       |
+| E_39 | ap_vld  | out       | 32       |
+| E_4  | ap_vld  | out       | 32       |
+| E_40 | ap_vld  | out       | 32       |
+| E_41 | ap_vld  | out       | 32       |
+| E_42 | ap_vld  | out       | 32       |
+| E_43 | ap_vld  | out       | 32       |
+| E_44 | ap_vld  | out       | 32       |
+| E_45 | ap_vld  | out       | 32       |
+| E_46 | ap_vld  | out       | 32       |
+| E_47 | ap_vld  | out       | 32       |
+| E_48 | ap_vld  | out       | 32       |
+| E_49 | ap_vld  | out       | 32       |
+| E_5  | ap_vld  | out       | 32       |
+| E_50 | ap_vld  | out       | 32       |
+| E_51 | ap_vld  | out       | 32       |
+| E_52 | ap_vld  | out       | 32       |
+| E_53 | ap_vld  | out       | 32       |
+| E_54 | ap_vld  | out       | 32       |
+| E_55 | ap_vld  | out       | 32       |
+| E_56 | ap_vld  | out       | 32       |
+| E_57 | ap_vld  | out       | 32       |
+| E_58 | ap_vld  | out       | 32       |
+| E_59 | ap_vld  | out       | 32       |
+| E_6  | ap_vld  | out       | 32       |
+| E_60 | ap_vld  | out       | 32       |
+| E_61 | ap_vld  | out       | 32       |
+| E_62 | ap_vld  | out       | 32       |
+| E_63 | ap_vld  | out       | 32       |
+| E_7  | ap_vld  | out       | 32       |
+| E_8  | ap_vld  | out       | 32       |
+| E_9  | ap_vld  | out       | 32       |
++------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | int*     |
+| B        | in        | int*     |
+| C        | out       | int*     |
+| D        | out       | int*     |
+| E        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| A        | A_0          | port    |
+| A        | A_1          | port    |
+| A        | A_2          | port    |
+| A        | A_3          | port    |
+| A        | A_4          | port    |
+| A        | A_5          | port    |
+| A        | A_6          | port    |
+| A        | A_7          | port    |
+| A        | A_8          | port    |
+| A        | A_9          | port    |
+| A        | A_10         | port    |
+| A        | A_11         | port    |
+| A        | A_12         | port    |
+| A        | A_13         | port    |
+| A        | A_14         | port    |
+| A        | A_15         | port    |
+| A        | A_16         | port    |
+| A        | A_17         | port    |
+| A        | A_18         | port    |
+| A        | A_19         | port    |
+| A        | A_20         | port    |
+| A        | A_21         | port    |
+| A        | A_22         | port    |
+| A        | A_23         | port    |
+| A        | A_24         | port    |
+| A        | A_25         | port    |
+| A        | A_26         | port    |
+| A        | A_27         | port    |
+| A        | A_28         | port    |
+| A        | A_29         | port    |
+| A        | A_30         | port    |
+| A        | A_31         | port    |
+| A        | A_32         | port    |
+| A        | A_33         | port    |
+| A        | A_34         | port    |
+| A        | A_35         | port    |
+| A        | A_36         | port    |
+| A        | A_37         | port    |
+| A        | A_38         | port    |
+| A        | A_39         | port    |
+| A        | A_40         | port    |
+| A        | A_41         | port    |
+| A        | A_42         | port    |
+| A        | A_43         | port    |
+| A        | A_44         | port    |
+| A        | A_45         | port    |
+| A        | A_46         | port    |
+| A        | A_47         | port    |
+| A        | A_48         | port    |
+| A        | A_49         | port    |
+| A        | A_50         | port    |
+| A        | A_51         | port    |
+| A        | A_52         | port    |
+| A        | A_53         | port    |
+| A        | A_54         | port    |
+| A        | A_55         | port    |
+| A        | A_56         | port    |
+| A        | A_57         | port    |
+| A        | A_58         | port    |
+| A        | A_59         | port    |
+| A        | A_60         | port    |
+| A        | A_61         | port    |
+| A        | A_62         | port    |
+| A        | A_63         | port    |
+| B        | B_0          | port    |
+| B        | B_1          | port    |
+| B        | B_2          | port    |
+| B        | B_3          | port    |
+| B        | B_4          | port    |
+| B        | B_5          | port    |
+| B        | B_6          | port    |
+| B        | B_7          | port    |
+| B        | B_8          | port    |
+| B        | B_9          | port    |
+| B        | B_10         | port    |
+| B        | B_11         | port    |
+| B        | B_12         | port    |
+| B        | B_13         | port    |
+| B        | B_14         | port    |
+| B        | B_15         | port    |
+| B        | B_16         | port    |
+| B        | B_17         | port    |
+| B        | B_18         | port    |
+| B        | B_19         | port    |
+| B        | B_20         | port    |
+| B        | B_21         | port    |
+| B        | B_22         | port    |
+| B        | B_23         | port    |
+| B        | B_24         | port    |
+| B        | B_25         | port    |
+| B        | B_26         | port    |
+| B        | B_27         | port    |
+| B        | B_28         | port    |
+| B        | B_29         | port    |
+| B        | B_30         | port    |
+| B        | B_31         | port    |
+| B        | B_32         | port    |
+| B        | B_33         | port    |
+| B        | B_34         | port    |
+| B        | B_35         | port    |
+| B        | B_36         | port    |
+| B        | B_37         | port    |
+| B        | B_38         | port    |
+| B        | B_39         | port    |
+| B        | B_40         | port    |
+| B        | B_41         | port    |
+| B        | B_42         | port    |
+| B        | B_43         | port    |
+| B        | B_44         | port    |
+| B        | B_45         | port    |
+| B        | B_46         | port    |
+| B        | B_47         | port    |
+| B        | B_48         | port    |
+| B        | B_49         | port    |
+| B        | B_50         | port    |
+| B        | B_51         | port    |
+| B        | B_52         | port    |
+| B        | B_53         | port    |
+| B        | B_54         | port    |
+| B        | B_55         | port    |
+| B        | B_56         | port    |
+| B        | B_57         | port    |
+| B        | B_58         | port    |
+| B        | B_59         | port    |
+| B        | B_60         | port    |
+| B        | B_61         | port    |
+| B        | B_62         | port    |
+| B        | B_63         | port    |
+| C        | C_0          | port    |
+| C        | C_0_ap_vld   | port    |
+| C        | C_1          | port    |
+| C        | C_1_ap_vld   | port    |
+| C        | C_2          | port    |
+| C        | C_2_ap_vld   | port    |
+| C        | C_3          | port    |
+| C        | C_3_ap_vld   | port    |
+| C        | C_4          | port    |
+| C        | C_4_ap_vld   | port    |
+| C        | C_5          | port    |
+| C        | C_5_ap_vld   | port    |
+| C        | C_6          | port    |
+| C        | C_6_ap_vld   | port    |
+| C        | C_7          | port    |
+| C        | C_7_ap_vld   | port    |
+| C        | C_8          | port    |
+| C        | C_8_ap_vld   | port    |
+| C        | C_9          | port    |
+| C        | C_9_ap_vld   | port    |
+| C        | C_10         | port    |
+| C        | C_10_ap_vld  | port    |
+| C        | C_11         | port    |
+| C        | C_11_ap_vld  | port    |
+| C        | C_12         | port    |
+| C        | C_12_ap_vld  | port    |
+| C        | C_13         | port    |
+| C        | C_13_ap_vld  | port    |
+| C        | C_14         | port    |
+| C        | C_14_ap_vld  | port    |
+| C        | C_15         | port    |
+| C        | C_15_ap_vld  | port    |
+| C        | C_16         | port    |
+| C        | C_16_ap_vld  | port    |
+| C        | C_17         | port    |
+| C        | C_17_ap_vld  | port    |
+| C        | C_18         | port    |
+| C        | C_18_ap_vld  | port    |
+| C        | C_19         | port    |
+| C        | C_19_ap_vld  | port    |
+| C        | C_20         | port    |
+| C        | C_20_ap_vld  | port    |
+| C        | C_21         | port    |
+| C        | C_21_ap_vld  | port    |
+| C        | C_22         | port    |
+| C        | C_22_ap_vld  | port    |
+| C        | C_23         | port    |
+| C        | C_23_ap_vld  | port    |
+| C        | C_24         | port    |
+| C        | C_24_ap_vld  | port    |
+| C        | C_25         | port    |
+| C        | C_25_ap_vld  | port    |
+| C        | C_26         | port    |
+| C        | C_26_ap_vld  | port    |
+| C        | C_27         | port    |
+| C        | C_27_ap_vld  | port    |
+| C        | C_28         | port    |
+| C        | C_28_ap_vld  | port    |
+| C        | C_29         | port    |
+| C        | C_29_ap_vld  | port    |
+| C        | C_30         | port    |
+| C        | C_30_ap_vld  | port    |
+| C        | C_31         | port    |
+| C        | C_31_ap_vld  | port    |
+| C        | C_32         | port    |
+| C        | C_32_ap_vld  | port    |
+| C        | C_33         | port    |
+| C        | C_33_ap_vld  | port    |
+| C        | C_34         | port    |
+| C        | C_34_ap_vld  | port    |
+| C        | C_35         | port    |
+| C        | C_35_ap_vld  | port    |
+| C        | C_36         | port    |
+| C        | C_36_ap_vld  | port    |
+| C        | C_37         | port    |
+| C        | C_37_ap_vld  | port    |
+| C        | C_38         | port    |
+| C        | C_38_ap_vld  | port    |
+| C        | C_39         | port    |
+| C        | C_39_ap_vld  | port    |
+| C        | C_40         | port    |
+| C        | C_40_ap_vld  | port    |
+| C        | C_41         | port    |
+| C        | C_41_ap_vld  | port    |
+| C        | C_42         | port    |
+| C        | C_42_ap_vld  | port    |
+| C        | C_43         | port    |
+| C        | C_43_ap_vld  | port    |
+| C        | C_44         | port    |
+| C        | C_44_ap_vld  | port    |
+| C        | C_45         | port    |
+| C        | C_45_ap_vld  | port    |
+| C        | C_46         | port    |
+| C        | C_46_ap_vld  | port    |
+| C        | C_47         | port    |
+| C        | C_47_ap_vld  | port    |
+| C        | C_48         | port    |
+| C        | C_48_ap_vld  | port    |
+| C        | C_49         | port    |
+| C        | C_49_ap_vld  | port    |
+| C        | C_50         | port    |
+| C        | C_50_ap_vld  | port    |
+| C        | C_51         | port    |
+| C        | C_51_ap_vld  | port    |
+| C        | C_52         | port    |
+| C        | C_52_ap_vld  | port    |
+| C        | C_53         | port    |
+| C        | C_53_ap_vld  | port    |
+| C        | C_54         | port    |
+| C        | C_54_ap_vld  | port    |
+| C        | C_55         | port    |
+| C        | C_55_ap_vld  | port    |
+| C        | C_56         | port    |
+| C        | C_56_ap_vld  | port    |
+| C        | C_57         | port    |
+| C        | C_57_ap_vld  | port    |
+| C        | C_58         | port    |
+| C        | C_58_ap_vld  | port    |
+| C        | C_59         | port    |
+| C        | C_59_ap_vld  | port    |
+| C        | C_60         | port    |
+| C        | C_60_ap_vld  | port    |
+| C        | C_61         | port    |
+| C        | C_61_ap_vld  | port    |
+| C        | C_62         | port    |
+| C        | C_62_ap_vld  | port    |
+| C        | C_63         | port    |
+| C        | C_63_ap_vld  | port    |
+| D        | D_0          | port    |
+| D        | D_0_ap_vld   | port    |
+| D        | D_1          | port    |
+| D        | D_1_ap_vld   | port    |
+| D        | D_2          | port    |
+| D        | D_2_ap_vld   | port    |
+| D        | D_3          | port    |
+| D        | D_3_ap_vld   | port    |
+| D        | D_4          | port    |
+| D        | D_4_ap_vld   | port    |
+| D        | D_5          | port    |
+| D        | D_5_ap_vld   | port    |
+| D        | D_6          | port    |
+| D        | D_6_ap_vld   | port    |
+| D        | D_7          | port    |
+| D        | D_7_ap_vld   | port    |
+| D        | D_8          | port    |
+| D        | D_8_ap_vld   | port    |
+| D        | D_9          | port    |
+| D        | D_9_ap_vld   | port    |
+| D        | D_10         | port    |
+| D        | D_10_ap_vld  | port    |
+| D        | D_11         | port    |
+| D        | D_11_ap_vld  | port    |
+| D        | D_12         | port    |
+| D        | D_12_ap_vld  | port    |
+| D        | D_13         | port    |
+| D        | D_13_ap_vld  | port    |
+| D        | D_14         | port    |
+| D        | D_14_ap_vld  | port    |
+| D        | D_15         | port    |
+| D        | D_15_ap_vld  | port    |
+| D        | D_16         | port    |
+| D        | D_16_ap_vld  | port    |
+| D        | D_17         | port    |
+| D        | D_17_ap_vld  | port    |
+| D        | D_18         | port    |
+| D        | D_18_ap_vld  | port    |
+| D        | D_19         | port    |
+| D        | D_19_ap_vld  | port    |
+| D        | D_20         | port    |
+| D        | D_20_ap_vld  | port    |
+| D        | D_21         | port    |
+| D        | D_21_ap_vld  | port    |
+| D        | D_22         | port    |
+| D        | D_22_ap_vld  | port    |
+| D        | D_23         | port    |
+| D        | D_23_ap_vld  | port    |
+| D        | D_24         | port    |
+| D        | D_24_ap_vld  | port    |
+| D        | D_25         | port    |
+| D        | D_25_ap_vld  | port    |
+| D        | D_26         | port    |
+| D        | D_26_ap_vld  | port    |
+| D        | D_27         | port    |
+| D        | D_27_ap_vld  | port    |
+| D        | D_28         | port    |
+| D        | D_28_ap_vld  | port    |
+| D        | D_29         | port    |
+| D        | D_29_ap_vld  | port    |
+| D        | D_30         | port    |
+| D        | D_30_ap_vld  | port    |
+| D        | D_31         | port    |
+| D        | D_31_ap_vld  | port    |
+| D        | D_32         | port    |
+| D        | D_32_ap_vld  | port    |
+| D        | D_33         | port    |
+| D        | D_33_ap_vld  | port    |
+| D        | D_34         | port    |
+| D        | D_34_ap_vld  | port    |
+| D        | D_35         | port    |
+| D        | D_35_ap_vld  | port    |
+| D        | D_36         | port    |
+| D        | D_36_ap_vld  | port    |
+| D        | D_37         | port    |
+| D        | D_37_ap_vld  | port    |
+| D        | D_38         | port    |
+| D        | D_38_ap_vld  | port    |
+| D        | D_39         | port    |
+| D        | D_39_ap_vld  | port    |
+| D        | D_40         | port    |
+| D        | D_40_ap_vld  | port    |
+| D        | D_41         | port    |
+| D        | D_41_ap_vld  | port    |
+| D        | D_42         | port    |
+| D        | D_42_ap_vld  | port    |
+| D        | D_43         | port    |
+| D        | D_43_ap_vld  | port    |
+| D        | D_44         | port    |
+| D        | D_44_ap_vld  | port    |
+| D        | D_45         | port    |
+| D        | D_45_ap_vld  | port    |
+| D        | D_46         | port    |
+| D        | D_46_ap_vld  | port    |
+| D        | D_47         | port    |
+| D        | D_47_ap_vld  | port    |
+| D        | D_48         | port    |
+| D        | D_48_ap_vld  | port    |
+| D        | D_49         | port    |
+| D        | D_49_ap_vld  | port    |
+| D        | D_50         | port    |
+| D        | D_50_ap_vld  | port    |
+| D        | D_51         | port    |
+| D        | D_51_ap_vld  | port    |
+| D        | D_52         | port    |
+| D        | D_52_ap_vld  | port    |
+| D        | D_53         | port    |
+| D        | D_53_ap_vld  | port    |
+| D        | D_54         | port    |
+| D        | D_54_ap_vld  | port    |
+| D        | D_55         | port    |
+| D        | D_55_ap_vld  | port    |
+| D        | D_56         | port    |
+| D        | D_56_ap_vld  | port    |
+| D        | D_57         | port    |
+| D        | D_57_ap_vld  | port    |
+| D        | D_58         | port    |
+| D        | D_58_ap_vld  | port    |
+| D        | D_59         | port    |
+| D        | D_59_ap_vld  | port    |
+| D        | D_60         | port    |
+| D        | D_60_ap_vld  | port    |
+| D        | D_61         | port    |
+| D        | D_61_ap_vld  | port    |
+| D        | D_62         | port    |
+| D        | D_62_ap_vld  | port    |
+| D        | D_63         | port    |
+| D        | D_63_ap_vld  | port    |
+| E        | E_0          | port    |
+| E        | E_0_ap_vld   | port    |
+| E        | E_1          | port    |
+| E        | E_1_ap_vld   | port    |
+| E        | E_2          | port    |
+| E        | E_2_ap_vld   | port    |
+| E        | E_3          | port    |
+| E        | E_3_ap_vld   | port    |
+| E        | E_4          | port    |
+| E        | E_4_ap_vld   | port    |
+| E        | E_5          | port    |
+| E        | E_5_ap_vld   | port    |
+| E        | E_6          | port    |
+| E        | E_6_ap_vld   | port    |
+| E        | E_7          | port    |
+| E        | E_7_ap_vld   | port    |
+| E        | E_8          | port    |
+| E        | E_8_ap_vld   | port    |
+| E        | E_9          | port    |
+| E        | E_9_ap_vld   | port    |
+| E        | E_10         | port    |
+| E        | E_10_ap_vld  | port    |
+| E        | E_11         | port    |
+| E        | E_11_ap_vld  | port    |
+| E        | E_12         | port    |
+| E        | E_12_ap_vld  | port    |
+| E        | E_13         | port    |
+| E        | E_13_ap_vld  | port    |
+| E        | E_14         | port    |
+| E        | E_14_ap_vld  | port    |
+| E        | E_15         | port    |
+| E        | E_15_ap_vld  | port    |
+| E        | E_16         | port    |
+| E        | E_16_ap_vld  | port    |
+| E        | E_17         | port    |
+| E        | E_17_ap_vld  | port    |
+| E        | E_18         | port    |
+| E        | E_18_ap_vld  | port    |
+| E        | E_19         | port    |
+| E        | E_19_ap_vld  | port    |
+| E        | E_20         | port    |
+| E        | E_20_ap_vld  | port    |
+| E        | E_21         | port    |
+| E        | E_21_ap_vld  | port    |
+| E        | E_22         | port    |
+| E        | E_22_ap_vld  | port    |
+| E        | E_23         | port    |
+| E        | E_23_ap_vld  | port    |
+| E        | E_24         | port    |
+| E        | E_24_ap_vld  | port    |
+| E        | E_25         | port    |
+| E        | E_25_ap_vld  | port    |
+| E        | E_26         | port    |
+| E        | E_26_ap_vld  | port    |
+| E        | E_27         | port    |
+| E        | E_27_ap_vld  | port    |
+| E        | E_28         | port    |
+| E        | E_28_ap_vld  | port    |
+| E        | E_29         | port    |
+| E        | E_29_ap_vld  | port    |
+| E        | E_30         | port    |
+| E        | E_30_ap_vld  | port    |
+| E        | E_31         | port    |
+| E        | E_31_ap_vld  | port    |
+| E        | E_32         | port    |
+| E        | E_32_ap_vld  | port    |
+| E        | E_33         | port    |
+| E        | E_33_ap_vld  | port    |
+| E        | E_34         | port    |
+| E        | E_34_ap_vld  | port    |
+| E        | E_35         | port    |
+| E        | E_35_ap_vld  | port    |
+| E        | E_36         | port    |
+| E        | E_36_ap_vld  | port    |
+| E        | E_37         | port    |
+| E        | E_37_ap_vld  | port    |
+| E        | E_38         | port    |
+| E        | E_38_ap_vld  | port    |
+| E        | E_39         | port    |
+| E        | E_39_ap_vld  | port    |
+| E        | E_40         | port    |
+| E        | E_40_ap_vld  | port    |
+| E        | E_41         | port    |
+| E        | E_41_ap_vld  | port    |
+| E        | E_42         | port    |
+| E        | E_42_ap_vld  | port    |
+| E        | E_43         | port    |
+| E        | E_43_ap_vld  | port    |
+| E        | E_44         | port    |
+| E        | E_44_ap_vld  | port    |
+| E        | E_45         | port    |
+| E        | E_45_ap_vld  | port    |
+| E        | E_46         | port    |
+| E        | E_46_ap_vld  | port    |
+| E        | E_47         | port    |
+| E        | E_47_ap_vld  | port    |
+| E        | E_48         | port    |
+| E        | E_48_ap_vld  | port    |
+| E        | E_49         | port    |
+| E        | E_49_ap_vld  | port    |
+| E        | E_50         | port    |
+| E        | E_50_ap_vld  | port    |
+| E        | E_51         | port    |
+| E        | E_51_ap_vld  | port    |
+| E        | E_52         | port    |
+| E        | E_52_ap_vld  | port    |
+| E        | E_53         | port    |
+| E        | E_53_ap_vld  | port    |
+| E        | E_54         | port    |
+| E        | E_54_ap_vld  | port    |
+| E        | E_55         | port    |
+| E        | E_55_ap_vld  | port    |
+| E        | E_56         | port    |
+| E        | E_56_ap_vld  | port    |
+| E        | E_57         | port    |
+| E        | E_57_ap_vld  | port    |
+| E        | E_58         | port    |
+| E        | E_58_ap_vld  | port    |
+| E        | E_59         | port    |
+| E        | E_59_ap_vld  | port    |
+| E        | E_60         | port    |
+| E        | E_60_ap_vld  | port    |
+| E        | E_61         | port    |
+| E        | E_61_ap_vld  | port    |
+| E        | E_62         | port    |
+| E        | E_62_ap_vld  | port    |
+| E        | E_63         | port    |
+| E        | E_63_ap_vld  | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------+-----+--------+------------+-----------+--------+---------+
+| Name                        | DSP | Pragma | Variable   | Op        | Impl   | Latency |
++-----------------------------+-----+--------+------------+-----------+--------+---------+
+| + q5_complete_partition     | 24  |        |            |           |        |         |
+|   sparsemux_33_6_32_1_1_U9  |     |        | tmp        | sparsemux | auto   | 0       |
+|   sparsemux_33_6_32_1_1_U10 |     |        | tmp_1      | sparsemux | auto   | 0       |
+|   sum_fu_3154_p2            |     |        | sum        | add       | fabric | 0       |
+|   mul_ln98_fu_2856_p1       |     |        | diff       | sub       | fabric | 0       |
+|   mul_32s_32s_32_1_1_U1     | 3   |        | mul_ln97   | mul       | auto   | 0       |
+|   mul_32s_32s_32_1_1_U2     | 3   |        | mul_ln98   | mul       | auto   | 0       |
+|   sparsemux_33_6_32_1_1_U11 |     |        | tmp_2      | sparsemux | auto   | 0       |
+|   sparsemux_33_6_32_1_1_U12 |     |        | tmp_3      | sparsemux | auto   | 0       |
+|   sparsemux_33_6_32_1_1_U13 |     |        | tmp_4      | sparsemux | auto   | 0       |
+|   sparsemux_33_6_32_1_1_U14 |     |        | tmp_5      | sparsemux | auto   | 0       |
+|   sum_4_fu_3476_p2          |     |        | sum_4      | add       | fabric | 0       |
+|   mul_ln98_1_fu_2896_p1     |     |        | diff_4     | sub       | fabric | 0       |
+|   mul_32s_32s_32_1_1_U3     | 3   |        | mul_ln97_1 | mul       | auto   | 0       |
+|   mul_32s_32s_32_1_1_U4     | 3   |        | mul_ln98_1 | mul       | auto   | 0       |
+|   sparsemux_33_6_32_1_1_U15 |     |        | tmp_6      | sparsemux | auto   | 0       |
+|   sum_5_fu_3579_p2          |     |        | sum_5      | add       | fabric | 0       |
+|   mul_ln98_2_fu_2936_p1     |     |        | diff_5     | sub       | fabric | 0       |
+|   mul_32s_32s_32_1_1_U5     | 3   |        | mul_ln97_2 | mul       | auto   | 0       |
+|   mul_32s_32s_32_1_1_U6     | 3   |        | mul_ln98_2 | mul       | auto   | 0       |
+|   sparsemux_33_6_32_1_1_U16 |     |        | tmp_7      | sparsemux | auto   | 0       |
+|   sum_3_fu_3682_p2          |     |        | sum_3      | add       | fabric | 0       |
+|   mul_ln98_3_fu_2976_p1     |     |        | diff_3     | sub       | fabric | 0       |
+|   mul_32s_32s_32_1_1_U7     | 3   |        | mul_ln97_3 | mul       | auto   | 0       |
+|   mul_32s_32s_32_1_1_U8     | 3   |        | mul_ln98_3 | mul       | auto   | 0       |
+|   i_fu_3712_p2              |     |        | i          | add       | fabric | 0       |
++-----------------------------+-----+--------+------------+-----------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name                    | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                         |           |           |      |      |        |          |      |         | Banks            |
++-------------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + q5_complete_partition |           |           | 0    | 0    |        |          |      |         |                  |
+|   control_s_axi_U       | interface | s_axilite |      |      |        |          |      |         |                  |
++-------------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++-----------+------------------+----------------------------------------------+------------------------------------------------------------------------+
+| Type      | Options          | Location                                     | Messages                                                               |
++-----------+------------------+----------------------------------------------+------------------------------------------------------------------------+
+| interface | ap_memory port=A | q5_kernel.cpp:77 in q5_complete_partition, A | Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. |
+| interface | ap_memory port=B | q5_kernel.cpp:78 in q5_complete_partition, B | Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. |
+| interface | ap_memory port=C | q5_kernel.cpp:79 in q5_complete_partition, C | Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. |
+| interface | ap_memory port=D | q5_kernel.cpp:80 in q5_complete_partition, D | Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. |
+| interface | ap_memory port=E | q5_kernel.cpp:81 in q5_complete_partition, E | Unsuported scalar variable on pragma 'ap_memory Interface', ignore it. |
++-----------+------------------+----------------------------------------------+------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+----------------------------------+---------------------------------------------------+
+| Type            | Options                          | Location                                          |
++-----------------+----------------------------------+---------------------------------------------------+
+| interface       | ap_memory port=A                 | q5_kernel.cpp:17 in q5_interface, A               |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:18 in q5_interface, B               |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:19 in q5_interface, C               |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:20 in q5_interface, D               |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:21 in q5_interface, E               |
+| interface       | s_axilite port=return            | q5_kernel.cpp:22 in q5_interface, return          |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:36 in q5_pipeline, A                |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:37 in q5_pipeline, B                |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:38 in q5_pipeline, C                |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:39 in q5_pipeline, D                |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:40 in q5_pipeline, E                |
+| interface       | s_axilite port=return            | q5_kernel.cpp:41 in q5_pipeline, return           |
+| pipeline        | II=1                             | q5_kernel.cpp:44 in q5_pipeline                   |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:56 in q5_no_partition, A            |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:57 in q5_no_partition, B            |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:58 in q5_no_partition, C            |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:59 in q5_no_partition, D            |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:60 in q5_no_partition, E            |
+| interface       | s_axilite port=return            | q5_kernel.cpp:61 in q5_no_partition, return       |
+| pipeline        | II=1                             | q5_kernel.cpp:64 in q5_no_partition               |
+| unroll          | factor=4                         | q5_kernel.cpp:65 in q5_no_partition               |
+| interface       | s_axilite port=return            | q5_kernel.cpp:82 in q5_complete_partition, return |
+| array_partition | variable=A complete dim=1        | q5_kernel.cpp:84 in q5_complete_partition, A      |
+| array_partition | variable=B complete dim=1        | q5_kernel.cpp:85 in q5_complete_partition, B      |
+| array_partition | variable=C complete dim=1        | q5_kernel.cpp:86 in q5_complete_partition, C      |
+| array_partition | variable=D complete dim=1        | q5_kernel.cpp:87 in q5_complete_partition, D      |
+| array_partition | variable=E complete dim=1        | q5_kernel.cpp:88 in q5_complete_partition, E      |
+| pipeline        | II=1                             | q5_kernel.cpp:91 in q5_complete_partition         |
+| unroll          | factor=4                         | q5_kernel.cpp:92 in q5_complete_partition         |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:104 in q5_cyclic_partition, A       |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:105 in q5_cyclic_partition, B       |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:106 in q5_cyclic_partition, C       |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:107 in q5_cyclic_partition, D       |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:108 in q5_cyclic_partition, E       |
+| interface       | s_axilite port=return            | q5_kernel.cpp:109 in q5_cyclic_partition, return  |
+| array_partition | variable=A cyclic factor=4 dim=1 | q5_kernel.cpp:111 in q5_cyclic_partition, A       |
+| array_partition | variable=B cyclic factor=4 dim=1 | q5_kernel.cpp:112 in q5_cyclic_partition, B       |
+| array_partition | variable=C cyclic factor=4 dim=1 | q5_kernel.cpp:113 in q5_cyclic_partition, C       |
+| array_partition | variable=D cyclic factor=4 dim=1 | q5_kernel.cpp:114 in q5_cyclic_partition, D       |
+| array_partition | variable=E cyclic factor=4 dim=1 | q5_kernel.cpp:115 in q5_cyclic_partition, E       |
+| pipeline        | II=1                             | q5_kernel.cpp:118 in q5_cyclic_partition          |
+| unroll          | factor=4                         | q5_kernel.cpp:119 in q5_cyclic_partition          |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:131 in q5_block_partition, A        |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:132 in q5_block_partition, B        |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:133 in q5_block_partition, C        |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:134 in q5_block_partition, D        |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:135 in q5_block_partition, E        |
+| interface       | s_axilite port=return            | q5_kernel.cpp:136 in q5_block_partition, return   |
+| array_partition | variable=A block factor=4 dim=1  | q5_kernel.cpp:138 in q5_block_partition, A        |
+| array_partition | variable=B block factor=4 dim=1  | q5_kernel.cpp:139 in q5_block_partition, B        |
+| array_partition | variable=C block factor=4 dim=1  | q5_kernel.cpp:140 in q5_block_partition, C        |
+| array_partition | variable=D block factor=4 dim=1  | q5_kernel.cpp:141 in q5_block_partition, D        |
+| array_partition | variable=E block factor=4 dim=1  | q5_kernel.cpp:142 in q5_block_partition, E        |
+| pipeline        | II=1                             | q5_kernel.cpp:145 in q5_block_partition           |
+| unroll          | factor=4                         | q5_kernel.cpp:146 in q5_block_partition           |
+| interface       | ap_memory port=A                 | q5_kernel.cpp:158 in q5_reshape, A                |
+| interface       | ap_memory port=B                 | q5_kernel.cpp:159 in q5_reshape, B                |
+| interface       | ap_memory port=C                 | q5_kernel.cpp:160 in q5_reshape, C                |
+| interface       | ap_memory port=D                 | q5_kernel.cpp:161 in q5_reshape, D                |
+| interface       | ap_memory port=E                 | q5_kernel.cpp:162 in q5_reshape, E                |
+| interface       | s_axilite port=return            | q5_kernel.cpp:163 in q5_reshape, return           |
+| array_reshape   | variable=A cyclic factor=4 dim=1 | q5_kernel.cpp:165 in q5_reshape, A                |
+| array_reshape   | variable=B cyclic factor=4 dim=1 | q5_kernel.cpp:166 in q5_reshape, B                |
+| array_reshape   | variable=C cyclic factor=4 dim=1 | q5_kernel.cpp:167 in q5_reshape, C                |
+| array_reshape   | variable=D cyclic factor=4 dim=1 | q5_kernel.cpp:168 in q5_reshape, D                |
+| array_reshape   | variable=E cyclic factor=4 dim=1 | q5_kernel.cpp:169 in q5_reshape, E                |
+| pipeline        | II=1                             | q5_kernel.cpp:172 in q5_reshape                   |
+| unroll          | factor=4                         | q5_kernel.cpp:173 in q5_reshape                   |
++-----------------+----------------------------------+---------------------------------------------------+
+
+

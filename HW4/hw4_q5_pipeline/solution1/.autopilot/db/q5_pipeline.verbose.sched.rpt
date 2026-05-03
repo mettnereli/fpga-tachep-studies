@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'q5_pipeline'
+================================================================
+* Date:           Sun May  3 16:01:49 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        hw4_q5_pipeline
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p-fsga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  25.00 ns|  5.448 ns|     6.75 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       66|       66|  1.650 us|  1.650 us|   64|   64|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_43_1  |       64|       64|         2|          1|          1|    64|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.48>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i1 = alloca i32 1"   --->   Operation 5 'alloca' 'i1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%spectopmodule_ln34 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_3" [q5_kernel.cpp:34]   --->   Operation 6 'spectopmodule' 'spectopmodule_ln34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A"   --->   Operation 8 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B"   --->   Operation 10 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %C, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %C"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %D, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %D"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %E, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %E"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_2, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.38ns)   --->   "%store_ln0 = store i6 0, i6 %i1"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc.split" [q5_kernel.cpp:43]   --->   Operation 19 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%i1_load = load i6 %i1" [q5_kernel.cpp:43]   --->   Operation 20 'load' 'i1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln43 = zext i6 %i1_load" [q5_kernel.cpp:43]   --->   Operation 21 'zext' 'zext_ln43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%A_addr = getelementptr i32 %A, i64 0, i64 %zext_ln43" [q5_kernel.cpp:45]   --->   Operation 22 'getelementptr' 'A_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [2/2] (0.69ns)   --->   "%A_load = load i6 %A_addr" [q5_kernel.cpp:45]   --->   Operation 23 'load' 'A_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%B_addr = getelementptr i32 %B, i64 0, i64 %zext_ln43" [q5_kernel.cpp:45]   --->   Operation 24 'getelementptr' 'B_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [2/2] (0.69ns)   --->   "%B_load = load i6 %B_addr" [q5_kernel.cpp:45]   --->   Operation 25 'load' 'B_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 26 [1/1] (0.70ns)   --->   "%i = add i6 %i1_load, i6 1" [q5_kernel.cpp:43]   --->   Operation 26 'add' 'i' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.70ns)   --->   "%icmp_ln43 = icmp_eq  i6 %i1_load, i6 63" [q5_kernel.cpp:43]   --->   Operation 27 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 0.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.38ns)   --->   "%store_ln43 = store i6 %i, i6 %i1" [q5_kernel.cpp:43]   --->   Operation 28 'store' 'store_ln43' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln43 = br i1 %icmp_ln43, void %for.inc.split, void %for.end" [q5_kernel.cpp:43]   --->   Operation 29 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.44>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0" [q5_kernel.cpp:44]   --->   Operation 30 'specpipeline' 'specpipeline_ln44' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%speclooptripcount_ln43 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64" [q5_kernel.cpp:43]   --->   Operation 31 'speclooptripcount' 'speclooptripcount_ln43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [q5_kernel.cpp:43]   --->   Operation 32 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/2] (0.69ns)   --->   "%A_load = load i6 %A_addr" [q5_kernel.cpp:45]   --->   Operation 33 'load' 'A_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 34 [1/2] (0.69ns)   --->   "%B_load = load i6 %B_addr" [q5_kernel.cpp:45]   --->   Operation 34 'load' 'B_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 35 [1/1] (0.88ns)   --->   "%sum = add i32 %B_load, i32 %A_load" [q5_kernel.cpp:45]   --->   Operation 35 'add' 'sum' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.88ns)   --->   "%diff = sub i32 %A_load, i32 %B_load" [q5_kernel.cpp:46]   --->   Operation 36 'sub' 'diff' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%C_addr = getelementptr i32 %C, i64 0, i64 %zext_ln43" [q5_kernel.cpp:48]   --->   Operation 37 'getelementptr' 'C_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.69ns)   --->   "%store_ln48 = store i32 %sum, i6 %C_addr" [q5_kernel.cpp:48]   --->   Operation 38 'store' 'store_ln48' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 39 [1/1] (3.17ns)   --->   "%mul_ln49 = mul i32 %B_load, i32 %A_load" [q5_kernel.cpp:49]   --->   Operation 39 'mul' 'mul_ln49' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%D_addr = getelementptr i32 %D, i64 0, i64 %zext_ln43" [q5_kernel.cpp:49]   --->   Operation 40 'getelementptr' 'D_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.69ns)   --->   "%store_ln49 = store i32 %mul_ln49, i6 %D_addr" [q5_kernel.cpp:49]   --->   Operation 41 'store' 'store_ln49' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 42 [1/1] (3.17ns)   --->   "%mul_ln50 = mul i32 %sum, i32 %diff" [q5_kernel.cpp:50]   --->   Operation 42 'mul' 'mul_ln50' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%E_addr = getelementptr i32 %E, i64 0, i64 %zext_ln43" [q5_kernel.cpp:50]   --->   Operation 43 'getelementptr' 'E_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.69ns)   --->   "%store_ln50 = store i32 %mul_ln50, i6 %E_addr" [q5_kernel.cpp:50]   --->   Operation 44 'store' 'store_ln50' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 45 [1/1] (0.38ns)   --->   "%ret_ln52 = ret" [q5_kernel.cpp:52]   --->   Operation 45 'ret' 'ret_ln52' <Predicate = (icmp_ln43)> <Delay = 0.38>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 25.000ns, clock uncertainty: 6.750ns.
+
+ <State 1>: 1.480ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'i1' [19]  (0.387 ns)
+	'load' operation 6 bit ('i1_load', q5_kernel.cpp:43) on local variable 'i1' [22]  (0.000 ns)
+	'add' operation 6 bit ('i', q5_kernel.cpp:43) [41]  (0.706 ns)
+	'store' operation 0 bit ('store_ln43', q5_kernel.cpp:43) of variable 'i', q5_kernel.cpp:43 on local variable 'i1' [43]  (0.387 ns)
+
+ <State 2>: 5.448ns
+The critical path consists of the following:
+	'load' operation 32 bit ('A_load', q5_kernel.cpp:45) on array 'A' [28]  (0.699 ns)
+	'add' operation 32 bit ('sum', q5_kernel.cpp:45) [31]  (0.880 ns)
+	'mul' operation 32 bit ('mul_ln50', q5_kernel.cpp:50) [38]  (3.170 ns)
+	'store' operation 0 bit ('store_ln50', q5_kernel.cpp:50) of variable 'mul_ln50', q5_kernel.cpp:50 on array 'E' [40]  (0.699 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

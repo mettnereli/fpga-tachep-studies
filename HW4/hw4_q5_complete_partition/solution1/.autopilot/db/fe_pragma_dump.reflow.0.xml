@@ -1,0 +1,15 @@
+<pragmas>
+<pragma file="q5_kernel.cpp" line="92" pragmaType="unroll" parentfunction="q5_complete_partition" factor="4" skip_exit_check="0"/>
+<pragma file="q5_kernel.cpp" line="91" pragmaType="pipeline" parentfunction="q5_complete_partition" off="0" ii="1" rewind="0" style=""/>
+<pragma file="q5_kernel.cpp" line="77" pragmaType="interface" parentfunction="q5_complete_partition" mode="ap_memory" port="A" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="78" pragmaType="interface" parentfunction="q5_complete_partition" mode="ap_memory" port="B" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="79" pragmaType="interface" parentfunction="q5_complete_partition" mode="ap_memory" port="C" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="80" pragmaType="interface" parentfunction="q5_complete_partition" mode="ap_memory" port="D" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="81" pragmaType="interface" parentfunction="q5_complete_partition" mode="ap_memory" port="E" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="q5_kernel.cpp" line="82" pragmaType="interface" parentfunction="q5_complete_partition" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="q5_kernel.cpp" line="84" pragmaType="array_partition" parentfunction="q5_complete_partition" dim="1" factor="0" mode="complete" dynamic="0" variable="A"/>
+<pragma file="q5_kernel.cpp" line="85" pragmaType="array_partition" parentfunction="q5_complete_partition" dim="1" factor="0" mode="complete" dynamic="0" variable="B"/>
+<pragma file="q5_kernel.cpp" line="86" pragmaType="array_partition" parentfunction="q5_complete_partition" dim="1" factor="0" mode="complete" dynamic="0" variable="C"/>
+<pragma file="q5_kernel.cpp" line="87" pragmaType="array_partition" parentfunction="q5_complete_partition" dim="1" factor="0" mode="complete" dynamic="0" variable="D"/>
+<pragma file="q5_kernel.cpp" line="88" pragmaType="array_partition" parentfunction="q5_complete_partition" dim="1" factor="0" mode="complete" dynamic="0" variable="E"/>
+</pragmas>

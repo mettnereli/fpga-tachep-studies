@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "q5_kernel.cpp",
+    "fileloc": 75,
+    "instructions": 75,
+    "loads": {
+      "T": 8
+    },
+    "name": "q5_complete_partition",
+    "stores": {
+      "T": 12
+    },
+    "total_instructions": 75
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "q5_kernel.cpp",
+    "fileloc": 156,
+    "instructions": 55,
+    "loads": {
+      "T": 2
+    },
+    "name": "q5_reshape",
+    "stores": {
+      "T": 3
+    },
+    "total_instructions": 55
+  }
+}
