@@ -1,0 +1,884 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun May  3 14:47:18 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'emettner' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 6.1.166-1.el9.elrepo.x86_64) on Sun May 03 14:47:22 CDT 2026
+INFO: [HLS 200-10] In directory '/scratch/emettner/fpga-tachep-studies/HW3'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hw3.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset hw3_vector_mult_bram 
+INFO: [HLS 200-10] Opening and resetting project '/scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram'.
+INFO: [HLS 200-1510] Running: set_top vector_mult_bram 
+INFO: [HLS 200-1510] Running: add_files hw3_kernels.cpp 
+INFO: [HLS 200-10] Adding design file 'hw3_kernels.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw3_kernels_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw3_kernels_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p-fsga2577-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw3_kernels_tb.cpp in debug mode
+   Compiling ../../../../hw3_kernels.cpp in debug mode
+   Generating csim.exe
+Vector multiplication with BRAM interface:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Vector multiplication with partitioning:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Matrix multiplication with BRAM interface:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with one-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with both-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.156 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 325.203 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw3_kernels.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.74 seconds. CPU system time: 0.84 seconds. Elapsed time: 1.65 seconds; current allocated memory: 327.527 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 23 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 21 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 17 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 24 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_8_1> at hw3_kernels.cpp:8:18 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.61 seconds. CPU system time: 0.73 seconds. Elapsed time: 8.85 seconds; current allocated memory: 336.977 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 336.977 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 337.062 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 337.062 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 358.293 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 358.293 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_mult_bram' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_mult_bram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.15 seconds; current allocated memory: 358.293 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 358.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_mult_bram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_bram/a' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_bram/b' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_bram/c' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_mult_bram' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'vector_mult_bram' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_mult_bram/a_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_mult_bram/a_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_mult_bram/b_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'vector_mult_bram/b_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_mult_bram'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 358.293 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.29 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.34 seconds; current allocated memory: 358.293 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.49 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.54 seconds; current allocated memory: 358.293 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_mult_bram.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_mult_bram.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 218.91 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 33.555 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-1510] Running: open_project -reset hw3_vector_mult_partition 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition'.
+INFO: [HLS 200-1510] Running: set_top vector_mult_partition 
+INFO: [HLS 200-1510] Running: add_files hw3_kernels.cpp 
+INFO: [HLS 200-10] Adding design file 'hw3_kernels.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw3_kernels_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw3_kernels_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw3_kernels_tb.cpp in debug mode
+   Compiling ../../../../hw3_kernels.cpp in debug mode
+   Generating csim.exe
+Vector multiplication with BRAM interface:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Vector multiplication with partitioning:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Matrix multiplication with BRAM interface:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with one-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with both-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 396.875 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw3_kernels.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.7 seconds. CPU system time: 0.88 seconds. Elapsed time: 1.65 seconds; current allocated memory: 396.875 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 113 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 113 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 113 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 113 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 113 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 161 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 162 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_vector_mult_partition/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_1' (hw3_kernels.cpp:22:19) in function 'vector_mult_partition' completely with a factor of 16 (hw3_kernels.cpp:13:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. (hw3_kernels.cpp:13:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. (hw3_kernels.cpp:13:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. (hw3_kernels.cpp:13:0)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'bram Interface', ignore it. (hw3_kernels.cpp:14:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'bram Interface', ignore it. (hw3_kernels.cpp:15:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'bram Interface', ignore it. (hw3_kernels.cpp:16:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.23 seconds. CPU system time: 0.82 seconds. Elapsed time: 9.41 seconds; current allocated memory: 396.875 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 396.875 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 396.875 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 396.898 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 417.012 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 417.012 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vector_mult_partition' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vector_mult_partition' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.25 seconds; current allocated memory: 417.012 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 417.012 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vector_mult_partition' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/a_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/b_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vector_mult_partition/c_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vector_mult_partition' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vector_mult_partition'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.58 seconds; current allocated memory: 417.012 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.28 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.32 seconds; current allocated memory: 417.012 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.55 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.6 seconds; current allocated memory: 417.012 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vector_mult_partition.
+INFO: [VLOG 209-307] Generating Verilog RTL for vector_mult_partition.
+INFO: [HLS 200-789] **** Estimated Fmax: 315.46 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:14; Allocated memory: 20.137 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-1510] Running: open_project -reset hw3_matrix_mult_bram 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram'.
+INFO: [HLS 200-1510] Running: set_top matrix_mult_bram 
+INFO: [HLS 200-1510] Running: add_files hw3_kernels.cpp 
+INFO: [HLS 200-10] Adding design file 'hw3_kernels.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw3_kernels_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw3_kernels_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw3_kernels_tb.cpp in debug mode
+   Compiling ../../../../hw3_kernels.cpp in debug mode
+   Generating csim.exe
+Vector multiplication with BRAM interface:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Vector multiplication with partitioning:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Matrix multiplication with BRAM interface:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with one-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with both-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.2 seconds; current allocated memory: 456.547 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw3_kernels.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.74 seconds. CPU system time: 0.83 seconds. Elapsed time: 1.63 seconds; current allocated memory: 456.547 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 49 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 37 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 54 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 54 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 54 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 54 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_bram/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_38_2> at hw3_kernels.cpp:38:26 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_41_3' is marked as complete unroll implied by the pipeline pragma (hw3_kernels.cpp:41:30)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_41_3' (hw3_kernels.cpp:41:30) in function 'matrix_mult_bram' completely with a factor of 6 (hw3_kernels.cpp:32:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.67 seconds. CPU system time: 0.81 seconds. Elapsed time: 8.94 seconds; current allocated memory: 456.547 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 456.547 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 456.547 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 456.547 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_mult_bram' (hw3_kernels.cpp:28:26)...5 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 469.258 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_37_1'(hw3_kernels.cpp:37:19) and 'VITIS_LOOP_38_2'(hw3_kernels.cpp:38:26) in function 'matrix_mult_bram' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_37_1' (hw3_kernels.cpp:37:19) in function 'matrix_mult_bram'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 460.621 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_mult_bram' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult_bram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_37_1_VITIS_LOOP_38_2'.
+WARNING: [HLS 200-885] The II Violation in module 'matrix_mult_bram' (loop 'VITIS_LOOP_37_1_VITIS_LOOP_38_2'): Unable to schedule 'load' operation 32 bit ('A_load_1', hw3_kernels.cpp:37) on array 'A' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'matrix_mult_bram' (loop 'VITIS_LOOP_37_1_VITIS_LOOP_38_2'): Unable to schedule 'load' operation 32 bit ('A_load_3', hw3_kernels.cpp:37) on array 'A' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'A'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 4, loop 'VITIS_LOOP_37_1_VITIS_LOOP_38_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.31 seconds; current allocated memory: 461.617 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 461.617 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult_bram' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_bram/A' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_bram/B' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_bram/C' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_mult_bram' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_mult_bram' pipeline 'VITIS_LOOP_37_1_VITIS_LOOP_38_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/A_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/A_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/A_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/A_Din_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/B_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/B_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/B_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_bram/B_Din_B' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult_bram'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 461.617 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.32 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.38 seconds; current allocated memory: 462.883 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.86 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.9 seconds; current allocated memory: 464.066 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_mult_bram.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_mult_bram.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 165.84 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 7.520 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-1510] Running: open_project -reset hw3_matrix_mult_partition_one_dim 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim'.
+INFO: [HLS 200-1510] Running: set_top matrix_mult_partition_one_dim 
+INFO: [HLS 200-1510] Running: add_files hw3_kernels.cpp 
+INFO: [HLS 200-10] Adding design file 'hw3_kernels.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw3_kernels_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw3_kernels_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw3_kernels_tb.cpp in debug mode
+   Compiling ../../../../hw3_kernels.cpp in debug mode
+   Generating csim.exe
+Vector multiplication with BRAM interface:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Vector multiplication with partitioning:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Matrix multiplication with BRAM interface:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with one-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with both-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.16 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.19 seconds; current allocated memory: 516.715 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw3_kernels.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.72 seconds. CPU system time: 0.89 seconds. Elapsed time: 1.72 seconds; current allocated memory: 516.715 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 53 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 128 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 194 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 199 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_one_dim/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_66_3' (hw3_kernels.cpp:66:30) in function 'matrix_mult_partition_one_dim' completely with a factor of 6 (hw3_kernels.cpp:54:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 2. (hw3_kernels.cpp:54:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. (hw3_kernels.cpp:54:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_62_1> at hw3_kernels.cpp:62:19 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_63_2' is marked as complete unroll implied by the pipeline pragma (hw3_kernels.cpp:63:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_63_2' (hw3_kernels.cpp:63:26) in function 'matrix_mult_partition_one_dim' completely with a factor of 6 (hw3_kernels.cpp:54:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.89 seconds. CPU system time: 0.87 seconds. Elapsed time: 9.05 seconds; current allocated memory: 516.715 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 516.715 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 516.715 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 516.715 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_mult_partition_one_dim' (hw3_kernels.cpp:50:19)...30 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 536.578 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 536.078 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_mult_partition_one_dim' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_62_1'.
+WARNING: [HLS 200-885] The II Violation in module 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1' (loop 'VITIS_LOOP_62_1'): Unable to schedule 'store' operation 0 bit ('C_addr_1_write_ln71', hw3_kernels.cpp:71) of variable 'sum', hw3_kernels.cpp:68 on array 'C' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'C'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1' (loop 'VITIS_LOOP_62_1'): Unable to schedule 'store' operation 0 bit ('C_addr_3_write_ln71', hw3_kernels.cpp:71) of variable 'sum', hw3_kernels.cpp:68 on array 'C' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'C'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 4, loop 'VITIS_LOOP_62_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.6 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.66 seconds; current allocated memory: 536.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 536.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult_partition_one_dim' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 536.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 536.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1' pipeline 'VITIS_LOOP_62_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_0_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_0_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_1_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_1_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_2_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_2_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_3_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_3_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_4_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_4_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_5_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1/A_5_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 536.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult_partition_one_dim' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/A_0' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/A_1' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/A_2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/A_3' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/A_4' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/A_5' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/B_0' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/B_1' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/B_2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/B_3' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/B_4' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/B_5' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_one_dim/C' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_mult_partition_one_dim' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_0_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_0_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_1_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_1_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_2_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_2_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_3_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_3_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_4_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_4_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_5_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/A_5_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_0_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_0_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_0_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_0_Din_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_1_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_1_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_1_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_1_Din_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_2_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_2_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_2_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_2_Din_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_3_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_3_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_3_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_3_Din_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_4_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_4_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_4_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_4_Din_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_5_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_5_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_5_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_mult_partition_one_dim/B_5_Din_B' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult_partition_one_dim'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.72 seconds; current allocated memory: 539.641 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.31 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.35 seconds; current allocated memory: 542.676 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.17 seconds. CPU system time: 0.07 seconds. Elapsed time: 3.26 seconds; current allocated memory: 546.996 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_mult_partition_one_dim.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_mult_partition_one_dim.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 161.84 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:16; Allocated memory: 30.355 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-1510] Running: open_project -reset hw3_matrix_mult_partition_both_dims 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims'.
+INFO: [HLS 200-1510] Running: set_top matrix_mult_partition_both_dims 
+INFO: [HLS 200-1510] Running: add_files hw3_kernels.cpp 
+INFO: [HLS 200-10] Adding design file 'hw3_kernels.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw3_kernels_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw3_kernels_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw3_kernels_tb.cpp in debug mode
+   Compiling ../../../../hw3_kernels.cpp in debug mode
+   Generating csim.exe
+Vector multiplication with BRAM interface:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Vector multiplication with partitioning:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 
+
+Matrix multiplication with BRAM interface:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with one-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+Matrix multiplication with both-dimension partitioning:
+70 85 100 115 130 145 
+91 112 133 154 175 196 
+112 139 166 193 220 247 
+133 166 199 232 265 298 
+154 193 232 271 310 349 
+175 220 265 310 355 400 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.19 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.2 seconds; current allocated memory: 580.688 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw3_kernels.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.72 seconds. CPU system time: 0.87 seconds. Elapsed time: 1.61 seconds; current allocated memory: 580.688 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 52 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 53 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 385 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 385 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 277 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 277 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 277 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 277 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 277 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 277 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 277 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 493 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 501 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_93_3' (hw3_kernels.cpp:93:30) in function 'matrix_mult_partition_both_dims' completely with a factor of 6 (hw3_kernels.cpp:80:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (hw3_kernels.cpp:80:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (hw3_kernels.cpp:80:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (hw3_kernels.cpp:80:0)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'bram Interface', ignore it. (hw3_kernels.cpp:81:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'bram Interface', ignore it. (hw3_kernels.cpp:82:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'bram Interface', ignore it. (hw3_kernels.cpp:83:9)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_90_2> at hw3_kernels.cpp:90:26 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.02 seconds. CPU system time: 0.89 seconds. Elapsed time: 10.01 seconds; current allocated memory: 580.688 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 580.688 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 580.688 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 580.688 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_mult_partition_both_dims' (hw3_kernels.cpp:76:26)...9 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 601.402 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_89_1'(hw3_kernels.cpp:89:19) and 'VITIS_LOOP_90_2'(hw3_kernels.cpp:90:26) in function 'matrix_mult_partition_both_dims' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_89_1' (hw3_kernels.cpp:89:19) in function 'matrix_mult_partition_both_dims'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 601.840 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_mult_partition_both_dims' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mult_partition_both_dims' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_89_1_VITIS_LOOP_90_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_89_1_VITIS_LOOP_90_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.54 seconds; current allocated memory: 601.840 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 601.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mult_partition_both_dims' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_0_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_0_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_0_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_1_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_1_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_1_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_2_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_2_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_2_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_3_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_3_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_3_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_3_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_3_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_3_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_4_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_4_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_4_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_4_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_4_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_4_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_5_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_5_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_5_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_5_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_5_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/A_5_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_0_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_0_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_0_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_1_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_1_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_1_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_2_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_2_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_2_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_3_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_3_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_3_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_3_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_3_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_3_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_4_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_4_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_4_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_4_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_4_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_4_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_5_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_5_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_5_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_5_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_5_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/B_5_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_1_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_1_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_2_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_2_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_2_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_2_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_2_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_2_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_3_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_3_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_3_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_3_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_3_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_3_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_4_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_4_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_4_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_4_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_4_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_4_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_5_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_5_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_5_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_5_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_5_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mult_partition_both_dims/C_5_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_mult_partition_both_dims' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_32_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mult_partition_both_dims'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.42 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.24 seconds; current allocated memory: 601.840 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.39 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.44 seconds; current allocated memory: 601.840 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 5.26 seconds. CPU system time: 0.08 seconds. Elapsed time: 5.38 seconds; current allocated memory: 606.059 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_mult_partition_both_dims.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_mult_partition_both_dims.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 167.66 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:20; Allocated memory: 25.371 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 55.65 seconds. Total CPU system time: 12.99 seconds. Total elapsed time: 93.69 seconds; peak allocated memory: 606.059 MB.

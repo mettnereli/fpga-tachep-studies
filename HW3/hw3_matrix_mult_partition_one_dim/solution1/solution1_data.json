@@ -1,0 +1,1765 @@
+{
+  "Top": "matrix_mult_partition_one_dim",
+  "RtlTop": "matrix_mult_partition_one_dim",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "matrix_mult_partition_one_dim_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "virtexuplus",
+    "Device": "xcvu13p",
+    "Package": "-fsga2577",
+    "Speed": "-2-e",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "A": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "A_0_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "A_1_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "A_2_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "A_3_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "A_4_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "A_5_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "B": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "B_0_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_0_PORTB",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_1_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_1_PORTB",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_2_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_2_PORTB",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_3_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_3_PORTB",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_4_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_4_PORTB",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_5_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "B_5_PORTB",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "C": {
+      "index": "2",
+      "direction": "out",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "C_PORTA",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "interface",
+          "interface": "C_PORTB",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "matrix_mult_partition_one_dim"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "25",
+    "Uncertainty": "6.75",
+    "IsCombinational": "0",
+    "II": "25",
+    "Latency": "24"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 25.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "matrix_mult_partition_one_dim",
+    "Version": "1.0",
+    "DisplayName": "Matrix_mult_partition_one_dim",
+    "Revision": "2114592708",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_matrix_mult_partition_one_dim_1_0.zip"
+  },
+  "Files": {
+    "CSource": ["..\/..\/hw3_kernels.cpp"],
+    "TestBench": ["..\/..\/hw3_kernels_tb.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/matrix_mult_partition_one_dim_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/matrix_mult_partition_one_dim_matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1.vhd",
+      "impl\/vhdl\/matrix_mult_partition_one_dim_mul_32s_32s_32_1_1.vhd",
+      "impl\/vhdl\/matrix_mult_partition_one_dim.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/matrix_mult_partition_one_dim_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/matrix_mult_partition_one_dim_matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1.v",
+      "impl\/verilog\/matrix_mult_partition_one_dim_mul_32s_32s_32_1_1.v",
+      "impl\/verilog\/matrix_mult_partition_one_dim.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/matrix_mult_partition_one_dim.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {"ASSOCIATED_RESET": "ap_rst"},
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_HIGH"},
+      "portMap": {"ap_rst": "RST"},
+      "ports": ["ap_rst"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "A_0_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "A_0_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "A_0_Addr_A": "ADDR",
+        "A_0_EN_A": "EN",
+        "A_0_WEN_A": "WE",
+        "A_0_Din_A": "DIN",
+        "A_0_Dout_A": "DOUT",
+        "A_0_Clk_A": "CLK",
+        "A_0_Rst_A": "RST"
+      },
+      "ports": [
+        "A_0_Addr_A",
+        "A_0_Clk_A",
+        "A_0_Din_A",
+        "A_0_Dout_A",
+        "A_0_EN_A",
+        "A_0_Rst_A",
+        "A_0_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "A"
+        }]
+    },
+    "A_1_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "A_1_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "A_1_Addr_A": "ADDR",
+        "A_1_EN_A": "EN",
+        "A_1_WEN_A": "WE",
+        "A_1_Din_A": "DIN",
+        "A_1_Dout_A": "DOUT",
+        "A_1_Clk_A": "CLK",
+        "A_1_Rst_A": "RST"
+      },
+      "ports": [
+        "A_1_Addr_A",
+        "A_1_Clk_A",
+        "A_1_Din_A",
+        "A_1_Dout_A",
+        "A_1_EN_A",
+        "A_1_Rst_A",
+        "A_1_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "A"
+        }]
+    },
+    "A_2_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "A_2_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "A_2_Addr_A": "ADDR",
+        "A_2_EN_A": "EN",
+        "A_2_WEN_A": "WE",
+        "A_2_Din_A": "DIN",
+        "A_2_Dout_A": "DOUT",
+        "A_2_Clk_A": "CLK",
+        "A_2_Rst_A": "RST"
+      },
+      "ports": [
+        "A_2_Addr_A",
+        "A_2_Clk_A",
+        "A_2_Din_A",
+        "A_2_Dout_A",
+        "A_2_EN_A",
+        "A_2_Rst_A",
+        "A_2_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "A"
+        }]
+    },
+    "A_3_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "A_3_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "A_3_Addr_A": "ADDR",
+        "A_3_EN_A": "EN",
+        "A_3_WEN_A": "WE",
+        "A_3_Din_A": "DIN",
+        "A_3_Dout_A": "DOUT",
+        "A_3_Clk_A": "CLK",
+        "A_3_Rst_A": "RST"
+      },
+      "ports": [
+        "A_3_Addr_A",
+        "A_3_Clk_A",
+        "A_3_Din_A",
+        "A_3_Dout_A",
+        "A_3_EN_A",
+        "A_3_Rst_A",
+        "A_3_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "A"
+        }]
+    },
+    "A_4_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "A_4_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "A_4_Addr_A": "ADDR",
+        "A_4_EN_A": "EN",
+        "A_4_WEN_A": "WE",
+        "A_4_Din_A": "DIN",
+        "A_4_Dout_A": "DOUT",
+        "A_4_Clk_A": "CLK",
+        "A_4_Rst_A": "RST"
+      },
+      "ports": [
+        "A_4_Addr_A",
+        "A_4_Clk_A",
+        "A_4_Din_A",
+        "A_4_Dout_A",
+        "A_4_EN_A",
+        "A_4_Rst_A",
+        "A_4_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "A"
+        }]
+    },
+    "A_5_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "A_5_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "A_5_Addr_A": "ADDR",
+        "A_5_EN_A": "EN",
+        "A_5_WEN_A": "WE",
+        "A_5_Din_A": "DIN",
+        "A_5_Dout_A": "DOUT",
+        "A_5_Clk_A": "CLK",
+        "A_5_Rst_A": "RST"
+      },
+      "ports": [
+        "A_5_Addr_A",
+        "A_5_Clk_A",
+        "A_5_Din_A",
+        "A_5_Dout_A",
+        "A_5_EN_A",
+        "A_5_Rst_A",
+        "A_5_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "A"
+        }]
+    },
+    "B_0_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_0_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_0_Addr_A": "ADDR",
+        "B_0_EN_A": "EN",
+        "B_0_WEN_A": "WE",
+        "B_0_Din_A": "DIN",
+        "B_0_Dout_A": "DOUT",
+        "B_0_Clk_A": "CLK",
+        "B_0_Rst_A": "RST"
+      },
+      "ports": [
+        "B_0_Addr_A",
+        "B_0_Clk_A",
+        "B_0_Din_A",
+        "B_0_Dout_A",
+        "B_0_EN_A",
+        "B_0_Rst_A",
+        "B_0_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_0_PORTB": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_0_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_0_Addr_B": "ADDR",
+        "B_0_EN_B": "EN",
+        "B_0_WEN_B": "WE",
+        "B_0_Din_B": "DIN",
+        "B_0_Dout_B": "DOUT",
+        "B_0_Clk_B": "CLK",
+        "B_0_Rst_B": "RST"
+      },
+      "ports": [
+        "B_0_Addr_B",
+        "B_0_Clk_B",
+        "B_0_Din_B",
+        "B_0_Dout_B",
+        "B_0_EN_B",
+        "B_0_Rst_B",
+        "B_0_WEN_B"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_1_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_1_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_1_Addr_A": "ADDR",
+        "B_1_EN_A": "EN",
+        "B_1_WEN_A": "WE",
+        "B_1_Din_A": "DIN",
+        "B_1_Dout_A": "DOUT",
+        "B_1_Clk_A": "CLK",
+        "B_1_Rst_A": "RST"
+      },
+      "ports": [
+        "B_1_Addr_A",
+        "B_1_Clk_A",
+        "B_1_Din_A",
+        "B_1_Dout_A",
+        "B_1_EN_A",
+        "B_1_Rst_A",
+        "B_1_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_1_PORTB": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_1_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_1_Addr_B": "ADDR",
+        "B_1_EN_B": "EN",
+        "B_1_WEN_B": "WE",
+        "B_1_Din_B": "DIN",
+        "B_1_Dout_B": "DOUT",
+        "B_1_Clk_B": "CLK",
+        "B_1_Rst_B": "RST"
+      },
+      "ports": [
+        "B_1_Addr_B",
+        "B_1_Clk_B",
+        "B_1_Din_B",
+        "B_1_Dout_B",
+        "B_1_EN_B",
+        "B_1_Rst_B",
+        "B_1_WEN_B"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_2_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_2_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_2_Addr_A": "ADDR",
+        "B_2_EN_A": "EN",
+        "B_2_WEN_A": "WE",
+        "B_2_Din_A": "DIN",
+        "B_2_Dout_A": "DOUT",
+        "B_2_Clk_A": "CLK",
+        "B_2_Rst_A": "RST"
+      },
+      "ports": [
+        "B_2_Addr_A",
+        "B_2_Clk_A",
+        "B_2_Din_A",
+        "B_2_Dout_A",
+        "B_2_EN_A",
+        "B_2_Rst_A",
+        "B_2_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_2_PORTB": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_2_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_2_Addr_B": "ADDR",
+        "B_2_EN_B": "EN",
+        "B_2_WEN_B": "WE",
+        "B_2_Din_B": "DIN",
+        "B_2_Dout_B": "DOUT",
+        "B_2_Clk_B": "CLK",
+        "B_2_Rst_B": "RST"
+      },
+      "ports": [
+        "B_2_Addr_B",
+        "B_2_Clk_B",
+        "B_2_Din_B",
+        "B_2_Dout_B",
+        "B_2_EN_B",
+        "B_2_Rst_B",
+        "B_2_WEN_B"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_3_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_3_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_3_Addr_A": "ADDR",
+        "B_3_EN_A": "EN",
+        "B_3_WEN_A": "WE",
+        "B_3_Din_A": "DIN",
+        "B_3_Dout_A": "DOUT",
+        "B_3_Clk_A": "CLK",
+        "B_3_Rst_A": "RST"
+      },
+      "ports": [
+        "B_3_Addr_A",
+        "B_3_Clk_A",
+        "B_3_Din_A",
+        "B_3_Dout_A",
+        "B_3_EN_A",
+        "B_3_Rst_A",
+        "B_3_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_3_PORTB": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_3_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_3_Addr_B": "ADDR",
+        "B_3_EN_B": "EN",
+        "B_3_WEN_B": "WE",
+        "B_3_Din_B": "DIN",
+        "B_3_Dout_B": "DOUT",
+        "B_3_Clk_B": "CLK",
+        "B_3_Rst_B": "RST"
+      },
+      "ports": [
+        "B_3_Addr_B",
+        "B_3_Clk_B",
+        "B_3_Din_B",
+        "B_3_Dout_B",
+        "B_3_EN_B",
+        "B_3_Rst_B",
+        "B_3_WEN_B"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_4_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_4_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_4_Addr_A": "ADDR",
+        "B_4_EN_A": "EN",
+        "B_4_WEN_A": "WE",
+        "B_4_Din_A": "DIN",
+        "B_4_Dout_A": "DOUT",
+        "B_4_Clk_A": "CLK",
+        "B_4_Rst_A": "RST"
+      },
+      "ports": [
+        "B_4_Addr_A",
+        "B_4_Clk_A",
+        "B_4_Din_A",
+        "B_4_Dout_A",
+        "B_4_EN_A",
+        "B_4_Rst_A",
+        "B_4_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_4_PORTB": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_4_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_4_Addr_B": "ADDR",
+        "B_4_EN_B": "EN",
+        "B_4_WEN_B": "WE",
+        "B_4_Din_B": "DIN",
+        "B_4_Dout_B": "DOUT",
+        "B_4_Clk_B": "CLK",
+        "B_4_Rst_B": "RST"
+      },
+      "ports": [
+        "B_4_Addr_B",
+        "B_4_Clk_B",
+        "B_4_Din_B",
+        "B_4_Dout_B",
+        "B_4_EN_B",
+        "B_4_Rst_B",
+        "B_4_WEN_B"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_5_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_5_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_5_Addr_A": "ADDR",
+        "B_5_EN_A": "EN",
+        "B_5_WEN_A": "WE",
+        "B_5_Din_A": "DIN",
+        "B_5_Dout_A": "DOUT",
+        "B_5_Clk_A": "CLK",
+        "B_5_Rst_A": "RST"
+      },
+      "ports": [
+        "B_5_Addr_A",
+        "B_5_Clk_A",
+        "B_5_Din_A",
+        "B_5_Dout_A",
+        "B_5_EN_A",
+        "B_5_Rst_A",
+        "B_5_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "B_5_PORTB": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "B_5_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "24",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "B_5_Addr_B": "ADDR",
+        "B_5_EN_B": "EN",
+        "B_5_WEN_B": "WE",
+        "B_5_Din_B": "DIN",
+        "B_5_Dout_B": "DOUT",
+        "B_5_Clk_B": "CLK",
+        "B_5_Rst_B": "RST"
+      },
+      "ports": [
+        "B_5_Addr_B",
+        "B_5_Clk_B",
+        "B_5_Din_B",
+        "B_5_Dout_B",
+        "B_5_EN_B",
+        "B_5_Rst_B",
+        "B_5_WEN_B"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "B"
+        }]
+    },
+    "C_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "C_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "144",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "C_Addr_A": "ADDR",
+        "C_EN_A": "EN",
+        "C_WEN_A": "WE",
+        "C_Din_A": "DIN",
+        "C_Dout_A": "DOUT",
+        "C_Clk_A": "CLK",
+        "C_Rst_A": "RST"
+      },
+      "ports": [
+        "C_Addr_A",
+        "C_Clk_A",
+        "C_Din_A",
+        "C_Dout_A",
+        "C_EN_A",
+        "C_Rst_A",
+        "C_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "C"
+        }]
+    },
+    "C_PORTB": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "direction": "inout",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "C_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_SIZE": "144",
+        "MEM_WIDTH": "32",
+        "MEM_ADDRESS_MODE": "BYTE_ADDRESS",
+        "READ_LATENCY": "1"
+      },
+      "portMap": {
+        "C_Addr_B": "ADDR",
+        "C_EN_B": "EN",
+        "C_WEN_B": "WE",
+        "C_Din_B": "DIN",
+        "C_Dout_B": "DOUT",
+        "C_Clk_B": "CLK",
+        "C_Rst_B": "RST"
+      },
+      "ports": [
+        "C_Addr_B",
+        "C_Clk_B",
+        "C_Din_B",
+        "C_Dout_B",
+        "C_EN_B",
+        "C_Rst_B",
+        "C_WEN_B"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "C"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_0_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_0_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_0_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "A_0_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_0_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "A_0_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_0_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_1_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_1_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_1_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "A_1_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_1_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "A_1_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_1_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_2_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_2_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_2_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "A_2_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_2_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "A_2_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_2_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_3_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_3_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_3_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "A_3_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_3_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "A_3_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_3_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_4_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_4_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_4_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "A_4_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_4_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "A_4_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_4_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_5_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_5_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_5_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "A_5_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "A_5_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "A_5_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "A_5_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_0_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_0_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_0_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_0_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_0_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_0_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_0_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_0_Addr_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_0_EN_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_0_WEN_B": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_0_Din_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_0_Dout_B": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_0_Clk_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_0_Rst_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_1_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_1_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_1_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_1_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_1_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_1_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_1_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_1_Addr_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_1_EN_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_1_WEN_B": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_1_Din_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_1_Dout_B": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_1_Clk_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_1_Rst_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_2_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_2_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_2_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_2_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_2_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_2_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_2_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_2_Addr_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_2_EN_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_2_WEN_B": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_2_Din_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_2_Dout_B": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_2_Clk_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_2_Rst_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_3_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_3_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_3_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_3_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_3_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_3_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_3_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_3_Addr_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_3_EN_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_3_WEN_B": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_3_Din_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_3_Dout_B": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_3_Clk_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_3_Rst_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_4_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_4_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_4_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_4_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_4_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_4_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_4_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_4_Addr_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_4_EN_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_4_WEN_B": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_4_Din_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_4_Dout_B": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_4_Clk_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_4_Rst_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_5_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_5_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_5_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_5_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_5_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_5_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_5_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_5_Addr_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_5_EN_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_5_WEN_B": {
+      "dir": "out",
+      "width": "4"
+    },
+    "B_5_Din_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "B_5_Dout_B": {
+      "dir": "in",
+      "width": "32"
+    },
+    "B_5_Clk_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "B_5_Rst_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "C_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "C_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "C_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "C_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "C_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "C_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "C_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "C_Addr_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "C_EN_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "C_WEN_B": {
+      "dir": "out",
+      "width": "4"
+    },
+    "C_Din_B": {
+      "dir": "out",
+      "width": "32"
+    },
+    "C_Dout_B": {
+      "dir": "in",
+      "width": "32"
+    },
+    "C_Clk_B": {
+      "dir": "out",
+      "width": "1"
+    },
+    "C_Rst_B": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "matrix_mult_partition_one_dim",
+      "Instances": [{
+          "ModuleName": "matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1",
+          "InstanceName": "grp_matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1_fu_434",
+          "BindInstances": "sub_ln71_fu_670_p2 add_ln71_fu_704_p2 add_ln71_1_fu_714_p2 add_ln71_2_fu_724_p2 add_ln71_3_fu_734_p2 mul_32s_32s_32_1_1_U1 mul_32s_32s_32_1_1_U2 mul_32s_32s_32_1_1_U3 mul_32s_32s_32_1_1_U4 mul_32s_32s_32_1_1_U5 mul_32s_32s_32_1_1_U6 grp_fu_555_p2 mul_32s_32s_32_1_1_U7 mul_32s_32s_32_1_1_U8 mul_32s_32s_32_1_1_U9 mul_32s_32s_32_1_1_U10 mul_32s_32s_32_1_1_U11 mul_32s_32s_32_1_1_U12 grp_fu_586_p2 mul_32s_32s_32_1_1_U1 mul_32s_32s_32_1_1_U2 mul_32s_32s_32_1_1_U3 mul_32s_32s_32_1_1_U4 mul_32s_32s_32_1_1_U5 mul_32s_32s_32_1_1_U6 grp_fu_555_p2 mul_32s_32s_32_1_1_U7 mul_32s_32s_32_1_1_U8 mul_32s_32s_32_1_1_U9 mul_32s_32s_32_1_1_U10 mul_32s_32s_32_1_1_U11 mul_32s_32s_32_1_1_U12 grp_fu_586_p2 mul_32s_32s_32_1_1_U1 mul_32s_32s_32_1_1_U2 mul_32s_32s_32_1_1_U3 mul_32s_32s_32_1_1_U4 mul_32s_32s_32_1_1_U5 mul_32s_32s_32_1_1_U6 grp_fu_555_p2 mul_32s_32s_32_1_1_U7 mul_32s_32s_32_1_1_U8 mul_32s_32s_32_1_1_U9 mul_32s_32s_32_1_1_U10 mul_32s_32s_32_1_1_U11 mul_32s_32s_32_1_1_U12 grp_fu_586_p2 i_fu_635_p2 icmp_ln62_fu_641_p2"
+        }]
+    },
+    "Info": {
+      "matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "matrix_mult_partition_one_dim": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1": {
+        "Latency": {
+          "LatencyBest": "20",
+          "LatencyAvg": "20",
+          "LatencyWorst": "20",
+          "PipelineII": "18",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind (delay=0 clock cycles(s))"
+        },
+        "Timing": {
+          "Target": "25.00",
+          "Uncertainty": "6.75",
+          "Estimate": "6.179"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_62_1",
+            "TripCount": "6",
+            "Latency": "18",
+            "PipelineII": "3",
+            "PipelineDepth": "4"
+          }],
+        "Area": {
+          "DSP": "36",
+          "AVAIL_DSP": "12288",
+          "UTIL_DSP": "~0",
+          "FF": "211",
+          "AVAIL_FF": "3456000",
+          "UTIL_FF": "~0",
+          "LUT": "1201",
+          "AVAIL_LUT": "1728000",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "5376",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "1280",
+          "UTIL_URAM": "0"
+        }
+      },
+      "matrix_mult_partition_one_dim": {
+        "Latency": {
+          "LatencyBest": "24",
+          "LatencyAvg": "24",
+          "LatencyWorst": "24",
+          "PipelineII": "25",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "25.00",
+          "Uncertainty": "6.75",
+          "Estimate": "6.179"
+        },
+        "Area": {
+          "DSP": "36",
+          "AVAIL_DSP": "12288",
+          "UTIL_DSP": "~0",
+          "FF": "1369",
+          "AVAIL_FF": "3456000",
+          "UTIL_FF": "~0",
+          "LUT": "1472",
+          "AVAIL_LUT": "1728000",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "5376",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "1280",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2026-05-03 14:48:28 CDT",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2024.1"
+  }
+}

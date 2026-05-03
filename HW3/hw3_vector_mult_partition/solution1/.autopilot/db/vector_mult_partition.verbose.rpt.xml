@@ -1,0 +1,187 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'vector_mult_partition'" level="0">
+<item name = "Date">Sun May  3 14:47:53 2026
+</item>
+<item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
+<item name = "Project">hw3_vector_mult_partition</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu13p-fsga2577-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">25.00 ns, 3.170 ns, 6.75 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">0, 0, 0 ns, 0 ns, 1, 1, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 48, 0, 320, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 1, 0, ~0, 0</specialColumn>
+<specialColumn name="Available">5376, 12288, 3456000, 1728000, 1280</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, 0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mul_32s_32s_32_1_1_U1">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U2">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U3">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U4">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U5">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U6">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U7">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U8">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U9">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U10">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U11">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U12">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U13">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U14">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U15">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+<column name="mul_32s_32s_32_1_1_U16">mul_32s_32s_32_1_1, 0, 3, 0, 20, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_start">in, 1, ap_ctrl_hs, vector_mult_partition, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, vector_mult_partition, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, vector_mult_partition, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, vector_mult_partition, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, vector_mult_partition, return value</column>
+<column name="a_0">in, 32, ap_none, a_0, pointer</column>
+<column name="a_1">in, 32, ap_none, a_1, pointer</column>
+<column name="a_2">in, 32, ap_none, a_2, pointer</column>
+<column name="a_3">in, 32, ap_none, a_3, pointer</column>
+<column name="a_4">in, 32, ap_none, a_4, pointer</column>
+<column name="a_5">in, 32, ap_none, a_5, pointer</column>
+<column name="a_6">in, 32, ap_none, a_6, pointer</column>
+<column name="a_7">in, 32, ap_none, a_7, pointer</column>
+<column name="a_8">in, 32, ap_none, a_8, pointer</column>
+<column name="a_9">in, 32, ap_none, a_9, pointer</column>
+<column name="a_10">in, 32, ap_none, a_10, pointer</column>
+<column name="a_11">in, 32, ap_none, a_11, pointer</column>
+<column name="a_12">in, 32, ap_none, a_12, pointer</column>
+<column name="a_13">in, 32, ap_none, a_13, pointer</column>
+<column name="a_14">in, 32, ap_none, a_14, pointer</column>
+<column name="a_15">in, 32, ap_none, a_15, pointer</column>
+<column name="b_0">in, 32, ap_none, b_0, pointer</column>
+<column name="b_1">in, 32, ap_none, b_1, pointer</column>
+<column name="b_2">in, 32, ap_none, b_2, pointer</column>
+<column name="b_3">in, 32, ap_none, b_3, pointer</column>
+<column name="b_4">in, 32, ap_none, b_4, pointer</column>
+<column name="b_5">in, 32, ap_none, b_5, pointer</column>
+<column name="b_6">in, 32, ap_none, b_6, pointer</column>
+<column name="b_7">in, 32, ap_none, b_7, pointer</column>
+<column name="b_8">in, 32, ap_none, b_8, pointer</column>
+<column name="b_9">in, 32, ap_none, b_9, pointer</column>
+<column name="b_10">in, 32, ap_none, b_10, pointer</column>
+<column name="b_11">in, 32, ap_none, b_11, pointer</column>
+<column name="b_12">in, 32, ap_none, b_12, pointer</column>
+<column name="b_13">in, 32, ap_none, b_13, pointer</column>
+<column name="b_14">in, 32, ap_none, b_14, pointer</column>
+<column name="b_15">in, 32, ap_none, b_15, pointer</column>
+<column name="c_0">out, 32, ap_vld, c_0, pointer</column>
+<column name="c_0_ap_vld">out, 1, ap_vld, c_0, pointer</column>
+<column name="c_1">out, 32, ap_vld, c_1, pointer</column>
+<column name="c_1_ap_vld">out, 1, ap_vld, c_1, pointer</column>
+<column name="c_2">out, 32, ap_vld, c_2, pointer</column>
+<column name="c_2_ap_vld">out, 1, ap_vld, c_2, pointer</column>
+<column name="c_3">out, 32, ap_vld, c_3, pointer</column>
+<column name="c_3_ap_vld">out, 1, ap_vld, c_3, pointer</column>
+<column name="c_4">out, 32, ap_vld, c_4, pointer</column>
+<column name="c_4_ap_vld">out, 1, ap_vld, c_4, pointer</column>
+<column name="c_5">out, 32, ap_vld, c_5, pointer</column>
+<column name="c_5_ap_vld">out, 1, ap_vld, c_5, pointer</column>
+<column name="c_6">out, 32, ap_vld, c_6, pointer</column>
+<column name="c_6_ap_vld">out, 1, ap_vld, c_6, pointer</column>
+<column name="c_7">out, 32, ap_vld, c_7, pointer</column>
+<column name="c_7_ap_vld">out, 1, ap_vld, c_7, pointer</column>
+<column name="c_8">out, 32, ap_vld, c_8, pointer</column>
+<column name="c_8_ap_vld">out, 1, ap_vld, c_8, pointer</column>
+<column name="c_9">out, 32, ap_vld, c_9, pointer</column>
+<column name="c_9_ap_vld">out, 1, ap_vld, c_9, pointer</column>
+<column name="c_10">out, 32, ap_vld, c_10, pointer</column>
+<column name="c_10_ap_vld">out, 1, ap_vld, c_10, pointer</column>
+<column name="c_11">out, 32, ap_vld, c_11, pointer</column>
+<column name="c_11_ap_vld">out, 1, ap_vld, c_11, pointer</column>
+<column name="c_12">out, 32, ap_vld, c_12, pointer</column>
+<column name="c_12_ap_vld">out, 1, ap_vld, c_12, pointer</column>
+<column name="c_13">out, 32, ap_vld, c_13, pointer</column>
+<column name="c_13_ap_vld">out, 1, ap_vld, c_13, pointer</column>
+<column name="c_14">out, 32, ap_vld, c_14, pointer</column>
+<column name="c_14_ap_vld">out, 1, ap_vld, c_14, pointer</column>
+<column name="c_15">out, 32, ap_vld, c_15, pointer</column>
+<column name="c_15_ap_vld">out, 1, ap_vld, c_15, pointer</column>
+</table>
+</item>
+</section>
+</profile>

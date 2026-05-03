@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void print_vector(const char name[], data_t v[VEC_N]) {
+void print_vector(const char name[], int v[VEC_N]) {
     cout << name << ":" << endl;
 
     for (int i = 0; i < VEC_N; i++) {
@@ -13,7 +13,7 @@ void print_vector(const char name[], data_t v[VEC_N]) {
     cout << endl << endl;
 }
 
-void print_matrix(const char name[], data_t M[MAT_N][MAT_N]) {
+void print_matrix(const char name[], int M[MAT_N][MAT_N]) {
     cout << name << ":" << endl;
 
     for (int i = 0; i < MAT_N; i++) {
@@ -27,13 +27,13 @@ void print_matrix(const char name[], data_t M[MAT_N][MAT_N]) {
 }
 
 int main() {
-    data_t a[VEC_N];
-    data_t b[VEC_N];
-    data_t c[VEC_N];
+    int a[VEC_N];
+    int b[VEC_N];
+    int c[VEC_N];
 
-    data_t A[MAT_N][MAT_N];
-    data_t B[MAT_N][MAT_N];
-    data_t C[MAT_N][MAT_N];
+    int A[MAT_N][MAT_N];
+    int B[MAT_N][MAT_N];
+    int C[MAT_N][MAT_N];
 
     for (int i = 0; i < VEC_N; i++) {
         a[i] = i + 1;

@@ -1,0 +1,399 @@
+
+
+================================================================
+== Synthesis Summary Report of 'matrix_mult_partition_both_dims'
+================================================================
++ General Information: 
+    * Date:           Sun May  3 14:48:46 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        hw3_matrix_mult_partition_both_dims
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p-fsga2577-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+-----------+-----+
+    |               Modules              | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |          |          |           |     |
+    |               & Loops              | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |    FF    |    LUT    | URAM|
+    +------------------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+-----------+-----+
+    |+ matrix_mult_partition_both_dims   |    II|  12.29|       37|  925.000|         -|       36|     -|    rewind|     -|  18 (~0%)|  18 (~0%)|  811 (~0%)|    -|
+    | o VITIS_LOOP_89_1_VITIS_LOOP_90_2  |     -|  18.25|       35|  875.000|         1|        1|    36|       yes|     -|         -|         -|          -|    -|
+    +------------------------------------+------+-------+---------+---------+----------+---------+------+----------+------+----------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-------+---------+-----------+----------+
+| Port  | Mode    | Direction | Bitwidth |
++-------+---------+-----------+----------+
+| A_0_0 | ap_none | in        | 32       |
+| A_0_1 | ap_none | in        | 32       |
+| A_0_2 | ap_none | in        | 32       |
+| A_0_3 | ap_none | in        | 32       |
+| A_0_4 | ap_none | in        | 32       |
+| A_0_5 | ap_none | in        | 32       |
+| A_1_0 | ap_none | in        | 32       |
+| A_1_1 | ap_none | in        | 32       |
+| A_1_2 | ap_none | in        | 32       |
+| A_1_3 | ap_none | in        | 32       |
+| A_1_4 | ap_none | in        | 32       |
+| A_1_5 | ap_none | in        | 32       |
+| A_2_0 | ap_none | in        | 32       |
+| A_2_1 | ap_none | in        | 32       |
+| A_2_2 | ap_none | in        | 32       |
+| A_2_3 | ap_none | in        | 32       |
+| A_2_4 | ap_none | in        | 32       |
+| A_2_5 | ap_none | in        | 32       |
+| A_3_0 | ap_none | in        | 32       |
+| A_3_1 | ap_none | in        | 32       |
+| A_3_2 | ap_none | in        | 32       |
+| A_3_3 | ap_none | in        | 32       |
+| A_3_4 | ap_none | in        | 32       |
+| A_3_5 | ap_none | in        | 32       |
+| A_4_0 | ap_none | in        | 32       |
+| A_4_1 | ap_none | in        | 32       |
+| A_4_2 | ap_none | in        | 32       |
+| A_4_3 | ap_none | in        | 32       |
+| A_4_4 | ap_none | in        | 32       |
+| A_4_5 | ap_none | in        | 32       |
+| A_5_0 | ap_none | in        | 32       |
+| A_5_1 | ap_none | in        | 32       |
+| A_5_2 | ap_none | in        | 32       |
+| A_5_3 | ap_none | in        | 32       |
+| A_5_4 | ap_none | in        | 32       |
+| A_5_5 | ap_none | in        | 32       |
+| B_0_0 | ap_none | in        | 32       |
+| B_0_1 | ap_none | in        | 32       |
+| B_0_2 | ap_none | in        | 32       |
+| B_0_3 | ap_none | in        | 32       |
+| B_0_4 | ap_none | in        | 32       |
+| B_0_5 | ap_none | in        | 32       |
+| B_1_0 | ap_none | in        | 32       |
+| B_1_1 | ap_none | in        | 32       |
+| B_1_2 | ap_none | in        | 32       |
+| B_1_3 | ap_none | in        | 32       |
+| B_1_4 | ap_none | in        | 32       |
+| B_1_5 | ap_none | in        | 32       |
+| B_2_0 | ap_none | in        | 32       |
+| B_2_1 | ap_none | in        | 32       |
+| B_2_2 | ap_none | in        | 32       |
+| B_2_3 | ap_none | in        | 32       |
+| B_2_4 | ap_none | in        | 32       |
+| B_2_5 | ap_none | in        | 32       |
+| B_3_0 | ap_none | in        | 32       |
+| B_3_1 | ap_none | in        | 32       |
+| B_3_2 | ap_none | in        | 32       |
+| B_3_3 | ap_none | in        | 32       |
+| B_3_4 | ap_none | in        | 32       |
+| B_3_5 | ap_none | in        | 32       |
+| B_4_0 | ap_none | in        | 32       |
+| B_4_1 | ap_none | in        | 32       |
+| B_4_2 | ap_none | in        | 32       |
+| B_4_3 | ap_none | in        | 32       |
+| B_4_4 | ap_none | in        | 32       |
+| B_4_5 | ap_none | in        | 32       |
+| B_5_0 | ap_none | in        | 32       |
+| B_5_1 | ap_none | in        | 32       |
+| B_5_2 | ap_none | in        | 32       |
+| B_5_3 | ap_none | in        | 32       |
+| B_5_4 | ap_none | in        | 32       |
+| B_5_5 | ap_none | in        | 32       |
+| C_0_0 | ap_vld  | out       | 32       |
+| C_0_1 | ap_vld  | out       | 32       |
+| C_0_2 | ap_vld  | out       | 32       |
+| C_0_3 | ap_vld  | out       | 32       |
+| C_0_4 | ap_vld  | out       | 32       |
+| C_0_5 | ap_vld  | out       | 32       |
+| C_1_0 | ap_vld  | out       | 32       |
+| C_1_1 | ap_vld  | out       | 32       |
+| C_1_2 | ap_vld  | out       | 32       |
+| C_1_3 | ap_vld  | out       | 32       |
+| C_1_4 | ap_vld  | out       | 32       |
+| C_1_5 | ap_vld  | out       | 32       |
+| C_2_0 | ap_vld  | out       | 32       |
+| C_2_1 | ap_vld  | out       | 32       |
+| C_2_2 | ap_vld  | out       | 32       |
+| C_2_3 | ap_vld  | out       | 32       |
+| C_2_4 | ap_vld  | out       | 32       |
+| C_2_5 | ap_vld  | out       | 32       |
+| C_3_0 | ap_vld  | out       | 32       |
+| C_3_1 | ap_vld  | out       | 32       |
+| C_3_2 | ap_vld  | out       | 32       |
+| C_3_3 | ap_vld  | out       | 32       |
+| C_3_4 | ap_vld  | out       | 32       |
+| C_3_5 | ap_vld  | out       | 32       |
+| C_4_0 | ap_vld  | out       | 32       |
+| C_4_1 | ap_vld  | out       | 32       |
+| C_4_2 | ap_vld  | out       | 32       |
+| C_4_3 | ap_vld  | out       | 32       |
+| C_4_4 | ap_vld  | out       | 32       |
+| C_4_5 | ap_vld  | out       | 32       |
+| C_5_0 | ap_vld  | out       | 32       |
+| C_5_1 | ap_vld  | out       | 32       |
+| C_5_2 | ap_vld  | out       | 32       |
+| C_5_3 | ap_vld  | out       | 32       |
+| C_5_4 | ap_vld  | out       | 32       |
+| C_5_5 | ap_vld  | out       | 32       |
++-------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | int*     |
+| B        | in        | int*     |
+| C        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| A        | A_0_0        | port    |
+| A        | A_0_1        | port    |
+| A        | A_0_2        | port    |
+| A        | A_0_3        | port    |
+| A        | A_0_4        | port    |
+| A        | A_0_5        | port    |
+| A        | A_1_0        | port    |
+| A        | A_1_1        | port    |
+| A        | A_1_2        | port    |
+| A        | A_1_3        | port    |
+| A        | A_1_4        | port    |
+| A        | A_1_5        | port    |
+| A        | A_2_0        | port    |
+| A        | A_2_1        | port    |
+| A        | A_2_2        | port    |
+| A        | A_2_3        | port    |
+| A        | A_2_4        | port    |
+| A        | A_2_5        | port    |
+| A        | A_3_0        | port    |
+| A        | A_3_1        | port    |
+| A        | A_3_2        | port    |
+| A        | A_3_3        | port    |
+| A        | A_3_4        | port    |
+| A        | A_3_5        | port    |
+| A        | A_4_0        | port    |
+| A        | A_4_1        | port    |
+| A        | A_4_2        | port    |
+| A        | A_4_3        | port    |
+| A        | A_4_4        | port    |
+| A        | A_4_5        | port    |
+| A        | A_5_0        | port    |
+| A        | A_5_1        | port    |
+| A        | A_5_2        | port    |
+| A        | A_5_3        | port    |
+| A        | A_5_4        | port    |
+| A        | A_5_5        | port    |
+| B        | B_0_0        | port    |
+| B        | B_0_1        | port    |
+| B        | B_0_2        | port    |
+| B        | B_0_3        | port    |
+| B        | B_0_4        | port    |
+| B        | B_0_5        | port    |
+| B        | B_1_0        | port    |
+| B        | B_1_1        | port    |
+| B        | B_1_2        | port    |
+| B        | B_1_3        | port    |
+| B        | B_1_4        | port    |
+| B        | B_1_5        | port    |
+| B        | B_2_0        | port    |
+| B        | B_2_1        | port    |
+| B        | B_2_2        | port    |
+| B        | B_2_3        | port    |
+| B        | B_2_4        | port    |
+| B        | B_2_5        | port    |
+| B        | B_3_0        | port    |
+| B        | B_3_1        | port    |
+| B        | B_3_2        | port    |
+| B        | B_3_3        | port    |
+| B        | B_3_4        | port    |
+| B        | B_3_5        | port    |
+| B        | B_4_0        | port    |
+| B        | B_4_1        | port    |
+| B        | B_4_2        | port    |
+| B        | B_4_3        | port    |
+| B        | B_4_4        | port    |
+| B        | B_4_5        | port    |
+| B        | B_5_0        | port    |
+| B        | B_5_1        | port    |
+| B        | B_5_2        | port    |
+| B        | B_5_3        | port    |
+| B        | B_5_4        | port    |
+| B        | B_5_5        | port    |
+| C        | C_0_0        | port    |
+| C        | C_0_0_ap_vld | port    |
+| C        | C_0_1        | port    |
+| C        | C_0_1_ap_vld | port    |
+| C        | C_0_2        | port    |
+| C        | C_0_2_ap_vld | port    |
+| C        | C_0_3        | port    |
+| C        | C_0_3_ap_vld | port    |
+| C        | C_0_4        | port    |
+| C        | C_0_4_ap_vld | port    |
+| C        | C_0_5        | port    |
+| C        | C_0_5_ap_vld | port    |
+| C        | C_1_0        | port    |
+| C        | C_1_0_ap_vld | port    |
+| C        | C_1_1        | port    |
+| C        | C_1_1_ap_vld | port    |
+| C        | C_1_2        | port    |
+| C        | C_1_2_ap_vld | port    |
+| C        | C_1_3        | port    |
+| C        | C_1_3_ap_vld | port    |
+| C        | C_1_4        | port    |
+| C        | C_1_4_ap_vld | port    |
+| C        | C_1_5        | port    |
+| C        | C_1_5_ap_vld | port    |
+| C        | C_2_0        | port    |
+| C        | C_2_0_ap_vld | port    |
+| C        | C_2_1        | port    |
+| C        | C_2_1_ap_vld | port    |
+| C        | C_2_2        | port    |
+| C        | C_2_2_ap_vld | port    |
+| C        | C_2_3        | port    |
+| C        | C_2_3_ap_vld | port    |
+| C        | C_2_4        | port    |
+| C        | C_2_4_ap_vld | port    |
+| C        | C_2_5        | port    |
+| C        | C_2_5_ap_vld | port    |
+| C        | C_3_0        | port    |
+| C        | C_3_0_ap_vld | port    |
+| C        | C_3_1        | port    |
+| C        | C_3_1_ap_vld | port    |
+| C        | C_3_2        | port    |
+| C        | C_3_2_ap_vld | port    |
+| C        | C_3_3        | port    |
+| C        | C_3_3_ap_vld | port    |
+| C        | C_3_4        | port    |
+| C        | C_3_4_ap_vld | port    |
+| C        | C_3_5        | port    |
+| C        | C_3_5_ap_vld | port    |
+| C        | C_4_0        | port    |
+| C        | C_4_0_ap_vld | port    |
+| C        | C_4_1        | port    |
+| C        | C_4_1_ap_vld | port    |
+| C        | C_4_2        | port    |
+| C        | C_4_2_ap_vld | port    |
+| C        | C_4_3        | port    |
+| C        | C_4_3_ap_vld | port    |
+| C        | C_4_4        | port    |
+| C        | C_4_4_ap_vld | port    |
+| C        | C_4_5        | port    |
+| C        | C_4_5_ap_vld | port    |
+| C        | C_5_0        | port    |
+| C        | C_5_0_ap_vld | port    |
+| C        | C_5_1        | port    |
+| C        | C_5_1_ap_vld | port    |
+| C        | C_5_2        | port    |
+| C        | C_5_2_ap_vld | port    |
+| C        | C_5_3        | port    |
+| C        | C_5_3_ap_vld | port    |
+| C        | C_5_4        | port    |
+| C        | C_5_4_ap_vld | port    |
+| C        | C_5_5        | port    |
+| C        | C_5_5_ap_vld | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------+-----+--------+-------------+-----------+----------+---------+
+| Name                              | DSP | Pragma | Variable    | Op        | Impl     | Latency |
++-----------------------------------+-----+--------+-------------+-----------+----------+---------+
+| + matrix_mult_partition_both_dims | 18  |        |             |           |          |         |
+|   select_ln89_fu_1040_p3          |     |        | select_ln89 | select    | auto_sel | 0       |
+|   i_fu_1048_p3                    |     |        | i           | select    | auto_sel | 0       |
+|   sparsemux_13_3_32_1_1_U7        |     |        | tmp         | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U8        |     |        | tmp_1       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U9        |     |        | tmp_2       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U10       |     |        | tmp_3       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U11       |     |        | tmp_4       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U12       |     |        | tmp_5       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U13       |     |        | tmp_6       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U14       |     |        | tmp_7       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U15       |     |        | tmp_8       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U16       |     |        | tmp_9       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U17       |     |        | tmp_s       | sparsemux | auto     | 0       |
+|   sparsemux_13_3_32_1_1_U18       |     |        | tmp_10      | sparsemux | auto     | 0       |
+|   mul_32s_32s_32_1_1_U1           | 3   |        | mul_ln95    | mul       | auto     | 0       |
+|   mul_32s_32s_32_1_1_U2           | 3   |        | mul_ln95_1  | mul       | auto     | 0       |
+|   mul_32s_32s_32_1_1_U3           | 3   |        | mul_ln95_2  | mul       | auto     | 0       |
+|   mul_32s_32s_32_1_1_U4           | 3   |        | mul_ln95_3  | mul       | auto     | 0       |
+|   mul_32s_32s_32_1_1_U5           | 3   |        | mul_ln95_4  | mul       | auto     | 0       |
+|   mul_32s_32s_32_1_1_U6           | 3   |        | mul_ln95_5  | mul       | auto     | 0       |
+|   add_ln95_fu_1452_p2             |     |        | add_ln95    | add       | fabric   | 0       |
+|   add_ln89_1_fu_1518_p2           |     |        | add_ln89_1  | add       | fabric   | 0       |
+|   j_fu_1524_p2                    |     |        | j           | add       | fabric   | 0       |
+|   icmp_ln90_fu_1530_p2            |     |        | icmp_ln90   | seteq     | auto     | 0       |
+|   add_ln89_fu_1536_p2             |     |        | add_ln89    | add       | fabric   | 0       |
+|   icmp_ln89_fu_1542_p2            |     |        | icmp_ln89   | seteq     | auto     | 0       |
++-----------------------------------+-----+--------+-------------+-----------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++-----------+------------------+----------------------------------------------------------+-------------------------------------------------------------------+
+| Type      | Options          | Location                                                 | Messages                                                          |
++-----------+------------------+----------------------------------------------------------+-------------------------------------------------------------------+
+| interface | mode=bram port=A | hw3_kernels.cpp:81 in matrix_mult_partition_both_dims, A | Unsuported scalar variable on pragma 'bram Interface', ignore it. |
+| interface | mode=bram port=B | hw3_kernels.cpp:82 in matrix_mult_partition_both_dims, B | Unsuported scalar variable on pragma 'bram Interface', ignore it. |
+| interface | mode=bram port=C | hw3_kernels.cpp:83 in matrix_mult_partition_both_dims, C | Unsuported scalar variable on pragma 'bram Interface', ignore it. |
++-----------+------------------+----------------------------------------------------------+-------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+---------------------------+----------------------------------------------------------+
+| Type            | Options                   | Location                                                 |
++-----------------+---------------------------+----------------------------------------------------------+
+| interface       | mode=bram port=a          | hw3_kernels.cpp:4 in vector_mult_bram, a                 |
+| interface       | mode=bram port=b          | hw3_kernels.cpp:5 in vector_mult_bram, b                 |
+| interface       | mode=bram port=c          | hw3_kernels.cpp:6 in vector_mult_bram, c                 |
+| interface       | mode=bram port=a          | hw3_kernels.cpp:14 in vector_mult_partition, a           |
+| interface       | mode=bram port=b          | hw3_kernels.cpp:15 in vector_mult_partition, b           |
+| interface       | mode=bram port=c          | hw3_kernels.cpp:16 in vector_mult_partition, c           |
+| array_partition | variable=a complete dim=1 | hw3_kernels.cpp:18 in vector_mult_partition, a           |
+| array_partition | variable=b complete dim=1 | hw3_kernels.cpp:19 in vector_mult_partition, b           |
+| array_partition | variable=c complete dim=1 | hw3_kernels.cpp:20 in vector_mult_partition, c           |
+| unroll          |                           | hw3_kernels.cpp:23 in vector_mult_partition              |
+| interface       | mode=bram port=A          | hw3_kernels.cpp:33 in matrix_mult_bram, A                |
+| interface       | mode=bram port=B          | hw3_kernels.cpp:34 in matrix_mult_bram, B                |
+| interface       | mode=bram port=C          | hw3_kernels.cpp:35 in matrix_mult_bram, C                |
+| interface       | mode=bram port=A          | hw3_kernels.cpp:55 in matrix_mult_partition_one_dim, A   |
+| interface       | mode=bram port=B          | hw3_kernels.cpp:56 in matrix_mult_partition_one_dim, B   |
+| interface       | mode=bram port=C          | hw3_kernels.cpp:57 in matrix_mult_partition_one_dim, C   |
+| array_partition | variable=A complete dim=2 | hw3_kernels.cpp:59 in matrix_mult_partition_one_dim, A   |
+| array_partition | variable=B complete dim=1 | hw3_kernels.cpp:60 in matrix_mult_partition_one_dim, B   |
+| unroll          |                           | hw3_kernels.cpp:67 in matrix_mult_partition_one_dim      |
+| array_partition | variable=A complete dim=0 | hw3_kernels.cpp:85 in matrix_mult_partition_both_dims, A |
+| array_partition | variable=B complete dim=0 | hw3_kernels.cpp:86 in matrix_mult_partition_both_dims, B |
+| array_partition | variable=C complete dim=0 | hw3_kernels.cpp:87 in matrix_mult_partition_both_dims, C |
+| unroll          |                           | hw3_kernels.cpp:94 in matrix_mult_partition_both_dims    |
++-----------------+---------------------------+----------------------------------------------------------+
+
+

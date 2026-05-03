@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="hw3_kernels.cpp" line="67" pragmaType="unroll" parentfunction="matrix_mult_partition_one_dim" factor="-1" skip_exit_check="0"/>
+<pragma file="hw3_kernels.cpp" line="55" pragmaType="interface" parentfunction="matrix_mult_partition_one_dim" mode="ap_memory" port="A" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="hw3_kernels.cpp" line="56" pragmaType="interface" parentfunction="matrix_mult_partition_one_dim" mode="ap_memory" port="B" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="hw3_kernels.cpp" line="57" pragmaType="interface" parentfunction="matrix_mult_partition_one_dim" mode="ap_memory" port="C" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="hw3_kernels.cpp" line="59" pragmaType="array_partition" parentfunction="matrix_mult_partition_one_dim" dim="2" factor="0" mode="complete" dynamic="0" variable="A"/>
+<pragma file="hw3_kernels.cpp" line="60" pragmaType="array_partition" parentfunction="matrix_mult_partition_one_dim" dim="1" factor="0" mode="complete" dynamic="0" variable="B"/>
+</pragmas>

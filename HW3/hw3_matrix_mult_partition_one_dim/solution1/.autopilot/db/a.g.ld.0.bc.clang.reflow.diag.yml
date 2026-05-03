@@ -1,0 +1,88 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: hw3_kernels.cpp, Line: 54, Column: 0 }
+Function:        _Z29matrix_mult_partition_one_dimPA6_iS0_S0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_66_3
+  - String:          ''' ('
+  - LoopLoc:         'hw3_kernels.cpp:66:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrix_mult_partition_one_dim
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: hw3_kernels.cpp, Line: 54, Column: 0 }
+Function:        _Z29matrix_mult_partition_one_dimPA6_iS0_S0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          A
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: hw3_kernels.cpp, Line: 54, Column: 0 }
+Function:        _Z29matrix_mult_partition_one_dimPA6_iS0_S0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          B
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_62_1
+  - String:          '> at '
+  - LoopLoc:         'hw3_kernels.cpp:62:19'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: hw3_kernels.cpp, Line: 63, Column: 26 }
+Function:        _Z29matrix_mult_partition_one_dimPA6_iS0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_63_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: hw3_kernels.cpp, Line: 54, Column: 0 }
+Function:        _Z29matrix_mult_partition_one_dimPA6_iS0_S0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_63_2
+  - String:          ''' ('
+  - LoopLoc:         'hw3_kernels.cpp:63:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrix_mult_partition_one_dim
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...

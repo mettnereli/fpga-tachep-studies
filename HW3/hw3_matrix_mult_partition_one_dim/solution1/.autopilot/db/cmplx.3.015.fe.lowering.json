@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "hw3_kernels.cpp",
+    "fileloc": 50,
+    "instructions": 194,
+    "loads": {
+      "T": 42
+    },
+    "name": "matrix_mult_partition_one_dim",
+    "stores": {
+      "T": 6
+    },
+    "total_instructions": 194
+  }
+}

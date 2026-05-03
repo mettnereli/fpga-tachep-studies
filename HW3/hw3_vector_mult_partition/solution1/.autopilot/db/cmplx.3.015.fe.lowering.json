@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hw3_kernels.cpp",
+    "fileloc": 13,
+    "instructions": 161,
+    "loads": {
+      "T": 32
+    },
+    "name": "vector_mult_partition",
+    "stores": {
+      "T": 16
+    },
+    "total_instructions": 161
+  }
+}

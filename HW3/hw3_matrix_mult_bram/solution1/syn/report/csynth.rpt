@@ -1,0 +1,149 @@
+
+
+================================================================
+== Synthesis Summary Report of 'matrix_mult_bram'
+================================================================
++ General Information: 
+    * Date:           Sun May  3 14:48:09 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        hw3_matrix_mult_bram
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p-fsga2577-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |               Modules              | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |           |     |
+    |               & Loops              | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ matrix_mult_bram                  |    II|  12.22|      110|  2.750e+03|         -|      108|     -|    rewind|     -|  6 (~0%)|  163 (~0%)|  659 (~0%)|    -|
+    | o VITIS_LOOP_37_1_VITIS_LOOP_38_2  |    II|  18.25|      108|  2.700e+03|         4|        3|    36|       yes|     -|        -|          -|          -|    -|
+    +------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* BRAM
++-----------+------------+---------------+
+| Interface | Data Width | Address Width |
++-----------+------------+---------------+
+| A_PORTA   | 32         | 32            |
+| A_PORTB   | 32         | 32            |
+| B_PORTA   | 32         | 32            |
+| B_PORTB   | 32         | 32            |
+| C_PORTA   | 32         | 32            |
++-----------+------------+---------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | int*     |
+| B        | in        | int*     |
+| C        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| A        | A_PORTA      | interface |
+| A        | A_PORTB      | interface |
+| B        | B_PORTA      | interface |
+| B        | B_PORTB      | interface |
+| C        | C_PORTA      | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------+-----+--------+-------------+--------+----------+---------+
+| Name                    | DSP | Pragma | Variable    | Op     | Impl     | Latency |
++-------------------------+-----+--------+-------------+--------+----------+---------+
+| + matrix_mult_bram      | 6   |        |             |        |          |         |
+|   add_ln37_fu_266_p2    |     |        | add_ln37    | add    | fabric   | 0       |
+|   select_ln37_fu_272_p3 |     |        | select_ln37 | select | auto_sel | 0       |
+|   i_fu_280_p3           |     |        | i           | select | auto_sel | 0       |
+|   empty_fu_308_p2       |     |        | empty       | sub    | fabric   | 0       |
+|   empty_6_fu_367_p2     |     |        | empty_6     | add    | fabric   | 0       |
+|   empty_7_fu_377_p2     |     |        | empty_7     | add    | fabric   | 0       |
+|   empty_8_fu_415_p2     |     |        | empty_8     | add    | fabric   | 0       |
+|   empty_9_fu_425_p2     |     |        | empty_9     | add    | fabric   | 0       |
+|   add_ln42_4_fu_351_p2  |     |        | add_ln42_4  | add    | fabric   | 0       |
+|   add_ln42_5_fu_390_p2  |     |        | add_ln42_5  | add    | fabric   | 0       |
+|   add_ln42_6_fu_401_p2  |     |        | add_ln42_6  | add    | fabric   | 0       |
+|   add_ln42_7_fu_454_p2  |     |        | add_ln42_7  | add    | fabric   | 0       |
+|   add_ln45_fu_465_p2    |     |        | add_ln45    | add    | fabric   | 0       |
+|   mul_32s_32s_32_1_1_U1 | 3   |        | mul_ln42    | mul    | auto     | 0       |
+|   mul_32s_32s_32_1_1_U1 | 3   |        | mul_ln42_1  | mul    | auto     | 0       |
+|   mul_32s_32s_32_1_1_U2 | 3   |        | mul_ln42_2  | mul    | auto     | 0       |
+|   mul_32s_32s_32_1_1_U1 | 3   |        | mul_ln42_3  | mul    | auto     | 0       |
+|   mul_32s_32s_32_1_1_U2 | 3   |        | mul_ln42_4  | mul    | auto     | 0       |
+|   mul_32s_32s_32_1_1_U2 | 3   |        | mul_ln42_5  | mul    | auto     | 0       |
+|   add_ln42_fu_470_p2    |     |        | add_ln42    | add    | fabric   | 0       |
+|   j_fu_475_p2           |     |        | j           | add    | fabric   | 0       |
+|   add_ln37_1_fu_480_p2  |     |        | add_ln37_1  | add    | fabric   | 0       |
+|   icmp_ln38_fu_486_p2   |     |        | icmp_ln38   | seteq  | auto     | 0       |
+|   icmp_ln37_fu_492_p2   |     |        | icmp_ln37   | seteq  | auto     | 0       |
++-------------------------+-----+--------+-------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------+----------------------------------------------------------+
+| Type            | Options                   | Location                                                 |
++-----------------+---------------------------+----------------------------------------------------------+
+| interface       | mode=bram port=a          | hw3_kernels.cpp:4 in vector_mult_bram, a                 |
+| interface       | mode=bram port=b          | hw3_kernels.cpp:5 in vector_mult_bram, b                 |
+| interface       | mode=bram port=c          | hw3_kernels.cpp:6 in vector_mult_bram, c                 |
+| interface       | mode=bram port=a          | hw3_kernels.cpp:14 in vector_mult_partition, a           |
+| interface       | mode=bram port=b          | hw3_kernels.cpp:15 in vector_mult_partition, b           |
+| interface       | mode=bram port=c          | hw3_kernels.cpp:16 in vector_mult_partition, c           |
+| array_partition | variable=a complete dim=1 | hw3_kernels.cpp:18 in vector_mult_partition, a           |
+| array_partition | variable=b complete dim=1 | hw3_kernels.cpp:19 in vector_mult_partition, b           |
+| array_partition | variable=c complete dim=1 | hw3_kernels.cpp:20 in vector_mult_partition, c           |
+| unroll          |                           | hw3_kernels.cpp:23 in vector_mult_partition              |
+| interface       | mode=bram port=A          | hw3_kernels.cpp:33 in matrix_mult_bram, A                |
+| interface       | mode=bram port=B          | hw3_kernels.cpp:34 in matrix_mult_bram, B                |
+| interface       | mode=bram port=C          | hw3_kernels.cpp:35 in matrix_mult_bram, C                |
+| interface       | mode=bram port=A          | hw3_kernels.cpp:55 in matrix_mult_partition_one_dim, A   |
+| interface       | mode=bram port=B          | hw3_kernels.cpp:56 in matrix_mult_partition_one_dim, B   |
+| interface       | mode=bram port=C          | hw3_kernels.cpp:57 in matrix_mult_partition_one_dim, C   |
+| array_partition | variable=A complete dim=2 | hw3_kernels.cpp:59 in matrix_mult_partition_one_dim, A   |
+| array_partition | variable=B complete dim=1 | hw3_kernels.cpp:60 in matrix_mult_partition_one_dim, B   |
+| unroll          |                           | hw3_kernels.cpp:67 in matrix_mult_partition_one_dim      |
+| interface       | mode=bram port=A          | hw3_kernels.cpp:81 in matrix_mult_partition_both_dims, A |
+| interface       | mode=bram port=B          | hw3_kernels.cpp:82 in matrix_mult_partition_both_dims, B |
+| interface       | mode=bram port=C          | hw3_kernels.cpp:83 in matrix_mult_partition_both_dims, C |
+| array_partition | variable=A complete dim=0 | hw3_kernels.cpp:85 in matrix_mult_partition_both_dims, A |
+| array_partition | variable=B complete dim=0 | hw3_kernels.cpp:86 in matrix_mult_partition_both_dims, B |
+| array_partition | variable=C complete dim=0 | hw3_kernels.cpp:87 in matrix_mult_partition_both_dims, C |
+| unroll          |                           | hw3_kernels.cpp:94 in matrix_mult_partition_both_dims    |
++-----------------+---------------------------+----------------------------------------------------------+
+
+

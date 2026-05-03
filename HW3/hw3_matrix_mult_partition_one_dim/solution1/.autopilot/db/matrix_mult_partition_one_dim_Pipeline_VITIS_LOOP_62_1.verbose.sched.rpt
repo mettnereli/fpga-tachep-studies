@@ -1,0 +1,321 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1'
+================================================================
+* Date:           Sun May  3 14:48:24 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        hw3_matrix_mult_partition_one_dim
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p-fsga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  25.00 ns|  6.179 ns|     6.75 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       20|       20|  0.500 us|  0.500 us|   18|   18|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_62_1  |       18|       18|         4|          3|          1|     6|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 3, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 3, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.34>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i1 = alloca i32 1"   --->   Operation 7 'alloca' 'i1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %C, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_5, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_4, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_3, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_2, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%B_1_load_5_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_1_load_5"   --->   Operation 15 'read' 'B_1_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%B_5_load_5_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_5_load_5"   --->   Operation 16 'read' 'B_5_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%B_3_load_5_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_3_load_5"   --->   Operation 17 'read' 'B_3_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%B_4_load_5_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_4_load_5"   --->   Operation 18 'read' 'B_4_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%B_0_load_5_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_0_load_5"   --->   Operation 19 'read' 'B_0_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%B_2_load_5_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_2_load_5"   --->   Operation 20 'read' 'B_2_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%B_1_load_4_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_1_load_4"   --->   Operation 21 'read' 'B_1_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%B_5_load_4_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_5_load_4"   --->   Operation 22 'read' 'B_5_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%B_3_load_4_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_3_load_4"   --->   Operation 23 'read' 'B_3_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%B_4_load_4_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_4_load_4"   --->   Operation 24 'read' 'B_4_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%B_0_load_4_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_0_load_4"   --->   Operation 25 'read' 'B_0_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%B_2_load_4_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_2_load_4"   --->   Operation 26 'read' 'B_2_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%B_1_load_3_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_1_load_3"   --->   Operation 27 'read' 'B_1_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%B_5_load_3_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_5_load_3"   --->   Operation 28 'read' 'B_5_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%B_3_load_3_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_3_load_3"   --->   Operation 29 'read' 'B_3_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%B_4_load_3_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_4_load_3"   --->   Operation 30 'read' 'B_4_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%B_0_load_3_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_0_load_3"   --->   Operation 31 'read' 'B_0_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%B_2_load_3_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_2_load_3"   --->   Operation 32 'read' 'B_2_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%B_1_load_2_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_1_load_2"   --->   Operation 33 'read' 'B_1_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%B_5_load_2_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_5_load_2"   --->   Operation 34 'read' 'B_5_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%B_3_load_2_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_3_load_2"   --->   Operation 35 'read' 'B_3_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%B_4_load_2_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_4_load_2"   --->   Operation 36 'read' 'B_4_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%B_0_load_2_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_0_load_2"   --->   Operation 37 'read' 'B_0_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%B_2_load_2_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_2_load_2"   --->   Operation 38 'read' 'B_2_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%B_1_load_1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_1_load_1"   --->   Operation 39 'read' 'B_1_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%B_5_load_1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_5_load_1"   --->   Operation 40 'read' 'B_5_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%B_3_load_1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_3_load_1"   --->   Operation 41 'read' 'B_3_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%B_4_load_1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_4_load_1"   --->   Operation 42 'read' 'B_4_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%B_0_load_1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_0_load_1"   --->   Operation 43 'read' 'B_0_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%B_2_load_1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_2_load_1"   --->   Operation 44 'read' 'B_2_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%B_1_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_1_load"   --->   Operation 45 'read' 'B_1_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%B_5_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_5_load"   --->   Operation 46 'read' 'B_5_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%B_3_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_3_load"   --->   Operation 47 'read' 'B_3_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%B_4_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_4_load"   --->   Operation 48 'read' 'B_4_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%B_0_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_0_load"   --->   Operation 49 'read' 'B_0_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%B_2_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B_2_load"   --->   Operation 50 'read' 'B_2_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.38ns)   --->   "%store_ln0 = store i3 0, i3 %i1"   --->   Operation 51 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_63_2.split"   --->   Operation 52 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%i1_load = load i3 %i1" [hw3_kernels.cpp:62]   --->   Operation 53 'load' 'i1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln62 = zext i3 %i1_load" [hw3_kernels.cpp:62]   --->   Operation 54 'zext' 'zext_ln62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%A_0_addr = getelementptr i32 %A_0, i64 0, i64 %zext_ln62" [hw3_kernels.cpp:62]   --->   Operation 55 'getelementptr' 'A_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [2/2] (0.69ns)   --->   "%A_0_load = load i3 %A_0_addr" [hw3_kernels.cpp:62]   --->   Operation 56 'load' 'A_0_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%A_1_addr = getelementptr i32 %A_1, i64 0, i64 %zext_ln62" [hw3_kernels.cpp:62]   --->   Operation 57 'getelementptr' 'A_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [2/2] (0.69ns)   --->   "%A_1_load = load i3 %A_1_addr" [hw3_kernels.cpp:62]   --->   Operation 58 'load' 'A_1_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%A_2_addr = getelementptr i32 %A_2, i64 0, i64 %zext_ln62" [hw3_kernels.cpp:62]   --->   Operation 59 'getelementptr' 'A_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [2/2] (0.69ns)   --->   "%A_2_load = load i3 %A_2_addr" [hw3_kernels.cpp:62]   --->   Operation 60 'load' 'A_2_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%A_3_addr = getelementptr i32 %A_3, i64 0, i64 %zext_ln62" [hw3_kernels.cpp:62]   --->   Operation 61 'getelementptr' 'A_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [2/2] (0.69ns)   --->   "%A_3_load = load i3 %A_3_addr" [hw3_kernels.cpp:62]   --->   Operation 62 'load' 'A_3_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%A_4_addr = getelementptr i32 %A_4, i64 0, i64 %zext_ln62" [hw3_kernels.cpp:62]   --->   Operation 63 'getelementptr' 'A_4_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [2/2] (0.69ns)   --->   "%A_4_load = load i3 %A_4_addr" [hw3_kernels.cpp:62]   --->   Operation 64 'load' 'A_4_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%A_5_addr = getelementptr i32 %A_5, i64 0, i64 %zext_ln62" [hw3_kernels.cpp:62]   --->   Operation 65 'getelementptr' 'A_5_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [2/2] (0.69ns)   --->   "%A_5_load = load i3 %A_5_addr" [hw3_kernels.cpp:62]   --->   Operation 66 'load' 'A_5_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 67 [1/1] (0.57ns)   --->   "%i = add i3 %i1_load, i3 1" [hw3_kernels.cpp:62]   --->   Operation 67 'add' 'i' <Predicate = true> <Delay = 0.57> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 68 [1/1] (0.57ns)   --->   "%icmp_ln62 = icmp_eq  i3 %i1_load, i3 5" [hw3_kernels.cpp:62]   --->   Operation 68 'icmp' 'icmp_ln62' <Predicate = true> <Delay = 0.57> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 69 [1/1] (0.38ns)   --->   "%store_ln62 = store i3 %i, i3 %i1" [hw3_kernels.cpp:62]   --->   Operation 69 'store' 'store_ln62' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %icmp_ln62, void %VITIS_LOOP_63_2.split, void %for.end24.exitStub" [hw3_kernels.cpp:62]   --->   Operation 70 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.17>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i3, i3 %i1_load, i3 0" [hw3_kernels.cpp:71]   --->   Operation 71 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i3.i1, i3 %i1_load, i1 0" [hw3_kernels.cpp:71]   --->   Operation 72 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln71 = zext i4 %tmp" [hw3_kernels.cpp:71]   --->   Operation 73 'zext' 'zext_ln71' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.70ns)   --->   "%sub_ln71 = sub i6 %p_shl, i6 %zext_ln71" [hw3_kernels.cpp:71]   --->   Operation 74 'sub' 'sub_ln71' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln71_1 = zext i6 %sub_ln71" [hw3_kernels.cpp:71]   --->   Operation 75 'zext' 'zext_ln71_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%C_addr = getelementptr i32 %C, i64 0, i64 %zext_ln71_1" [hw3_kernels.cpp:71]   --->   Operation 76 'getelementptr' 'C_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_cast = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %sub_ln71, i32 1, i32 4" [hw3_kernels.cpp:71]   --->   Operation 77 'partselect' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i4.i1, i4 %tmp_cast, i1 1" [hw3_kernels.cpp:71]   --->   Operation 78 'bitconcatenate' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln71_2 = zext i5 %tmp_1" [hw3_kernels.cpp:71]   --->   Operation 79 'zext' 'zext_ln71_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%C_addr_1 = getelementptr i32 %C, i64 0, i64 %zext_ln71_2" [hw3_kernels.cpp:71]   --->   Operation 80 'getelementptr' 'C_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/2] (0.69ns)   --->   "%A_0_load = load i3 %A_0_addr" [hw3_kernels.cpp:62]   --->   Operation 81 'load' 'A_0_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 82 [1/2] (0.69ns)   --->   "%A_1_load = load i3 %A_1_addr" [hw3_kernels.cpp:62]   --->   Operation 82 'load' 'A_1_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 83 [1/2] (0.69ns)   --->   "%A_2_load = load i3 %A_2_addr" [hw3_kernels.cpp:62]   --->   Operation 83 'load' 'A_2_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 84 [1/2] (0.69ns)   --->   "%A_3_load = load i3 %A_3_addr" [hw3_kernels.cpp:62]   --->   Operation 84 'load' 'A_3_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 85 [1/2] (0.69ns)   --->   "%A_4_load = load i3 %A_4_addr" [hw3_kernels.cpp:62]   --->   Operation 85 'load' 'A_4_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 86 [1/2] (0.69ns)   --->   "%A_5_load = load i3 %A_5_addr" [hw3_kernels.cpp:62]   --->   Operation 86 'load' 'A_5_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 87 [1/1] (3.17ns)   --->   "%mul_ln68 = mul i32 %A_2_load, i32 %B_2_load_read" [hw3_kernels.cpp:68]   --->   Operation 87 'mul' 'mul_ln68' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (3.17ns)   --->   "%mul_ln68_1 = mul i32 %A_0_load, i32 %B_0_load_read" [hw3_kernels.cpp:68]   --->   Operation 88 'mul' 'mul_ln68_1' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (3.17ns)   --->   "%mul_ln68_2 = mul i32 %A_4_load, i32 %B_4_load_read" [hw3_kernels.cpp:68]   --->   Operation 89 'mul' 'mul_ln68_2' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (3.17ns)   --->   "%mul_ln68_3 = mul i32 %A_3_load, i32 %B_3_load_read" [hw3_kernels.cpp:68]   --->   Operation 90 'mul' 'mul_ln68_3' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 91 [1/1] (3.17ns)   --->   "%mul_ln68_4 = mul i32 %A_5_load, i32 %B_5_load_read" [hw3_kernels.cpp:68]   --->   Operation 91 'mul' 'mul_ln68_4' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 92 [1/1] (3.17ns)   --->   "%mul_ln68_5 = mul i32 %A_1_load, i32 %B_1_load_read" [hw3_kernels.cpp:68]   --->   Operation 92 'mul' 'mul_ln68_5' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 93 [1/1] (0.88ns)   --->   "%add_ln68 = add i32 %mul_ln68_1, i32 %mul_ln68" [hw3_kernels.cpp:68]   --->   Operation 93 'add' 'add_ln68' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 94 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_1 = add i32 %add_ln68, i32 %mul_ln68_5" [hw3_kernels.cpp:68]   --->   Operation 94 'add' 'add_ln68_1' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 95 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_2 = add i32 %mul_ln68_2, i32 %mul_ln68_4" [hw3_kernels.cpp:68]   --->   Operation 95 'add' 'add_ln68_2' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 96 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%add_ln68_3 = add i32 %add_ln68_2, i32 %mul_ln68_3" [hw3_kernels.cpp:68]   --->   Operation 96 'add' 'add_ln68_3' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 97 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%sum = add i32 %add_ln68_3, i32 %add_ln68_1" [hw3_kernels.cpp:68]   --->   Operation 97 'add' 'sum' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 98 [1/1] (0.69ns)   --->   "%store_ln71 = store i32 %sum, i6 %C_addr" [hw3_kernels.cpp:71]   --->   Operation 98 'store' 'store_ln71' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36> <RAM>
+ST_2 : Operation 99 [1/1] (3.17ns)   --->   "%mul_ln68_6 = mul i32 %A_2_load, i32 %B_2_load_1_read" [hw3_kernels.cpp:68]   --->   Operation 99 'mul' 'mul_ln68_6' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 100 [1/1] (3.17ns)   --->   "%mul_ln68_7 = mul i32 %A_0_load, i32 %B_0_load_1_read" [hw3_kernels.cpp:68]   --->   Operation 100 'mul' 'mul_ln68_7' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 101 [1/1] (3.17ns)   --->   "%mul_ln68_8 = mul i32 %A_4_load, i32 %B_4_load_1_read" [hw3_kernels.cpp:68]   --->   Operation 101 'mul' 'mul_ln68_8' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 102 [1/1] (3.17ns)   --->   "%mul_ln68_9 = mul i32 %A_3_load, i32 %B_3_load_1_read" [hw3_kernels.cpp:68]   --->   Operation 102 'mul' 'mul_ln68_9' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 103 [1/1] (3.17ns)   --->   "%mul_ln68_10 = mul i32 %A_5_load, i32 %B_5_load_1_read" [hw3_kernels.cpp:68]   --->   Operation 103 'mul' 'mul_ln68_10' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 104 [1/1] (3.17ns)   --->   "%mul_ln68_11 = mul i32 %A_1_load, i32 %B_1_load_1_read" [hw3_kernels.cpp:68]   --->   Operation 104 'mul' 'mul_ln68_11' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 105 [1/1] (0.88ns)   --->   "%add_ln68_5 = add i32 %mul_ln68_7, i32 %mul_ln68_6" [hw3_kernels.cpp:68]   --->   Operation 105 'add' 'add_ln68_5' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 106 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_6 = add i32 %add_ln68_5, i32 %mul_ln68_11" [hw3_kernels.cpp:68]   --->   Operation 106 'add' 'add_ln68_6' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 107 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_7 = add i32 %mul_ln68_8, i32 %mul_ln68_10" [hw3_kernels.cpp:68]   --->   Operation 107 'add' 'add_ln68_7' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 108 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%add_ln68_8 = add i32 %add_ln68_7, i32 %mul_ln68_9" [hw3_kernels.cpp:68]   --->   Operation 108 'add' 'add_ln68_8' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 109 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%sum_1 = add i32 %add_ln68_8, i32 %add_ln68_6" [hw3_kernels.cpp:68]   --->   Operation 109 'add' 'sum_1' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 110 [1/1] (0.69ns)   --->   "%store_ln71 = store i32 %sum_1, i6 %C_addr_1" [hw3_kernels.cpp:71]   --->   Operation 110 'store' 'store_ln71' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36> <RAM>
+
+State 3 <SV = 2> <Delay = 5.48>
+ST_3 : Operation 111 [1/1] (0.70ns)   --->   "%add_ln71 = add i6 %sub_ln71, i6 2" [hw3_kernels.cpp:71]   --->   Operation 111 'add' 'add_ln71' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%zext_ln71_3 = zext i6 %add_ln71" [hw3_kernels.cpp:71]   --->   Operation 112 'zext' 'zext_ln71_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%C_addr_2 = getelementptr i32 %C, i64 0, i64 %zext_ln71_3" [hw3_kernels.cpp:71]   --->   Operation 113 'getelementptr' 'C_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.70ns)   --->   "%add_ln71_1 = add i6 %sub_ln71, i6 3" [hw3_kernels.cpp:71]   --->   Operation 114 'add' 'add_ln71_1' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%zext_ln71_4 = zext i6 %add_ln71_1" [hw3_kernels.cpp:71]   --->   Operation 115 'zext' 'zext_ln71_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "%C_addr_3 = getelementptr i32 %C, i64 0, i64 %zext_ln71_4" [hw3_kernels.cpp:71]   --->   Operation 116 'getelementptr' 'C_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 117 [1/1] (3.17ns)   --->   "%mul_ln68_12 = mul i32 %A_2_load, i32 %B_2_load_2_read" [hw3_kernels.cpp:68]   --->   Operation 117 'mul' 'mul_ln68_12' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 118 [1/1] (3.17ns)   --->   "%mul_ln68_13 = mul i32 %A_0_load, i32 %B_0_load_2_read" [hw3_kernels.cpp:68]   --->   Operation 118 'mul' 'mul_ln68_13' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 119 [1/1] (3.17ns)   --->   "%mul_ln68_14 = mul i32 %A_4_load, i32 %B_4_load_2_read" [hw3_kernels.cpp:68]   --->   Operation 119 'mul' 'mul_ln68_14' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 120 [1/1] (3.17ns)   --->   "%mul_ln68_15 = mul i32 %A_3_load, i32 %B_3_load_2_read" [hw3_kernels.cpp:68]   --->   Operation 120 'mul' 'mul_ln68_15' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 121 [1/1] (3.17ns)   --->   "%mul_ln68_16 = mul i32 %A_5_load, i32 %B_5_load_2_read" [hw3_kernels.cpp:68]   --->   Operation 121 'mul' 'mul_ln68_16' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 122 [1/1] (3.17ns)   --->   "%mul_ln68_17 = mul i32 %A_1_load, i32 %B_1_load_2_read" [hw3_kernels.cpp:68]   --->   Operation 122 'mul' 'mul_ln68_17' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 123 [1/1] (0.88ns)   --->   "%add_ln68_10 = add i32 %mul_ln68_13, i32 %mul_ln68_12" [hw3_kernels.cpp:68]   --->   Operation 123 'add' 'add_ln68_10' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 124 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_11 = add i32 %add_ln68_10, i32 %mul_ln68_17" [hw3_kernels.cpp:68]   --->   Operation 124 'add' 'add_ln68_11' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 125 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_12 = add i32 %mul_ln68_14, i32 %mul_ln68_16" [hw3_kernels.cpp:68]   --->   Operation 125 'add' 'add_ln68_12' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 126 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%add_ln68_13 = add i32 %add_ln68_12, i32 %mul_ln68_15" [hw3_kernels.cpp:68]   --->   Operation 126 'add' 'add_ln68_13' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 127 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%sum_2 = add i32 %add_ln68_13, i32 %add_ln68_11" [hw3_kernels.cpp:68]   --->   Operation 127 'add' 'sum_2' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 128 [1/1] (0.69ns)   --->   "%store_ln71 = store i32 %sum_2, i6 %C_addr_2" [hw3_kernels.cpp:71]   --->   Operation 128 'store' 'store_ln71' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36> <RAM>
+ST_3 : Operation 129 [1/1] (3.17ns)   --->   "%mul_ln68_18 = mul i32 %A_2_load, i32 %B_2_load_3_read" [hw3_kernels.cpp:68]   --->   Operation 129 'mul' 'mul_ln68_18' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 130 [1/1] (3.17ns)   --->   "%mul_ln68_19 = mul i32 %A_0_load, i32 %B_0_load_3_read" [hw3_kernels.cpp:68]   --->   Operation 130 'mul' 'mul_ln68_19' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 131 [1/1] (3.17ns)   --->   "%mul_ln68_20 = mul i32 %A_4_load, i32 %B_4_load_3_read" [hw3_kernels.cpp:68]   --->   Operation 131 'mul' 'mul_ln68_20' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 132 [1/1] (3.17ns)   --->   "%mul_ln68_21 = mul i32 %A_3_load, i32 %B_3_load_3_read" [hw3_kernels.cpp:68]   --->   Operation 132 'mul' 'mul_ln68_21' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 133 [1/1] (3.17ns)   --->   "%mul_ln68_22 = mul i32 %A_5_load, i32 %B_5_load_3_read" [hw3_kernels.cpp:68]   --->   Operation 133 'mul' 'mul_ln68_22' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 134 [1/1] (3.17ns)   --->   "%mul_ln68_23 = mul i32 %A_1_load, i32 %B_1_load_3_read" [hw3_kernels.cpp:68]   --->   Operation 134 'mul' 'mul_ln68_23' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 135 [1/1] (0.88ns)   --->   "%add_ln68_15 = add i32 %mul_ln68_19, i32 %mul_ln68_18" [hw3_kernels.cpp:68]   --->   Operation 135 'add' 'add_ln68_15' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 136 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_16 = add i32 %add_ln68_15, i32 %mul_ln68_23" [hw3_kernels.cpp:68]   --->   Operation 136 'add' 'add_ln68_16' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 137 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_17 = add i32 %mul_ln68_20, i32 %mul_ln68_22" [hw3_kernels.cpp:68]   --->   Operation 137 'add' 'add_ln68_17' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 138 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%add_ln68_18 = add i32 %add_ln68_17, i32 %mul_ln68_21" [hw3_kernels.cpp:68]   --->   Operation 138 'add' 'add_ln68_18' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 139 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%sum_3 = add i32 %add_ln68_18, i32 %add_ln68_16" [hw3_kernels.cpp:68]   --->   Operation 139 'add' 'sum_3' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 140 [1/1] (0.69ns)   --->   "%store_ln71 = store i32 %sum_3, i6 %C_addr_3" [hw3_kernels.cpp:71]   --->   Operation 140 'store' 'store_ln71' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36> <RAM>
+
+State 4 <SV = 3> <Delay = 5.48>
+ST_4 : Operation 141 [1/1] (0.70ns)   --->   "%add_ln71_2 = add i6 %sub_ln71, i6 4" [hw3_kernels.cpp:71]   --->   Operation 141 'add' 'add_ln71_2' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln71_5 = zext i6 %add_ln71_2" [hw3_kernels.cpp:71]   --->   Operation 142 'zext' 'zext_ln71_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 143 [1/1] (0.00ns)   --->   "%C_addr_4 = getelementptr i32 %C, i64 0, i64 %zext_ln71_5" [hw3_kernels.cpp:71]   --->   Operation 143 'getelementptr' 'C_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 144 [1/1] (0.70ns)   --->   "%add_ln71_3 = add i6 %sub_ln71, i6 5" [hw3_kernels.cpp:71]   --->   Operation 144 'add' 'add_ln71_3' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 145 [1/1] (0.00ns)   --->   "%zext_ln71_6 = zext i6 %add_ln71_3" [hw3_kernels.cpp:71]   --->   Operation 145 'zext' 'zext_ln71_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 146 [1/1] (0.00ns)   --->   "%C_addr_5 = getelementptr i32 %C, i64 0, i64 %zext_ln71_6" [hw3_kernels.cpp:71]   --->   Operation 146 'getelementptr' 'C_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 147 [1/1] (0.00ns)   --->   "%specpipeline_ln62 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [hw3_kernels.cpp:62]   --->   Operation 147 'specpipeline' 'specpipeline_ln62' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%speclooptripcount_ln62 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 6, i64 6, i64 6" [hw3_kernels.cpp:62]   --->   Operation 148 'speclooptripcount' 'speclooptripcount_ln62' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (0.00ns)   --->   "%specloopname_ln62 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [hw3_kernels.cpp:62]   --->   Operation 149 'specloopname' 'specloopname_ln62' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 150 [1/1] (3.17ns)   --->   "%mul_ln68_24 = mul i32 %A_2_load, i32 %B_2_load_4_read" [hw3_kernels.cpp:68]   --->   Operation 150 'mul' 'mul_ln68_24' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 151 [1/1] (3.17ns)   --->   "%mul_ln68_25 = mul i32 %A_0_load, i32 %B_0_load_4_read" [hw3_kernels.cpp:68]   --->   Operation 151 'mul' 'mul_ln68_25' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 152 [1/1] (3.17ns)   --->   "%mul_ln68_26 = mul i32 %A_4_load, i32 %B_4_load_4_read" [hw3_kernels.cpp:68]   --->   Operation 152 'mul' 'mul_ln68_26' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 153 [1/1] (3.17ns)   --->   "%mul_ln68_27 = mul i32 %A_3_load, i32 %B_3_load_4_read" [hw3_kernels.cpp:68]   --->   Operation 153 'mul' 'mul_ln68_27' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 154 [1/1] (3.17ns)   --->   "%mul_ln68_28 = mul i32 %A_5_load, i32 %B_5_load_4_read" [hw3_kernels.cpp:68]   --->   Operation 154 'mul' 'mul_ln68_28' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 155 [1/1] (3.17ns)   --->   "%mul_ln68_29 = mul i32 %A_1_load, i32 %B_1_load_4_read" [hw3_kernels.cpp:68]   --->   Operation 155 'mul' 'mul_ln68_29' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 156 [1/1] (0.88ns)   --->   "%add_ln68_20 = add i32 %mul_ln68_25, i32 %mul_ln68_24" [hw3_kernels.cpp:68]   --->   Operation 156 'add' 'add_ln68_20' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 157 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_21 = add i32 %add_ln68_20, i32 %mul_ln68_29" [hw3_kernels.cpp:68]   --->   Operation 157 'add' 'add_ln68_21' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 158 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_22 = add i32 %mul_ln68_26, i32 %mul_ln68_28" [hw3_kernels.cpp:68]   --->   Operation 158 'add' 'add_ln68_22' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 159 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%add_ln68_23 = add i32 %add_ln68_22, i32 %mul_ln68_27" [hw3_kernels.cpp:68]   --->   Operation 159 'add' 'add_ln68_23' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 160 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%sum_4 = add i32 %add_ln68_23, i32 %add_ln68_21" [hw3_kernels.cpp:68]   --->   Operation 160 'add' 'sum_4' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 161 [1/1] (0.69ns)   --->   "%store_ln71 = store i32 %sum_4, i6 %C_addr_4" [hw3_kernels.cpp:71]   --->   Operation 161 'store' 'store_ln71' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36> <RAM>
+ST_4 : Operation 162 [1/1] (3.17ns)   --->   "%mul_ln68_30 = mul i32 %A_2_load, i32 %B_2_load_5_read" [hw3_kernels.cpp:68]   --->   Operation 162 'mul' 'mul_ln68_30' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 163 [1/1] (3.17ns)   --->   "%mul_ln68_31 = mul i32 %A_0_load, i32 %B_0_load_5_read" [hw3_kernels.cpp:68]   --->   Operation 163 'mul' 'mul_ln68_31' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 164 [1/1] (3.17ns)   --->   "%mul_ln68_32 = mul i32 %A_4_load, i32 %B_4_load_5_read" [hw3_kernels.cpp:68]   --->   Operation 164 'mul' 'mul_ln68_32' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 165 [1/1] (3.17ns)   --->   "%mul_ln68_33 = mul i32 %A_3_load, i32 %B_3_load_5_read" [hw3_kernels.cpp:68]   --->   Operation 165 'mul' 'mul_ln68_33' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 166 [1/1] (3.17ns)   --->   "%mul_ln68_34 = mul i32 %A_5_load, i32 %B_5_load_5_read" [hw3_kernels.cpp:68]   --->   Operation 166 'mul' 'mul_ln68_34' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 167 [1/1] (3.17ns)   --->   "%mul_ln68_35 = mul i32 %A_1_load, i32 %B_1_load_5_read" [hw3_kernels.cpp:68]   --->   Operation 167 'mul' 'mul_ln68_35' <Predicate = true> <Delay = 3.17> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 168 [1/1] (0.88ns)   --->   "%add_ln68_25 = add i32 %mul_ln68_31, i32 %mul_ln68_30" [hw3_kernels.cpp:68]   --->   Operation 168 'add' 'add_ln68_25' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 169 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_26 = add i32 %add_ln68_25, i32 %mul_ln68_35" [hw3_kernels.cpp:68]   --->   Operation 169 'add' 'add_ln68_26' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 170 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln68_27 = add i32 %mul_ln68_32, i32 %mul_ln68_34" [hw3_kernels.cpp:68]   --->   Operation 170 'add' 'add_ln68_27' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 171 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%add_ln68_28 = add i32 %add_ln68_27, i32 %mul_ln68_33" [hw3_kernels.cpp:68]   --->   Operation 171 'add' 'add_ln68_28' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 172 [1/1] (0.73ns) (root node of TernaryAdder)   --->   "%sum_5 = add i32 %add_ln68_28, i32 %add_ln68_26" [hw3_kernels.cpp:68]   --->   Operation 172 'add' 'sum_5' <Predicate = true> <Delay = 0.73> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.36> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 173 [1/1] (0.69ns)   --->   "%store_ln71 = store i32 %sum_5, i6 %C_addr_5" [hw3_kernels.cpp:71]   --->   Operation 173 'store' 'store_ln71' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 36> <RAM>
+ST_4 : Operation 174 [1/1] (0.38ns)   --->   "%ret_ln0 = ret"   --->   Operation 174 'ret' 'ret_ln0' <Predicate = (icmp_ln62)> <Delay = 0.38>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 25.000ns, clock uncertainty: 6.750ns.
+
+ <State 1>: 1.346ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'i1' [88]  (0.387 ns)
+	'load' operation 3 bit ('i1_load', hw3_kernels.cpp:62) on local variable 'i1' [91]  (0.000 ns)
+	'add' operation 3 bit ('i', hw3_kernels.cpp:62) [202]  (0.572 ns)
+	'store' operation 0 bit ('store_ln62', hw3_kernels.cpp:62) of variable 'i', hw3_kernels.cpp:62 on local variable 'i1' [204]  (0.387 ns)
+
+ <State 2>: 6.179ns
+The critical path consists of the following:
+	'load' operation 32 bit ('A_0_load', hw3_kernels.cpp:62) on array 'A_0' [119]  (0.699 ns)
+	'mul' operation 32 bit ('mul_ln68_1', hw3_kernels.cpp:68) [131]  (3.170 ns)
+	'add' operation 32 bit ('add_ln68', hw3_kernels.cpp:68) [136]  (0.880 ns)
+	'add' operation 32 bit ('add_ln68_1', hw3_kernels.cpp:68) [137]  (0.000 ns)
+	'add' operation 32 bit ('sum', hw3_kernels.cpp:68) [140]  (0.731 ns)
+	'store' operation 0 bit ('store_ln71', hw3_kernels.cpp:71) of variable 'sum', hw3_kernels.cpp:68 on array 'C' [141]  (0.699 ns)
+
+ <State 3>: 5.480ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln68_12', hw3_kernels.cpp:68) [154]  (3.170 ns)
+	'add' operation 32 bit ('add_ln68_10', hw3_kernels.cpp:68) [160]  (0.880 ns)
+	'add' operation 32 bit ('add_ln68_11', hw3_kernels.cpp:68) [161]  (0.000 ns)
+	'add' operation 32 bit ('sum', hw3_kernels.cpp:68) [164]  (0.731 ns)
+	'store' operation 0 bit ('store_ln71', hw3_kernels.cpp:71) of variable 'sum', hw3_kernels.cpp:68 on array 'C' [165]  (0.699 ns)
+
+ <State 4>: 5.480ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln68_24', hw3_kernels.cpp:68) [178]  (3.170 ns)
+	'add' operation 32 bit ('add_ln68_20', hw3_kernels.cpp:68) [184]  (0.880 ns)
+	'add' operation 32 bit ('add_ln68_21', hw3_kernels.cpp:68) [185]  (0.000 ns)
+	'add' operation 32 bit ('sum', hw3_kernels.cpp:68) [188]  (0.731 ns)
+	'store' operation 0 bit ('store_ln71', hw3_kernels.cpp:71) of variable 'sum', hw3_kernels.cpp:68 on array 'C' [189]  (0.699 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

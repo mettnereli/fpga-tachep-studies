@@ -1,0 +1,20 @@
+{
+    "0": {
+        "name": "matrix_mult_partition_both_dims",
+        "file": "hw3_kernels.cpp",
+        "fileloc": "76",
+        "instructions": "427",
+        "total_instructions": "427",
+        "calls": "",
+        "basicblocks": "52",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

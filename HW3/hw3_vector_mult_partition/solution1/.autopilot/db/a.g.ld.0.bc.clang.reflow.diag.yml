@@ -1,0 +1,598 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: hw3_kernels.cpp, Line: 13, Column: 0 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_22_1
+  - String:          ''' ('
+  - LoopLoc:         'hw3_kernels.cpp:22:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          vector_mult_partition
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: hw3_kernels.cpp, Line: 13, Column: 0 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          a
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: hw3_kernels.cpp, Line: 13, Column: 0 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          b
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: hw3_kernels.cpp, Line: 13, Column: 0 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          c
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 14, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 15, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict-variable
+Name:            VariablePragmaScalarWarn
+DebugLoc:        { File: hw3_kernels.cpp, Line: 16, Column: 9 }
+Function:        _Z21vector_mult_partitionPiS_S_
+Args:            
+  - String:          'Unsuported scalar variable on pragma '''
+  - Name:            bram Interface
+  - String:          ''', '
+  - String:          ignore it.
+...

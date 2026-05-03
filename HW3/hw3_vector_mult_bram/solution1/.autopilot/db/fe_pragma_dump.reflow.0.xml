@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="hw3_kernels.cpp" line="4" pragmaType="interface" parentfunction="vector_mult_bram" mode="ap_memory" port="a" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="hw3_kernels.cpp" line="5" pragmaType="interface" parentfunction="vector_mult_bram" mode="ap_memory" port="b" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="hw3_kernels.cpp" line="6" pragmaType="interface" parentfunction="vector_mult_bram" mode="ap_memory" port="c" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+</pragmas>

@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'vector_mult_partition'
+================================================================
+* Date:           Sun May  3 14:47:53 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        hw3_vector_mult_partition
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p-fsga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  25.00 ns|  3.170 ns|     6.75 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        -|        -|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|     48|        0|      320|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|        -|     -|
+|Register             |        -|      -|        -|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|     48|        0|      320|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      1|        0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|     ~0|        0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |        Instance        |       Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |mul_32s_32s_32_1_1_U1   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U2   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U3   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U4   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U5   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U6   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U7   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U8   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U9   |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U10  |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U11  |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U12  |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U13  |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U14  |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U15  |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    |mul_32s_32s_32_1_1_U16  |mul_32s_32s_32_1_1  |        0|   3|  0|  20|    0|
+    +------------------------+--------------------+---------+----+---+----+-----+
+    |Total                   |                    |        0|  48|  0| 320|    0|
+    +------------------------+--------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+-----------------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-------------+-----+-----+------------+-----------------------+--------------+
+|ap_start     |   in|    1|  ap_ctrl_hs|  vector_mult_partition|  return value|
+|ap_done      |  out|    1|  ap_ctrl_hs|  vector_mult_partition|  return value|
+|ap_idle      |  out|    1|  ap_ctrl_hs|  vector_mult_partition|  return value|
+|ap_ready     |  out|    1|  ap_ctrl_hs|  vector_mult_partition|  return value|
+|ap_rst       |   in|    1|  ap_ctrl_hs|  vector_mult_partition|  return value|
+|a_0          |   in|   32|     ap_none|                    a_0|       pointer|
+|a_1          |   in|   32|     ap_none|                    a_1|       pointer|
+|a_2          |   in|   32|     ap_none|                    a_2|       pointer|
+|a_3          |   in|   32|     ap_none|                    a_3|       pointer|
+|a_4          |   in|   32|     ap_none|                    a_4|       pointer|
+|a_5          |   in|   32|     ap_none|                    a_5|       pointer|
+|a_6          |   in|   32|     ap_none|                    a_6|       pointer|
+|a_7          |   in|   32|     ap_none|                    a_7|       pointer|
+|a_8          |   in|   32|     ap_none|                    a_8|       pointer|
+|a_9          |   in|   32|     ap_none|                    a_9|       pointer|
+|a_10         |   in|   32|     ap_none|                   a_10|       pointer|
+|a_11         |   in|   32|     ap_none|                   a_11|       pointer|
+|a_12         |   in|   32|     ap_none|                   a_12|       pointer|
+|a_13         |   in|   32|     ap_none|                   a_13|       pointer|
+|a_14         |   in|   32|     ap_none|                   a_14|       pointer|
+|a_15         |   in|   32|     ap_none|                   a_15|       pointer|
+|b_0          |   in|   32|     ap_none|                    b_0|       pointer|
+|b_1          |   in|   32|     ap_none|                    b_1|       pointer|
+|b_2          |   in|   32|     ap_none|                    b_2|       pointer|
+|b_3          |   in|   32|     ap_none|                    b_3|       pointer|
+|b_4          |   in|   32|     ap_none|                    b_4|       pointer|
+|b_5          |   in|   32|     ap_none|                    b_5|       pointer|
+|b_6          |   in|   32|     ap_none|                    b_6|       pointer|
+|b_7          |   in|   32|     ap_none|                    b_7|       pointer|
+|b_8          |   in|   32|     ap_none|                    b_8|       pointer|
+|b_9          |   in|   32|     ap_none|                    b_9|       pointer|
+|b_10         |   in|   32|     ap_none|                   b_10|       pointer|
+|b_11         |   in|   32|     ap_none|                   b_11|       pointer|
+|b_12         |   in|   32|     ap_none|                   b_12|       pointer|
+|b_13         |   in|   32|     ap_none|                   b_13|       pointer|
+|b_14         |   in|   32|     ap_none|                   b_14|       pointer|
+|b_15         |   in|   32|     ap_none|                   b_15|       pointer|
+|c_0          |  out|   32|      ap_vld|                    c_0|       pointer|
+|c_0_ap_vld   |  out|    1|      ap_vld|                    c_0|       pointer|
+|c_1          |  out|   32|      ap_vld|                    c_1|       pointer|
+|c_1_ap_vld   |  out|    1|      ap_vld|                    c_1|       pointer|
+|c_2          |  out|   32|      ap_vld|                    c_2|       pointer|
+|c_2_ap_vld   |  out|    1|      ap_vld|                    c_2|       pointer|
+|c_3          |  out|   32|      ap_vld|                    c_3|       pointer|
+|c_3_ap_vld   |  out|    1|      ap_vld|                    c_3|       pointer|
+|c_4          |  out|   32|      ap_vld|                    c_4|       pointer|
+|c_4_ap_vld   |  out|    1|      ap_vld|                    c_4|       pointer|
+|c_5          |  out|   32|      ap_vld|                    c_5|       pointer|
+|c_5_ap_vld   |  out|    1|      ap_vld|                    c_5|       pointer|
+|c_6          |  out|   32|      ap_vld|                    c_6|       pointer|
+|c_6_ap_vld   |  out|    1|      ap_vld|                    c_6|       pointer|
+|c_7          |  out|   32|      ap_vld|                    c_7|       pointer|
+|c_7_ap_vld   |  out|    1|      ap_vld|                    c_7|       pointer|
+|c_8          |  out|   32|      ap_vld|                    c_8|       pointer|
+|c_8_ap_vld   |  out|    1|      ap_vld|                    c_8|       pointer|
+|c_9          |  out|   32|      ap_vld|                    c_9|       pointer|
+|c_9_ap_vld   |  out|    1|      ap_vld|                    c_9|       pointer|
+|c_10         |  out|   32|      ap_vld|                   c_10|       pointer|
+|c_10_ap_vld  |  out|    1|      ap_vld|                   c_10|       pointer|
+|c_11         |  out|   32|      ap_vld|                   c_11|       pointer|
+|c_11_ap_vld  |  out|    1|      ap_vld|                   c_11|       pointer|
+|c_12         |  out|   32|      ap_vld|                   c_12|       pointer|
+|c_12_ap_vld  |  out|    1|      ap_vld|                   c_12|       pointer|
+|c_13         |  out|   32|      ap_vld|                   c_13|       pointer|
+|c_13_ap_vld  |  out|    1|      ap_vld|                   c_13|       pointer|
+|c_14         |  out|   32|      ap_vld|                   c_14|       pointer|
+|c_14_ap_vld  |  out|    1|      ap_vld|                   c_14|       pointer|
+|c_15         |  out|   32|      ap_vld|                   c_15|       pointer|
+|c_15_ap_vld  |  out|    1|      ap_vld|                   c_15|       pointer|
++-------------+-----+-----+------------+-----------------------+--------------+
+

@@ -1,0 +1,10 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="matrix_mult_partition_both_dims" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="matrix_mult_partition_both_dims"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

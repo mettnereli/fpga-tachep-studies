@@ -1,0 +1,34 @@
+{
+    "1": {
+        "name": "matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1",
+        "file": "hw3_kernels.cpp",
+        "fileloc": "62",
+        "instructions": "162",
+        "total_instructions": "162",
+        "calls": "",
+        "basicblocks": "3",
+        "loads": {
+            "L": "1",
+            "T": "6"
+        },
+        "stores": {
+            "L": "2",
+            "T": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "matrix_mult_partition_one_dim",
+        "file": "hw3_kernels.cpp",
+        "fileloc": "50",
+        "instructions": "101",
+        "total_instructions": "263",
+        "calls": "1",
+        "basicblocks": "1",
+        "loads": {
+            "T": "36"
+        }
+    }
+}

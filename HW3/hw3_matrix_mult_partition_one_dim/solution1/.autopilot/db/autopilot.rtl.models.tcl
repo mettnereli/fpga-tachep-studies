@@ -1,0 +1,9 @@
+set SynModuleInfo {
+  {SRCNAME matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1 MODELNAME matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1 RTLNAME matrix_mult_partition_one_dim_matrix_mult_partition_one_dim_Pipeline_VITIS_LOOP_62_1
+    SUBMODULES {
+      {MODELNAME matrix_mult_partition_one_dim_mul_32s_32s_32_1_1 RTLNAME matrix_mult_partition_one_dim_mul_32s_32s_32_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME matrix_mult_partition_one_dim_flow_control_loop_pipe_sequential_init RTLNAME matrix_mult_partition_one_dim_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME matrix_mult_partition_one_dim_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME matrix_mult_partition_one_dim MODELNAME matrix_mult_partition_one_dim RTLNAME matrix_mult_partition_one_dim IS_TOP 1}
+}

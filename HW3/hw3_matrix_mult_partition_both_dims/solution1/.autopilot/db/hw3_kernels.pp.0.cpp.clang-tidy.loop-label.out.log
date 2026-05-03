@@ -1,0 +1,55 @@
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:191:2: warning: Added loop label VITIS_LOOP_8_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 16; i++) {
+ ^~~
+ VITIS_LOOP_8_1: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:191:2: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:205:2: warning: Added loop label VITIS_LOOP_22_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 16; i++) {
+ ^~~
+ VITIS_LOOP_22_1: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:205:2: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:220:2: warning: Added loop label VITIS_LOOP_37_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 6; i++) {
+ ^~~
+ VITIS_LOOP_37_1: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:220:2: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:221:9: warning: Added loop label VITIS_LOOP_38_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 6; j++) {
+        ^~~
+        VITIS_LOOP_38_2: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:221:9: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:224:13: warning: Added loop label VITIS_LOOP_41_3:   [xilinx-label-all-loops]
+            for (int k = 0; k < 6; k++) {
+            ^~~
+            VITIS_LOOP_41_3: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:224:13: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:245:2: warning: Added loop label VITIS_LOOP_62_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 6; i++) {
+ ^~~
+ VITIS_LOOP_62_1: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:245:2: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:246:9: warning: Added loop label VITIS_LOOP_63_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 6; j++) {
+        ^~~
+        VITIS_LOOP_63_2: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:246:9: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:249:13: warning: Added loop label VITIS_LOOP_66_3:   [xilinx-label-all-loops]
+            for (int k = 0; k < 6; k++) {
+            ^~~
+            VITIS_LOOP_66_3: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:249:13: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:276:2: warning: Added loop label VITIS_LOOP_89_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 6; i++) {
+ ^~~
+ VITIS_LOOP_89_1: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:276:2: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:277:9: warning: Added loop label VITIS_LOOP_90_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 6; j++) {
+        ^~~
+        VITIS_LOOP_90_2: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:277:9: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:280:13: warning: Added loop label VITIS_LOOP_93_3:   [xilinx-label-all-loops]
+            for (int k = 0; k < 6; k++) {
+            ^~~
+            VITIS_LOOP_93_3: 
+/scratch/emettner/fpga-tachep-studies/HW3/hw3_matrix_mult_partition_both_dims/solution1/.autopilot/db/hw3_kernels.pp.0.cpp:280:13: note: FIX-IT applied suggested code changes
