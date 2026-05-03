@@ -1,0 +1,42 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_6_2
+  - String:          '> at '
+  - LoopLoc:         'sorter.cpp:6:25'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: sorter.cpp, Line: 5, Column: 21 }
+Function:        _Z6sorterPi
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_5_1
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sorter.cpp, Line: 5, Column: 21 }
+Function:        _Z6sorterPi
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  sorter
+  - String:          ' '
+  - PragmaSrcLoc:    'sorter.cpp:5:21'
+    DebugLoc:        { File: sorter.cpp, Line: 5, Column: 21 }
+  - LoopName:        VITIS_LOOP_5_1
+  - String:          ' '
+  - LoopLoc:         'sorter.cpp:5:21'
+    DebugLoc:        { File: sorter.cpp, Line: 5, Column: 21 }
+  - String:          ' '
+...

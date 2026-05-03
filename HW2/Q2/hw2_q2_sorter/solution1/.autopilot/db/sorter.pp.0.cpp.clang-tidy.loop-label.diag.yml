@@ -1,0 +1,22 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/.autopilot/db/sorter.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_5_1:  '
+    FileOffset:      5
+    FilePath:        sorter.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/.autopilot/db/sorter.pp.0.cpp
+        Offset:          9779
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_5_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_6_2:  '
+    FileOffset:      6
+    FilePath:        sorter.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/.autopilot/db/sorter.pp.0.cpp
+        Offset:          9822
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_6_2: '
+...

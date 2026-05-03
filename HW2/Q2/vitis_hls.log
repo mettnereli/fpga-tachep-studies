@@ -1,0 +1,124 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat May  2 23:58:11 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'emettner' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 6.1.166-1.el9.elrepo.x86_64) on Sat May 02 23:58:16 CDT 2026
+INFO: [HLS 200-10] In directory '/scratch/emettner/fpga-tachep-studies/HW2/Q2'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_sorter.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset hw2_q2_sorter 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter'.
+INFO: [HLS 200-1510] Running: set_top sorter 
+INFO: [HLS 200-1510] Running: add_files sorter.cpp 
+INFO: [HLS 200-10] Adding design file 'sorter.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_sorter.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb_sorter.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p-fsga2577-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb_sorter.cpp in debug mode
+   Compiling ../../../../sorter.cpp in debug mode
+   Generating csim.exe
+Before sorting: 5 2 9 1 5 6 7 3 4 8 0 11 12 15 14 13 
+After sorting: 0 1 2 3 4 5 5 6 7 8 9 11 12 13 14 15 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.172 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.18 seconds; current allocated memory: 325.211 MB.
+INFO: [HLS 200-10] Analyzing design file 'sorter.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.63 seconds. CPU system time: 0.76 seconds. Elapsed time: 1.67 seconds; current allocated memory: 327.102 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 24 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 33 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW2/Q2/hw2_q2_sorter/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_6_2> at sorter.cpp:6:25 
+INFO: [HLS 214-437] Automatically disabling loop flattening for loop 'VITIS_LOOP_5_1'. (sorter.cpp:5:21)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.61 seconds. CPU system time: 0.73 seconds. Elapsed time: 9.02 seconds; current allocated memory: 336.723 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 336.723 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 336.816 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 336.816 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 358.363 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 358.363 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sorter' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sorter_Pipeline_VITIS_LOOP_6_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_6_2'.
+WARNING: [HLS 200-880] The II Violation in module 'sorter_Pipeline_VITIS_LOOP_6_2' (loop 'VITIS_LOOP_6_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('a_addr_1_write_ln10', sorter.cpp:10) of variable 'temp', sorter.cpp:7 on array 'a' and 'load' operation 32 bit ('temp', sorter.cpp:7) on array 'a'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'VITIS_LOOP_6_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.19 seconds; current allocated memory: 359.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 359.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sorter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 359.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 359.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sorter_Pipeline_VITIS_LOOP_6_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sorter_Pipeline_VITIS_LOOP_6_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 359.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sorter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sorter/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sorter' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sorter'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 359.062 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.28 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.33 seconds; current allocated memory: 360.926 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.46 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.5 seconds; current allocated memory: 362.473 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sorter.
+INFO: [VLOG 209-307] Generating Verilog RTL for sorter.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 438.98 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:13; Allocated memory: 37.680 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 13.75 seconds. Total CPU system time: 2.61 seconds. Total elapsed time: 22.49 seconds; peak allocated memory: 362.473 MB.

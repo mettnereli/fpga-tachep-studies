@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../tb_sorter.cpp in debug mode
+   Compiling ../../../../sorter.cpp in debug mode
+   Generating csim.exe
+Before sorting: 5 2 9 1 5 6 7 3 4 8 0 11 12 15 14 13 
+After sorting: 0 1 2 3 4 5 5 6 7 8 9 11 12 13 14 15 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

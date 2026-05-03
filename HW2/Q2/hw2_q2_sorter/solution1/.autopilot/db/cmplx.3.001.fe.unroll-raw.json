@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "sorter.cpp",
+    "fileloc": 4,
+    "instructions": 44,
+    "loads": {
+      "T": 4
+    },
+    "name": "sorter",
+    "stores": {
+      "T": 2
+    },
+    "total_instructions": 44
+  }
+}
