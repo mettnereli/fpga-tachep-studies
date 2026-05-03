@@ -1,3 +1,5 @@
+# Q2
+
 |         LUT |          FF |         DSP |        BRAM | Estimated clock period | Target clock period | Meets timing? | Latency (Max) |
 | ----------: | ----------: | ----------: | ----------: | ---------------------: | ------------------: | ------------- | ------------: |
 | 206         |          35 | 0           |           0 |            2.278 ns    |               25 ns | Yes           |           511 |
