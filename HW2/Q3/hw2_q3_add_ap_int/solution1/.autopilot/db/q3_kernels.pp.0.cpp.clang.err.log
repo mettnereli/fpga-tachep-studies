@@ -1,0 +1,4 @@
+/scratch/emettner/fpga-tachep-studies/HW2/Q3/run_q3_kernels.tcl:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=add_ap_int_XLX_SEP_ PragmaOptions=name=add_ap_int_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=add_ap_int
+        ^
+1 warning generated.

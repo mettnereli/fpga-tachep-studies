@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../q3_kernels_tb.cpp in debug mode
+   Compiling ../../../../q3_kernels.cpp in debug mode
+   Generating csim.exe
+int result:
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+long result:
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+long long result:
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+ap_int<32> result:
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+ap_uint<32> result:
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+ap_fixed<16,6> result:
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

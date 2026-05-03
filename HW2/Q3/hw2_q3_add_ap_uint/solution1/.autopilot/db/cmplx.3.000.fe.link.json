@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "q3_kernels.cpp",
+    "fileloc": 27,
+    "instructions": 32,
+    "loads": {
+      "L": 1
+    },
+    "name": "add_ap_uint",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 142
+  }
+}

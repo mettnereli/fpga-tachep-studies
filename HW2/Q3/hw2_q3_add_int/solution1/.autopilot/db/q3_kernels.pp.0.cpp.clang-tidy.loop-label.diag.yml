@@ -1,0 +1,103 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1223_1:  '
+    FileOffset:      1223
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          55191
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          282585
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          283049
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          283514
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          566869
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_4_1:  '
+    FileOffset:      4
+    FilePath:        q3_kernels.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          935258
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_4_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_10_1:  '
+    FileOffset:      10
+    FilePath:        q3_kernels.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          935382
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_10_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_16_1:  '
+    FileOffset:      16
+    FilePath:        q3_kernels.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          935525
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_16_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_22_1:  '
+    FileOffset:      22
+    FilePath:        q3_kernels.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          935669
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_22_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_1:  '
+    FileOffset:      28
+    FilePath:        q3_kernels.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          935817
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_1:  '
+    FileOffset:      34
+    FilePath:        q3_kernels.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW2/Q3/hw2_q3_add_int/solution1/.autopilot/db/q3_kernels.pp.0.cpp
+        Offset:          935975
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_1: '
+...
