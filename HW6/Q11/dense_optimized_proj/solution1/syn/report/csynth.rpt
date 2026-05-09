@@ -1,0 +1,128 @@
+
+
+================================================================
+== Synthesis Summary Report of 'dense_optimized'
+================================================================
++ General Information: 
+    * Date:           Sat May  9 13:44:50 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        dense_optimized_proj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p-fsga2577-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+----------+-----------+-----+
+    |               Modules              | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |         |          |           |     |
+    |               & Loops              | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |    FF    |    LUT    | URAM|
+    +------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+----------+-----------+-----+
+    |+ dense_optimized                   |    II|  12.35|      130|  3.250e+03|         -|      128|     -|    rewind|     -|  3 (~0%)|  60 (~0%)|  333 (~0%)|    -|
+    | o VITIS_LOOP_35_1_VITIS_LOOP_38_2  |     -|  18.25|      128|  3.200e+03|         2|        1|   128|       yes|     -|        -|         -|          -|    -|
+    +------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* BRAM
++-----------+------------+---------------+
+| Interface | Data Width | Address Width |
++-----------+------------+---------------+
+| w_0_PORTA | 32         | 32            |
+| w_1_PORTA | 32         | 32            |
+| w_2_PORTA | 32         | 32            |
+| w_3_PORTA | 32         | 32            |
+| x_0_PORTA | 32         | 32            |
+| x_1_PORTA | 32         | 32            |
+| x_2_PORTA | 32         | 32            |
+| x_3_PORTA | 32         | 32            |
+| y_PORTA   | 32         | 32            |
++-----------+------------+---------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| x        | in        | int*     |
+| w        | in        | int*     |
+| y        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| x        | x_0_PORTA    | interface |
+| x        | x_1_PORTA    | interface |
+| x        | x_2_PORTA    | interface |
+| x        | x_3_PORTA    | interface |
+| w        | w_0_PORTA    | interface |
+| w        | w_1_PORTA    | interface |
+| w        | w_2_PORTA    | interface |
+| w        | w_3_PORTA    | interface |
+| y        | y_PORTA      | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------+-----+--------+---------------+-----------+----------+---------+
+| Name                      | DSP | Pragma | Variable      | Op        | Impl     | Latency |
++---------------------------+-----+--------+---------------+-----------+----------+---------+
+| + dense_optimized         | 3   |        |               |           |          |         |
+|   add_ln35_fu_293_p2      |     |        | add_ln35      | add       | fabric   | 0       |
+|   select_ln35_fu_299_p3   |     |        | select_ln35   | select    | auto_sel | 0       |
+|   select_ln35_1_fu_410_p3 |     |        | select_ln35_1 | select    | auto_sel | 0       |
+|   j_fu_307_p3             |     |        | j             | select    | auto_sel | 0       |
+|   add_ln40_fu_354_p2      |     |        | add_ln40      | add       | fabric   | 0       |
+|   sparsemux_9_2_32_1_1_U2 |     |        | tmp           | sparsemux | auto     | 0       |
+|   sparsemux_9_2_32_1_1_U3 |     |        | tmp_1         | sparsemux | auto     | 0       |
+|   mul_32s_32s_32_1_1_U1   | 3   |        | mul_ln40      | mul       | auto     | 0       |
+|   sum_fu_466_p2           |     |        | sum           | add       | fabric   | 0       |
+|   i_fu_368_p2             |     |        | i             | add       | fabric   | 0       |
+|   icmp_ln38_fu_374_p2     |     |        | icmp_ln38     | seteq     | auto     | 0       |
+|   add_ln35_1_fu_380_p2    |     |        | add_ln35_1    | add       | fabric   | 0       |
+|   icmp_ln35_fu_386_p2     |     |        | icmp_ln35     | seteq     | auto     | 0       |
++---------------------------+-----+--------+---------------+-----------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+------------------------------------------+
+| Type            | Options                          | Location                                 |
++-----------------+----------------------------------+------------------------------------------+
+| interface       | mode=bram port=x                 | dense_layer.cpp:24 in dense_optimized, x |
+| interface       | mode=bram port=w                 | dense_layer.cpp:25 in dense_optimized, w |
+| interface       | mode=bram port=y                 | dense_layer.cpp:26 in dense_optimized, y |
+| stable          | variable=w                       | dense_layer.cpp:28 in dense_optimized, w |
+| array_partition | variable=x cyclic factor=4 dim=1 | dense_layer.cpp:30 in dense_optimized, x |
+| array_partition | variable=w cyclic factor=4 dim=1 | dense_layer.cpp:31 in dense_optimized, w |
+| allocation      | operation instances=mul limit=4  | dense_layer.cpp:33 in dense_optimized    |
+| pipeline        | II=1                             | dense_layer.cpp:39 in dense_optimized    |
++-----------------+----------------------------------+------------------------------------------+
+
+

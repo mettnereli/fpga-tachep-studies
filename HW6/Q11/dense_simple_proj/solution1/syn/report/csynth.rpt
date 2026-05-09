@@ -1,0 +1,148 @@
+
+
+================================================================
+== Synthesis Summary Report of 'dense_simple'
+================================================================
++ General Information: 
+    * Date:           Sat May  9 13:44:35 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        dense_simple_proj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p-fsga2577-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |                 Modules                 | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |           |     |
+    |                 & Loops                 | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +-----------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ dense_simple                           |     -|  10.71|       75|  1.875e+03|         -|       76|     -|        no|     -|  6 (~0%)|  752 (~0%)|  880 (~0%)|    -|
+    | + dense_simple_Pipeline_VITIS_LOOP_8_1  |     -|  10.71|       66|  1.650e+03|         -|       66|     -|        no|     -|  6 (~0%)|  229 (~0%)|  723 (~0%)|    -|
+    |  o VITIS_LOOP_8_1                       |    II|  18.25|       64|  1.600e+03|         9|        8|     8|       yes|     -|        -|          -|          -|    -|
+    +-----------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------+-----------+----------+
+| Port       | Direction | Bitwidth |
++------------+-----------+----------+
+| w_address0 | out       | 7        |
+| w_address1 | out       | 7        |
+| w_q0       | in        | 32       |
+| w_q1       | in        | 32       |
+| x_address0 | out       | 4        |
+| x_address1 | out       | 4        |
+| x_q0       | in        | 32       |
+| x_q1       | in        | 32       |
+| y_address0 | out       | 3        |
+| y_d0       | out       | 32       |
++------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| x        | in        | int*     |
+| w        | in        | int*     |
+| y        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| x        | x_address0   | port    | offset   |
+| x        | x_ce0        | port    |          |
+| x        | x_q0         | port    |          |
+| x        | x_address1   | port    | offset   |
+| x        | x_ce1        | port    |          |
+| x        | x_q1         | port    |          |
+| w        | w_address0   | port    | offset   |
+| w        | w_ce0        | port    |          |
+| w        | w_q0         | port    |          |
+| w        | w_address1   | port    | offset   |
+| w        | w_ce1        | port    |          |
+| w        | w_q1         | port    |          |
+| y        | y_address0   | port    | offset   |
+| y        | y_ce0        | port    |          |
+| y        | y_we0        | port    |          |
+| y        | y_d0         | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+-------------+-------+--------+---------+
+| Name                                    | DSP | Pragma | Variable    | Op    | Impl   | Latency |
++-----------------------------------------+-----+--------+-------------+-------+--------+---------+
+| + dense_simple                          | 6   |        |             |       |        |         |
+|  + dense_simple_Pipeline_VITIS_LOOP_8_1 | 6   |        |             |       |        |         |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12    | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12_1  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12_2  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12_3  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12_4  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12_5  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12_6  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_7  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_8  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_9  | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_10 | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_11 | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_12 | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U1                | 3   |        | mul_ln12_13 | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_14 | mul   | auto   | 0       |
+|    mul_32s_32s_32_1_1_U2                | 3   |        | mul_ln12_15 | mul   | auto   | 0       |
+|    grp_fu_352_p2                        |     |        | add_ln12_1  | add   | fabric | 0       |
+|    grp_fu_358_p2                        |     |        | add_ln12_4  | add   | fabric | 0       |
+|    grp_fu_352_p2                        |     |        | add_ln12_7  | add   | fabric | 0       |
+|    grp_fu_358_p2                        |     |        | add_ln12_8  | add   | fabric | 0       |
+|    grp_fu_352_p2                        |     |        | add_ln12_11 | add   | fabric | 0       |
+|    j_fu_410_p2                          |     |        | j           | add   | fabric | 0       |
+|    icmp_ln8_fu_416_p2                   |     |        | icmp_ln8    | seteq | auto   | 0       |
++-----------------------------------------+-----+--------+-------------+-------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+------------------------------------------+
+| Type            | Options                          | Location                                 |
++-----------------+----------------------------------+------------------------------------------+
+| interface       | mode=bram port=x                 | dense_layer.cpp:24 in dense_optimized, x |
+| interface       | mode=bram port=w                 | dense_layer.cpp:25 in dense_optimized, w |
+| interface       | mode=bram port=y                 | dense_layer.cpp:26 in dense_optimized, y |
+| stable          | variable=w                       | dense_layer.cpp:28 in dense_optimized, w |
+| array_partition | variable=x cyclic factor=4 dim=1 | dense_layer.cpp:30 in dense_optimized, x |
+| array_partition | variable=w cyclic factor=4 dim=1 | dense_layer.cpp:31 in dense_optimized, w |
+| allocation      | operation instances=mul limit=4  | dense_layer.cpp:33 in dense_optimized    |
+| pipeline        | II=1                             | dense_layer.cpp:39 in dense_optimized    |
++-----------------+----------------------------------+------------------------------------------+
+
+

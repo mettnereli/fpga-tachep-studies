@@ -1,0 +1,40 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/.autopilot/db/dense_layer.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_8_1:  '
+    FileOffset:      8
+    FilePath:        dense_layer.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/.autopilot/db/dense_layer.pp.0.cpp
+        Offset:          9961
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_8_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_11_2:  '
+    FileOffset:      11
+    FilePath:        dense_layer.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/.autopilot/db/dense_layer.pp.0.cpp
+        Offset:          10021
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_11_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_1:  '
+    FileOffset:      35
+    FilePath:        dense_layer.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/.autopilot/db/dense_layer.pp.0.cpp
+        Offset:          10528
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_38_2:  '
+    FileOffset:      38
+    FilePath:        dense_layer.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/.autopilot/db/dense_layer.pp.0.cpp
+        Offset:          10588
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_38_2: '
+...

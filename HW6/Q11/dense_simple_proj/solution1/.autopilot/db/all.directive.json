@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "dense_simple",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "dense_simple"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/scratch/emettner/fpga-tachep-studies/HW6/Q11/run_dense_layer.tcl",
+    "sourceLine": 14,
+    "success": true
+  }
+]

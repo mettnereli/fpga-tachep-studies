@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/scratch/emettner/fpga-tachep-studies/HW6/Q11/run_dense_layer.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dense_simple" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dense_simple" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=x" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=w" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=y" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w" ARG_PragmaType="stable" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=x cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=mul limit=4" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="dense_layer.cpp:11:26" msg_body="Loop 'VITIS_LOOP_11_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_11_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="dense_layer.cpp:7:0" msg_body="Unrolling loop 'VITIS_LOOP_11_2' (dense_layer.cpp:11:26) in function 'dense_simple' completely with a factor of 16">
+        <args Factor="16" LoopLoc="dense_layer.cpp:11:26" LoopName="VITIS_LOOP_11_2"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

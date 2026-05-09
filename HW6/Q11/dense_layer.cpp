@@ -30,7 +30,7 @@ void dense_optimized(
 #pragma HLS ARRAY_PARTITION variable=x cyclic factor=4 dim=1
 #pragma HLS ARRAY_PARTITION variable=w cyclic factor=4 dim=1
 
-#pragma HLS ALLOCATION instances=mul limit=4 operation
+#pragma HLS ALLOCATION operation instances=mul limit=4
 
     for (int j = 0; j < OUT_SIZE; j++) {
         int sum = 0;

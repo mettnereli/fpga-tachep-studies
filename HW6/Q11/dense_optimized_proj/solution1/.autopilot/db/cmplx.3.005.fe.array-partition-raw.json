@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "dense_layer.cpp",
+    "fileloc": 19,
+    "instructions": 63,
+    "loads": {
+      "T": 8
+    },
+    "name": "dense_optimized",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 63
+  }
+}

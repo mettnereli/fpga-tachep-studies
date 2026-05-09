@@ -1,0 +1,28 @@
+/scratch/emettner/fpga-tachep-studies/HW6/Q11/run_dense_layer.tcl:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=dense_simple_XLX_SEP_ PragmaOptions=name=dense_simple_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=dense_simple
+        ^
+dense_layer.cpp:24:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=mode=bram port=x_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=bram port=x
+        ^
+dense_layer.cpp:25:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=mode=bram port=w_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=bram port=w
+        ^
+dense_layer.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=mode=bram port=y_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=bram port=y
+        ^
+dense_layer.cpp:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stable_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=variable=w_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STABLE variable=w
+        ^
+dense_layer.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=variable=x cyclic factor=4 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=x cyclic factor=4 dim=1
+        ^
+dense_layer.cpp:31:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=variable=w cyclic factor=4 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=w cyclic factor=4 dim=1
+        ^
+dense_layer.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=allocation_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=operation instances=mul limit=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ALLOCATION operation instances=mul limit=4
+        ^
+dense_layer.cpp:39:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=dense_optimized_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+9 warnings generated.

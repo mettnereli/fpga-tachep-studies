@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/scratch/emettner/fpga-tachep-studies/HW6/Q11/run_dense_layer.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dense_optimized" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=x" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=w" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=y" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w" ARG_PragmaType="stable" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=x cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=mul limit=4" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dense_layer.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dense_optimized" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="dense_layer.cpp:23:0" msg_body="Applying array_partition to 'x': Cyclic partitioning with factor 4 on dimension 1.">
+        <args Dim="1" Factor="4" Mode="Cyclic" UOName="x"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="dense_layer.cpp:23:0" msg_body="Applying array_partition to 'w': Cyclic partitioning with factor 4 on dimension 1.">
+        <args Dim="1" Factor="4" Mode="Cyclic" UOName="w"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

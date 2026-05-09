@@ -1,0 +1,109 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+Tool Version Limit: 2024.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p-fsga2577-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.180 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 325.215 MB.
+INFO: [HLS 200-10] Analyzing design file 'dense_layer.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.64 seconds. CPU system time: 0.77 seconds. Elapsed time: 1.48 seconds; current allocated memory: 327.141 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 33 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 22 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 21 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 21 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 109 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 114 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q11/dense_simple_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_8_1> at dense_layer.cpp:8:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_11_2' is marked as complete unroll implied by the pipeline pragma (dense_layer.cpp:11:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_11_2' (dense_layer.cpp:11:26) in function 'dense_simple' completely with a factor of 16 (dense_layer.cpp:7:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.64 seconds. CPU system time: 0.77 seconds. Elapsed time: 8.93 seconds; current allocated memory: 336.773 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 336.773 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 336.855 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 336.871 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'dense_simple' (dense_layer.cpp:3:21)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 358.621 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 358.723 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dense_simple' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_simple_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+WARNING: [HLS 200-885] The II Violation in module 'dense_simple_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to schedule 'load' operation 32 bit ('w_load_1', dense_layer.cpp:12) on array 'w' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'w'.
+WARNING: [HLS 200-885] The II Violation in module 'dense_simple_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to schedule 'load' operation 32 bit ('w_load_3', dense_layer.cpp:12) on array 'w' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'w'.
+WARNING: [HLS 200-885] The II Violation in module 'dense_simple_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to schedule 'load' operation 32 bit ('w_load_5', dense_layer.cpp:12) on array 'w' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'w'.
+WARNING: [HLS 200-885] The II Violation in module 'dense_simple_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to schedule 'load' operation 32 bit ('w_load_7', dense_layer.cpp:12) on array 'w' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'w'.
+WARNING: [HLS 200-885] The II Violation in module 'dense_simple_Pipeline_VITIS_LOOP_8_1' (loop 'VITIS_LOOP_8_1'): Unable to schedule 'load' operation 32 bit ('w_load_13', dense_layer.cpp:12) on array 'w' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'w'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 9, loop 'VITIS_LOOP_8_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.42 seconds; current allocated memory: 359.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 359.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_simple' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 359.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 359.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_Pipeline_VITIS_LOOP_8_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dense_simple_Pipeline_VITIS_LOOP_8_1' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_Pipeline_VITIS_LOOP_8_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 359.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dense_simple/x' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dense_simple/w' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dense_simple/y' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dense_simple' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 360.902 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.28 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.32 seconds; current allocated memory: 364.316 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.56 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.59 seconds; current allocated memory: 366.730 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dense_simple.
+INFO: [VLOG 209-307] Generating Verilog RTL for dense_simple.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.59 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 42.039 MB.
+INFO: [HLS 200-1510] Running: close_project 

@@ -1,0 +1,10 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../dense_layer_tb.cpp in debug mode
+   Compiling ../../../../dense_layer.cpp in debug mode
+   Generating csim.exe
+TEST PASSED
+Output:
+1496 1632 1768 1904 2040 2176 2312 2448 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

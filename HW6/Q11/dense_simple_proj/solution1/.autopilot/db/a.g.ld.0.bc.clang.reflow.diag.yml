@@ -1,0 +1,36 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_8_1
+  - String:          '> at '
+  - LoopLoc:         'dense_layer.cpp:8:21'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: dense_layer.cpp, Line: 11, Column: 26 }
+Function:        _Z12dense_simplePiPA8_iS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_11_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: dense_layer.cpp, Line: 7, Column: 0 }
+Function:        _Z12dense_simplePiPA8_iS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_11_2
+  - String:          ''' ('
+  - LoopLoc:         'dense_layer.cpp:11:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dense_simple
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
