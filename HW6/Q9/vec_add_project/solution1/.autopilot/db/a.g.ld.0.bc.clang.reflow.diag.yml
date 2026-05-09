@@ -1,0 +1,16 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: vec_add.cpp, Line: 3, Column: 0 }
+Function:        _Z7vec_addP7ap_uintILi16EES1_S1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_4_1
+  - String:          ''' ('
+  - LoopLoc:         'vec_add.cpp:4:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          vec_add
+  - String:          ''' completely with a factor of '
+  - Factor:          '15'
+...

@@ -1,0 +1,58 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1223_1:  '
+    FileOffset:      1223
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp
+        Offset:          55182
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp
+        Offset:          282576
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp
+        Offset:          283040
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp
+        Offset:          283505
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp
+        Offset:          566860
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_4_1:  '
+    FileOffset:      4
+    FilePath:        vec_add.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp
+        Offset:          934939
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_4_1: '
+...

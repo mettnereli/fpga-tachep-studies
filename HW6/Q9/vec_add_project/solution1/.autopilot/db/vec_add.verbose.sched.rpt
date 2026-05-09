@@ -1,0 +1,328 @@
+
+
+================================================================
+== Vitis HLS Report for 'vec_add'
+================================================================
+* Date:           Sat May  9 10:49:07 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        vec_add_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p-fsga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  25.00 ns|  2.151 ns|     6.75 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        8|        8|  0.200 us|  0.200 us|    9|    9|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.68>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%A_addr = getelementptr i16 %A, i64 0, i64 0" [vec_add.cpp:6]   --->   Operation 10 'getelementptr' 'A_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (0.68ns)   --->   "%A_load = load i4 %A_addr" [vec_add.cpp:6]   --->   Operation 11 'load' 'A_load' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%B_addr = getelementptr i16 %B, i64 0, i64 0" [vec_add.cpp:6]   --->   Operation 12 'getelementptr' 'B_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [2/2] (0.68ns)   --->   "%B_load = load i4 %B_addr" [vec_add.cpp:6]   --->   Operation 13 'load' 'B_load' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr i16 %A, i64 0, i64 1" [vec_add.cpp:6]   --->   Operation 14 'getelementptr' 'A_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (0.68ns)   --->   "%A_load_1 = load i4 %A_addr_1" [vec_add.cpp:6]   --->   Operation 15 'load' 'A_load_1' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr i16 %B, i64 0, i64 1" [vec_add.cpp:6]   --->   Operation 16 'getelementptr' 'B_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (0.68ns)   --->   "%B_load_1 = load i4 %B_addr_1" [vec_add.cpp:6]   --->   Operation 17 'load' 'B_load_1' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 18 [1/2] (0.68ns)   --->   "%A_load = load i4 %A_addr" [vec_add.cpp:6]   --->   Operation 18 'load' 'A_load' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 19 [1/2] (0.68ns)   --->   "%B_load = load i4 %B_addr" [vec_add.cpp:6]   --->   Operation 19 'load' 'B_load' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 20 [1/1] (0.78ns)   --->   "%add_ln6 = add i16 %B_load, i16 %A_load" [vec_add.cpp:6]   --->   Operation 20 'add' 'add_ln6' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%C_addr = getelementptr i16 %C, i64 0, i64 0" [vec_add.cpp:6]   --->   Operation 21 'getelementptr' 'C_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6, i4 %C_addr" [vec_add.cpp:6]   --->   Operation 22 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 23 [1/2] (0.68ns)   --->   "%A_load_1 = load i4 %A_addr_1" [vec_add.cpp:6]   --->   Operation 23 'load' 'A_load_1' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 24 [1/2] (0.68ns)   --->   "%B_load_1 = load i4 %B_addr_1" [vec_add.cpp:6]   --->   Operation 24 'load' 'B_load_1' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 25 [1/1] (0.78ns)   --->   "%add_ln6_1 = add i16 %B_load_1, i16 %A_load_1" [vec_add.cpp:6]   --->   Operation 25 'add' 'add_ln6_1' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%C_addr_1 = getelementptr i16 %C, i64 0, i64 1" [vec_add.cpp:6]   --->   Operation 26 'getelementptr' 'C_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_1, i4 %C_addr_1" [vec_add.cpp:6]   --->   Operation 27 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%A_addr_2 = getelementptr i16 %A, i64 0, i64 2" [vec_add.cpp:6]   --->   Operation 28 'getelementptr' 'A_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [2/2] (0.68ns)   --->   "%A_load_2 = load i4 %A_addr_2" [vec_add.cpp:6]   --->   Operation 29 'load' 'A_load_2' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%B_addr_2 = getelementptr i16 %B, i64 0, i64 2" [vec_add.cpp:6]   --->   Operation 30 'getelementptr' 'B_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [2/2] (0.68ns)   --->   "%B_load_2 = load i4 %B_addr_2" [vec_add.cpp:6]   --->   Operation 31 'load' 'B_load_2' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%A_addr_3 = getelementptr i16 %A, i64 0, i64 3" [vec_add.cpp:6]   --->   Operation 32 'getelementptr' 'A_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [2/2] (0.68ns)   --->   "%A_load_3 = load i4 %A_addr_3" [vec_add.cpp:6]   --->   Operation 33 'load' 'A_load_3' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%B_addr_3 = getelementptr i16 %B, i64 0, i64 3" [vec_add.cpp:6]   --->   Operation 34 'getelementptr' 'B_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [2/2] (0.68ns)   --->   "%B_load_3 = load i4 %B_addr_3" [vec_add.cpp:6]   --->   Operation 35 'load' 'B_load_3' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 3 <SV = 2> <Delay = 2.15>
+ST_3 : Operation 36 [1/2] (0.68ns)   --->   "%A_load_2 = load i4 %A_addr_2" [vec_add.cpp:6]   --->   Operation 36 'load' 'A_load_2' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 37 [1/2] (0.68ns)   --->   "%B_load_2 = load i4 %B_addr_2" [vec_add.cpp:6]   --->   Operation 37 'load' 'B_load_2' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 38 [1/1] (0.78ns)   --->   "%add_ln6_2 = add i16 %B_load_2, i16 %A_load_2" [vec_add.cpp:6]   --->   Operation 38 'add' 'add_ln6_2' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%C_addr_2 = getelementptr i16 %C, i64 0, i64 2" [vec_add.cpp:6]   --->   Operation 39 'getelementptr' 'C_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_2, i4 %C_addr_2" [vec_add.cpp:6]   --->   Operation 40 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 41 [1/2] (0.68ns)   --->   "%A_load_3 = load i4 %A_addr_3" [vec_add.cpp:6]   --->   Operation 41 'load' 'A_load_3' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 42 [1/2] (0.68ns)   --->   "%B_load_3 = load i4 %B_addr_3" [vec_add.cpp:6]   --->   Operation 42 'load' 'B_load_3' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 43 [1/1] (0.78ns)   --->   "%add_ln6_3 = add i16 %B_load_3, i16 %A_load_3" [vec_add.cpp:6]   --->   Operation 43 'add' 'add_ln6_3' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%C_addr_3 = getelementptr i16 %C, i64 0, i64 3" [vec_add.cpp:6]   --->   Operation 44 'getelementptr' 'C_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_3, i4 %C_addr_3" [vec_add.cpp:6]   --->   Operation 45 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%A_addr_4 = getelementptr i16 %A, i64 0, i64 4" [vec_add.cpp:6]   --->   Operation 46 'getelementptr' 'A_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [2/2] (0.68ns)   --->   "%A_load_4 = load i4 %A_addr_4" [vec_add.cpp:6]   --->   Operation 47 'load' 'A_load_4' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%B_addr_4 = getelementptr i16 %B, i64 0, i64 4" [vec_add.cpp:6]   --->   Operation 48 'getelementptr' 'B_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [2/2] (0.68ns)   --->   "%B_load_4 = load i4 %B_addr_4" [vec_add.cpp:6]   --->   Operation 49 'load' 'B_load_4' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%A_addr_5 = getelementptr i16 %A, i64 0, i64 5" [vec_add.cpp:6]   --->   Operation 50 'getelementptr' 'A_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [2/2] (0.68ns)   --->   "%A_load_5 = load i4 %A_addr_5" [vec_add.cpp:6]   --->   Operation 51 'load' 'A_load_5' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%B_addr_5 = getelementptr i16 %B, i64 0, i64 5" [vec_add.cpp:6]   --->   Operation 52 'getelementptr' 'B_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [2/2] (0.68ns)   --->   "%B_load_5 = load i4 %B_addr_5" [vec_add.cpp:6]   --->   Operation 53 'load' 'B_load_5' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 4 <SV = 3> <Delay = 2.15>
+ST_4 : Operation 54 [1/2] (0.68ns)   --->   "%A_load_4 = load i4 %A_addr_4" [vec_add.cpp:6]   --->   Operation 54 'load' 'A_load_4' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 55 [1/2] (0.68ns)   --->   "%B_load_4 = load i4 %B_addr_4" [vec_add.cpp:6]   --->   Operation 55 'load' 'B_load_4' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 56 [1/1] (0.78ns)   --->   "%add_ln6_4 = add i16 %B_load_4, i16 %A_load_4" [vec_add.cpp:6]   --->   Operation 56 'add' 'add_ln6_4' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%C_addr_4 = getelementptr i16 %C, i64 0, i64 4" [vec_add.cpp:6]   --->   Operation 57 'getelementptr' 'C_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_4, i4 %C_addr_4" [vec_add.cpp:6]   --->   Operation 58 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 59 [1/2] (0.68ns)   --->   "%A_load_5 = load i4 %A_addr_5" [vec_add.cpp:6]   --->   Operation 59 'load' 'A_load_5' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 60 [1/2] (0.68ns)   --->   "%B_load_5 = load i4 %B_addr_5" [vec_add.cpp:6]   --->   Operation 60 'load' 'B_load_5' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 61 [1/1] (0.78ns)   --->   "%add_ln6_5 = add i16 %B_load_5, i16 %A_load_5" [vec_add.cpp:6]   --->   Operation 61 'add' 'add_ln6_5' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%C_addr_5 = getelementptr i16 %C, i64 0, i64 5" [vec_add.cpp:6]   --->   Operation 62 'getelementptr' 'C_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_5, i4 %C_addr_5" [vec_add.cpp:6]   --->   Operation 63 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%A_addr_6 = getelementptr i16 %A, i64 0, i64 6" [vec_add.cpp:6]   --->   Operation 64 'getelementptr' 'A_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [2/2] (0.68ns)   --->   "%A_load_6 = load i4 %A_addr_6" [vec_add.cpp:6]   --->   Operation 65 'load' 'A_load_6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%B_addr_6 = getelementptr i16 %B, i64 0, i64 6" [vec_add.cpp:6]   --->   Operation 66 'getelementptr' 'B_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [2/2] (0.68ns)   --->   "%B_load_6 = load i4 %B_addr_6" [vec_add.cpp:6]   --->   Operation 67 'load' 'B_load_6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%A_addr_7 = getelementptr i16 %A, i64 0, i64 7" [vec_add.cpp:6]   --->   Operation 68 'getelementptr' 'A_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [2/2] (0.68ns)   --->   "%A_load_7 = load i4 %A_addr_7" [vec_add.cpp:6]   --->   Operation 69 'load' 'A_load_7' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%B_addr_7 = getelementptr i16 %B, i64 0, i64 7" [vec_add.cpp:6]   --->   Operation 70 'getelementptr' 'B_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [2/2] (0.68ns)   --->   "%B_load_7 = load i4 %B_addr_7" [vec_add.cpp:6]   --->   Operation 71 'load' 'B_load_7' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 5 <SV = 4> <Delay = 2.15>
+ST_5 : Operation 72 [1/2] (0.68ns)   --->   "%A_load_6 = load i4 %A_addr_6" [vec_add.cpp:6]   --->   Operation 72 'load' 'A_load_6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 73 [1/2] (0.68ns)   --->   "%B_load_6 = load i4 %B_addr_6" [vec_add.cpp:6]   --->   Operation 73 'load' 'B_load_6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 74 [1/1] (0.78ns)   --->   "%add_ln6_6 = add i16 %B_load_6, i16 %A_load_6" [vec_add.cpp:6]   --->   Operation 74 'add' 'add_ln6_6' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%C_addr_6 = getelementptr i16 %C, i64 0, i64 6" [vec_add.cpp:6]   --->   Operation 75 'getelementptr' 'C_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 76 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_6, i4 %C_addr_6" [vec_add.cpp:6]   --->   Operation 76 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 77 [1/2] (0.68ns)   --->   "%A_load_7 = load i4 %A_addr_7" [vec_add.cpp:6]   --->   Operation 77 'load' 'A_load_7' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 78 [1/2] (0.68ns)   --->   "%B_load_7 = load i4 %B_addr_7" [vec_add.cpp:6]   --->   Operation 78 'load' 'B_load_7' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 79 [1/1] (0.78ns)   --->   "%add_ln6_7 = add i16 %B_load_7, i16 %A_load_7" [vec_add.cpp:6]   --->   Operation 79 'add' 'add_ln6_7' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%C_addr_7 = getelementptr i16 %C, i64 0, i64 7" [vec_add.cpp:6]   --->   Operation 80 'getelementptr' 'C_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_7, i4 %C_addr_7" [vec_add.cpp:6]   --->   Operation 81 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%A_addr_8 = getelementptr i16 %A, i64 0, i64 8" [vec_add.cpp:6]   --->   Operation 82 'getelementptr' 'A_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 83 [2/2] (0.68ns)   --->   "%A_load_8 = load i4 %A_addr_8" [vec_add.cpp:6]   --->   Operation 83 'load' 'A_load_8' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%B_addr_8 = getelementptr i16 %B, i64 0, i64 8" [vec_add.cpp:6]   --->   Operation 84 'getelementptr' 'B_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [2/2] (0.68ns)   --->   "%B_load_8 = load i4 %B_addr_8" [vec_add.cpp:6]   --->   Operation 85 'load' 'B_load_8' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%A_addr_9 = getelementptr i16 %A, i64 0, i64 9" [vec_add.cpp:6]   --->   Operation 86 'getelementptr' 'A_addr_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [2/2] (0.68ns)   --->   "%A_load_9 = load i4 %A_addr_9" [vec_add.cpp:6]   --->   Operation 87 'load' 'A_load_9' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%B_addr_9 = getelementptr i16 %B, i64 0, i64 9" [vec_add.cpp:6]   --->   Operation 88 'getelementptr' 'B_addr_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 89 [2/2] (0.68ns)   --->   "%B_load_9 = load i4 %B_addr_9" [vec_add.cpp:6]   --->   Operation 89 'load' 'B_load_9' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 6 <SV = 5> <Delay = 2.15>
+ST_6 : Operation 90 [1/2] (0.68ns)   --->   "%A_load_8 = load i4 %A_addr_8" [vec_add.cpp:6]   --->   Operation 90 'load' 'A_load_8' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 91 [1/2] (0.68ns)   --->   "%B_load_8 = load i4 %B_addr_8" [vec_add.cpp:6]   --->   Operation 91 'load' 'B_load_8' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 92 [1/1] (0.78ns)   --->   "%add_ln6_8 = add i16 %B_load_8, i16 %A_load_8" [vec_add.cpp:6]   --->   Operation 92 'add' 'add_ln6_8' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 93 [1/1] (0.00ns)   --->   "%C_addr_8 = getelementptr i16 %C, i64 0, i64 8" [vec_add.cpp:6]   --->   Operation 93 'getelementptr' 'C_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 94 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_8, i4 %C_addr_8" [vec_add.cpp:6]   --->   Operation 94 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 95 [1/2] (0.68ns)   --->   "%A_load_9 = load i4 %A_addr_9" [vec_add.cpp:6]   --->   Operation 95 'load' 'A_load_9' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 96 [1/2] (0.68ns)   --->   "%B_load_9 = load i4 %B_addr_9" [vec_add.cpp:6]   --->   Operation 96 'load' 'B_load_9' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 97 [1/1] (0.78ns)   --->   "%add_ln6_9 = add i16 %B_load_9, i16 %A_load_9" [vec_add.cpp:6]   --->   Operation 97 'add' 'add_ln6_9' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%C_addr_9 = getelementptr i16 %C, i64 0, i64 9" [vec_add.cpp:6]   --->   Operation 98 'getelementptr' 'C_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_9, i4 %C_addr_9" [vec_add.cpp:6]   --->   Operation 99 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%A_addr_10 = getelementptr i16 %A, i64 0, i64 10" [vec_add.cpp:6]   --->   Operation 100 'getelementptr' 'A_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 101 [2/2] (0.68ns)   --->   "%A_load_10 = load i4 %A_addr_10" [vec_add.cpp:6]   --->   Operation 101 'load' 'A_load_10' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%B_addr_10 = getelementptr i16 %B, i64 0, i64 10" [vec_add.cpp:6]   --->   Operation 102 'getelementptr' 'B_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 103 [2/2] (0.68ns)   --->   "%B_load_10 = load i4 %B_addr_10" [vec_add.cpp:6]   --->   Operation 103 'load' 'B_load_10' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%A_addr_11 = getelementptr i16 %A, i64 0, i64 11" [vec_add.cpp:6]   --->   Operation 104 'getelementptr' 'A_addr_11' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 105 [2/2] (0.68ns)   --->   "%A_load_11 = load i4 %A_addr_11" [vec_add.cpp:6]   --->   Operation 105 'load' 'A_load_11' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%B_addr_11 = getelementptr i16 %B, i64 0, i64 11" [vec_add.cpp:6]   --->   Operation 106 'getelementptr' 'B_addr_11' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 107 [2/2] (0.68ns)   --->   "%B_load_11 = load i4 %B_addr_11" [vec_add.cpp:6]   --->   Operation 107 'load' 'B_load_11' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 7 <SV = 6> <Delay = 2.15>
+ST_7 : Operation 108 [1/2] (0.68ns)   --->   "%A_load_10 = load i4 %A_addr_10" [vec_add.cpp:6]   --->   Operation 108 'load' 'A_load_10' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_7 : Operation 109 [1/2] (0.68ns)   --->   "%B_load_10 = load i4 %B_addr_10" [vec_add.cpp:6]   --->   Operation 109 'load' 'B_load_10' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_7 : Operation 110 [1/1] (0.78ns)   --->   "%add_ln6_10 = add i16 %B_load_10, i16 %A_load_10" [vec_add.cpp:6]   --->   Operation 110 'add' 'add_ln6_10' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%C_addr_10 = getelementptr i16 %C, i64 0, i64 10" [vec_add.cpp:6]   --->   Operation 111 'getelementptr' 'C_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_10, i4 %C_addr_10" [vec_add.cpp:6]   --->   Operation 112 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_7 : Operation 113 [1/2] (0.68ns)   --->   "%A_load_11 = load i4 %A_addr_11" [vec_add.cpp:6]   --->   Operation 113 'load' 'A_load_11' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_7 : Operation 114 [1/2] (0.68ns)   --->   "%B_load_11 = load i4 %B_addr_11" [vec_add.cpp:6]   --->   Operation 114 'load' 'B_load_11' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_7 : Operation 115 [1/1] (0.78ns)   --->   "%add_ln6_11 = add i16 %B_load_11, i16 %A_load_11" [vec_add.cpp:6]   --->   Operation 115 'add' 'add_ln6_11' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%C_addr_11 = getelementptr i16 %C, i64 0, i64 11" [vec_add.cpp:6]   --->   Operation 116 'getelementptr' 'C_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 117 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_11, i4 %C_addr_11" [vec_add.cpp:6]   --->   Operation 117 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%A_addr_12 = getelementptr i16 %A, i64 0, i64 12" [vec_add.cpp:6]   --->   Operation 118 'getelementptr' 'A_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [2/2] (0.68ns)   --->   "%A_load_12 = load i4 %A_addr_12" [vec_add.cpp:6]   --->   Operation 119 'load' 'A_load_12' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_7 : Operation 120 [1/1] (0.00ns)   --->   "%B_addr_12 = getelementptr i16 %B, i64 0, i64 12" [vec_add.cpp:6]   --->   Operation 120 'getelementptr' 'B_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 121 [2/2] (0.68ns)   --->   "%B_load_12 = load i4 %B_addr_12" [vec_add.cpp:6]   --->   Operation 121 'load' 'B_load_12' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 8 <SV = 7> <Delay = 2.15>
+ST_8 : Operation 122 [1/2] (0.68ns)   --->   "%A_load_12 = load i4 %A_addr_12" [vec_add.cpp:6]   --->   Operation 122 'load' 'A_load_12' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_8 : Operation 123 [1/2] (0.68ns)   --->   "%B_load_12 = load i4 %B_addr_12" [vec_add.cpp:6]   --->   Operation 123 'load' 'B_load_12' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_8 : Operation 124 [1/1] (0.78ns)   --->   "%add_ln6_12 = add i16 %B_load_12, i16 %A_load_12" [vec_add.cpp:6]   --->   Operation 124 'add' 'add_ln6_12' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 125 [1/1] (0.00ns)   --->   "%C_addr_12 = getelementptr i16 %C, i64 0, i64 12" [vec_add.cpp:6]   --->   Operation 125 'getelementptr' 'C_addr_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 126 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_12, i4 %C_addr_12" [vec_add.cpp:6]   --->   Operation 126 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_8 : Operation 127 [1/1] (0.00ns)   --->   "%A_addr_13 = getelementptr i16 %A, i64 0, i64 13" [vec_add.cpp:6]   --->   Operation 127 'getelementptr' 'A_addr_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 128 [2/2] (0.68ns)   --->   "%A_load_13 = load i4 %A_addr_13" [vec_add.cpp:6]   --->   Operation 128 'load' 'A_load_13' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_8 : Operation 129 [1/1] (0.00ns)   --->   "%B_addr_13 = getelementptr i16 %B, i64 0, i64 13" [vec_add.cpp:6]   --->   Operation 129 'getelementptr' 'B_addr_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 130 [2/2] (0.68ns)   --->   "%B_load_13 = load i4 %B_addr_13" [vec_add.cpp:6]   --->   Operation 130 'load' 'B_load_13' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_8 : Operation 131 [1/1] (0.00ns)   --->   "%A_addr_14 = getelementptr i16 %A, i64 0, i64 14" [vec_add.cpp:6]   --->   Operation 131 'getelementptr' 'A_addr_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 132 [2/2] (0.68ns)   --->   "%A_load_14 = load i4 %A_addr_14" [vec_add.cpp:6]   --->   Operation 132 'load' 'A_load_14' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_8 : Operation 133 [1/1] (0.00ns)   --->   "%B_addr_14 = getelementptr i16 %B, i64 0, i64 14" [vec_add.cpp:6]   --->   Operation 133 'getelementptr' 'B_addr_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 134 [2/2] (0.68ns)   --->   "%B_load_14 = load i4 %B_addr_14" [vec_add.cpp:6]   --->   Operation 134 'load' 'B_load_14' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+
+State 9 <SV = 8> <Delay = 2.15>
+ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [vec_add.cpp:3]   --->   Operation 135 'spectopmodule' 'spectopmodule_ln3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %A, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 136 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 137 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %A"   --->   Operation 137 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 138 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %B, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 138 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 139 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %B"   --->   Operation 139 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 140 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %C, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 140 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 141 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %C"   --->   Operation 141 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 142 [1/2] (0.68ns)   --->   "%A_load_13 = load i4 %A_addr_13" [vec_add.cpp:6]   --->   Operation 142 'load' 'A_load_13' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_9 : Operation 143 [1/2] (0.68ns)   --->   "%B_load_13 = load i4 %B_addr_13" [vec_add.cpp:6]   --->   Operation 143 'load' 'B_load_13' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_9 : Operation 144 [1/1] (0.78ns)   --->   "%add_ln6_13 = add i16 %B_load_13, i16 %A_load_13" [vec_add.cpp:6]   --->   Operation 144 'add' 'add_ln6_13' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 145 [1/1] (0.00ns)   --->   "%C_addr_13 = getelementptr i16 %C, i64 0, i64 13" [vec_add.cpp:6]   --->   Operation 145 'getelementptr' 'C_addr_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 146 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_13, i4 %C_addr_13" [vec_add.cpp:6]   --->   Operation 146 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_9 : Operation 147 [1/2] (0.68ns)   --->   "%A_load_14 = load i4 %A_addr_14" [vec_add.cpp:6]   --->   Operation 147 'load' 'A_load_14' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_9 : Operation 148 [1/2] (0.68ns)   --->   "%B_load_14 = load i4 %B_addr_14" [vec_add.cpp:6]   --->   Operation 148 'load' 'B_load_14' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_9 : Operation 149 [1/1] (0.78ns)   --->   "%add_ln6_14 = add i16 %B_load_14, i16 %A_load_14" [vec_add.cpp:6]   --->   Operation 149 'add' 'add_ln6_14' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 150 [1/1] (0.00ns)   --->   "%C_addr_14 = getelementptr i16 %C, i64 0, i64 14" [vec_add.cpp:6]   --->   Operation 150 'getelementptr' 'C_addr_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 151 [1/1] (0.68ns)   --->   "%store_ln6 = store i16 %add_ln6_14, i4 %C_addr_14" [vec_add.cpp:6]   --->   Operation 151 'store' 'store_ln6' <Predicate = true> <Delay = 0.68> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.68> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 15> <RAM>
+ST_9 : Operation 152 [1/1] (0.00ns)   --->   "%ret_ln9 = ret" [vec_add.cpp:9]   --->   Operation 152 'ret' 'ret_ln9' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 25.000ns, clock uncertainty: 6.750ns.
+
+ <State 1>: 0.683ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('A_addr', vec_add.cpp:6) [11]  (0.000 ns)
+	'load' operation 16 bit ('A_load', vec_add.cpp:6) on array 'A' [12]  (0.683 ns)
+
+ <State 2>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load', vec_add.cpp:6) on array 'A' [12]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6', vec_add.cpp:6) [15]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6', vec_add.cpp:6 on array 'C' [17]  (0.683 ns)
+
+ <State 3>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load_2', vec_add.cpp:6) on array 'A' [26]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6_2', vec_add.cpp:6) [29]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6_2', vec_add.cpp:6 on array 'C' [31]  (0.683 ns)
+
+ <State 4>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load_4', vec_add.cpp:6) on array 'A' [40]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6_4', vec_add.cpp:6) [43]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6_4', vec_add.cpp:6 on array 'C' [45]  (0.683 ns)
+
+ <State 5>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load_6', vec_add.cpp:6) on array 'A' [54]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6_6', vec_add.cpp:6) [57]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6_6', vec_add.cpp:6 on array 'C' [59]  (0.683 ns)
+
+ <State 6>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load_8', vec_add.cpp:6) on array 'A' [68]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6_8', vec_add.cpp:6) [71]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6_8', vec_add.cpp:6 on array 'C' [73]  (0.683 ns)
+
+ <State 7>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load_10', vec_add.cpp:6) on array 'A' [82]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6_10', vec_add.cpp:6) [85]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6_10', vec_add.cpp:6 on array 'C' [87]  (0.683 ns)
+
+ <State 8>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load_12', vec_add.cpp:6) on array 'A' [96]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6_12', vec_add.cpp:6) [99]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6_12', vec_add.cpp:6 on array 'C' [101]  (0.683 ns)
+
+ <State 9>: 2.151ns
+The critical path consists of the following:
+	'load' operation 16 bit ('A_load_13', vec_add.cpp:6) on array 'A' [103]  (0.683 ns)
+	'add' operation 16 bit ('add_ln6_13', vec_add.cpp:6) [106]  (0.785 ns)
+	'store' operation 0 bit ('store_ln6', vec_add.cpp:6) of variable 'add_ln6_13', vec_add.cpp:6 on array 'C' [108]  (0.683 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

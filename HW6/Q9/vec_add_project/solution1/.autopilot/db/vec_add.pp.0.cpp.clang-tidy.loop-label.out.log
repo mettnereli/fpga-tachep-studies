@@ -1,0 +1,30 @@
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:1315:7: warning: Added loop label VITIS_LOOP_1223_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1223_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:1315:7: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:2289:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:2289:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:2303:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:2303:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:2317:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:2317:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:3946:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:3946:7: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:5733:5: warning: Added loop label VITIS_LOOP_4_1:   [xilinx-label-all-loops]
+    for (dint16_t i = 0; i < 15; i++) {
+    ^~~
+    VITIS_LOOP_4_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/.autopilot/db/vec_add.pp.0.cpp:5733:5: note: FIX-IT applied suggested code changes

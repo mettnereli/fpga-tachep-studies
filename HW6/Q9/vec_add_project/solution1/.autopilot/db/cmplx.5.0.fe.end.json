@@ -1,0 +1,17 @@
+{
+    "0": {
+        "name": "vec_add",
+        "file": "vec_add.cpp",
+        "fileloc": "3",
+        "instructions": "113",
+        "total_instructions": "113",
+        "calls": "",
+        "basicblocks": "1",
+        "loads": {
+            "T": "30"
+        },
+        "stores": {
+            "T": "15"
+        }
+    }
+}

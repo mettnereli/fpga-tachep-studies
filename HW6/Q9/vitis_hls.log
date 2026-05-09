@@ -1,0 +1,102 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat May  9 10:48:33 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'emettner' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 6.1.166-1.el9.elrepo.x86_64) on Sat May 09 10:48:37 CDT 2026
+INFO: [HLS 200-10] In directory '/scratch/emettner/fpga-tachep-studies/HW6/Q9'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_vec_add.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset vec_add_project 
+INFO: [HLS 200-10] Opening and resetting project '/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project'.
+INFO: [HLS 200-1510] Running: set_top vec_add 
+INFO: [HLS 200-1510] Running: add_files vec_add.cpp 
+INFO: [HLS 200-10] Adding design file 'vec_add.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb vec_add_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'vec_add_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p-fsga2577-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../vec_add_tb.cpp in debug mode
+   Compiling ../../../../vec_add.cpp in debug mode
+   Generating csim.exe
+TEST PASSED
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:08; Allocated memory: 0.141 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 325.219 MB.
+INFO: [HLS 200-10] Analyzing design file 'vec_add.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.93 seconds. CPU system time: 1.16 seconds. Elapsed time: 8.25 seconds; current allocated memory: 327.164 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 261 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 112 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 113 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q9/vec_add_project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_4_1' (vec_add.cpp:4:21) in function 'vec_add' completely with a factor of 15 (vec_add.cpp:3:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.89 seconds. CPU system time: 0.79 seconds. Elapsed time: 8.98 seconds; current allocated memory: 336.699 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 336.699 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 336.699 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 336.699 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 357.555 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 357.555 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'vec_add' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'vec_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.18 seconds; current allocated memory: 357.555 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 357.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'vec_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'vec_add/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vec_add/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'vec_add/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'vec_add' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'vec_add'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 357.555 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.31 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 357.555 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.56 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.61 seconds; current allocated memory: 357.555 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for vec_add.
+INFO: [VLOG 209-307] Generating Verilog RTL for vec_add.
+INFO: [HLS 200-789] **** Estimated Fmax: 464.90 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:19; Allocated memory: 32.801 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 27.48 seconds. Total CPU system time: 3.27 seconds. Total elapsed time: 35.28 seconds; peak allocated memory: 357.555 MB.

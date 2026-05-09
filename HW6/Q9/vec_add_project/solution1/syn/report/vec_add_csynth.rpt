@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'vec_add'
+================================================================
+* Date:           Sat May  9 10:49:07 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        vec_add_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p-fsga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  25.00 ns|  2.151 ns|     6.75 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        8|        8|  0.200 us|  0.200 us|    9|    9|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       46|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|      330|     -|
+|Register             |        -|      -|        9|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|        9|      376|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------+----------+----+---+----+------------+------------+
+    | Variable Name | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------+----------+----+---+----+------------+------------+
+    |grp_fu_484_p2  |         +|   0|  0|  23|          16|          16|
+    |grp_fu_491_p2  |         +|   0|  0|  23|          16|          16|
+    +---------------+----------+----+---+----+------------+------------+
+    |Total          |          |   0|  0|  46|          32|          32|
+    +---------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |A_address0_local  |  49|          9|    4|         36|
+    |A_address1_local  |  43|          8|    4|         32|
+    |B_address0_local  |  49|          9|    4|         36|
+    |B_address1_local  |  43|          8|    4|         32|
+    |C_address0_local  |  49|          9|    4|         36|
+    |C_address1_local  |  43|          8|    4|         32|
+    |ap_NS_fsm         |  54|         10|    1|         10|
+    +------------------+----+-----------+-----+-----------+
+    |Total             | 330|         61|   25|        214|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  9|   0|    9|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  9|   0|    9|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------+-----+-----+------------+--------------+--------------+
+|  RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------+-----+-----+------------+--------------+--------------+
+|ap_clk      |   in|    1|  ap_ctrl_hs|       vec_add|  return value|
+|ap_rst      |   in|    1|  ap_ctrl_hs|       vec_add|  return value|
+|ap_start    |   in|    1|  ap_ctrl_hs|       vec_add|  return value|
+|ap_done     |  out|    1|  ap_ctrl_hs|       vec_add|  return value|
+|ap_idle     |  out|    1|  ap_ctrl_hs|       vec_add|  return value|
+|ap_ready    |  out|    1|  ap_ctrl_hs|       vec_add|  return value|
+|A_address0  |  out|    4|   ap_memory|             A|         array|
+|A_ce0       |  out|    1|   ap_memory|             A|         array|
+|A_q0        |   in|   16|   ap_memory|             A|         array|
+|A_address1  |  out|    4|   ap_memory|             A|         array|
+|A_ce1       |  out|    1|   ap_memory|             A|         array|
+|A_q1        |   in|   16|   ap_memory|             A|         array|
+|B_address0  |  out|    4|   ap_memory|             B|         array|
+|B_ce0       |  out|    1|   ap_memory|             B|         array|
+|B_q0        |   in|   16|   ap_memory|             B|         array|
+|B_address1  |  out|    4|   ap_memory|             B|         array|
+|B_ce1       |  out|    1|   ap_memory|             B|         array|
+|B_q1        |   in|   16|   ap_memory|             B|         array|
+|C_address0  |  out|    4|   ap_memory|             C|         array|
+|C_ce0       |  out|    1|   ap_memory|             C|         array|
+|C_we0       |  out|    1|   ap_memory|             C|         array|
+|C_d0        |  out|   16|   ap_memory|             C|         array|
+|C_address1  |  out|    4|   ap_memory|             C|         array|
+|C_ce1       |  out|    1|   ap_memory|             C|         array|
+|C_we1       |  out|    1|   ap_memory|             C|         array|
+|C_d1        |  out|   16|   ap_memory|             C|         array|
++------------+-----+-----+------------+--------------+--------------+
+

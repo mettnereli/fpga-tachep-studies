@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "vec_add",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "vec_add"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/scratch/emettner/fpga-tachep-studies/HW6/Q9/run_vec_add.tcl",
+    "sourceLine": 13,
+    "success": true
+  }
+]
