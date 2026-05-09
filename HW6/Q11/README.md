@@ -4,9 +4,9 @@ The simple neural network is as basic as possible given some in array and some m
 
 | Version               |         LUT |          FF |         DSP |        BRAM | Estimated clock period | Target clock period |     Latency |
 | --------------------- | ----------: | ----------: | ----------: | ----------: | ---------------------: | ------------------: | ----------: |
-| Simple dense layer    | from report | from report | from report | from report |            from report |               25 ns | from report |
-| Optimized dense layer | from report | from report | from report | from report |            from report |               25 ns | from report |
+| Simple dense layer    | 880 | 752 | 6 | 0 |            7.542 ns |               25 ns | 1.875 us|
+| Optimized dense layer | 333 | 60 | 3 | 0 |           5.901 ns |               25 ns | 3.250 us |
 
 
 
-
+I think this is a success - the optimized layer has an increased clock period of a little over 1.5 ns, and the resources usage is more than halved across the board. I was initially considering using a complete ARRAY_PARTITION and an UNROLL instead of PIPELINE, but I think the cyclic partition and PIPELINE still maximized speed wihout having a bunch of unnecessary resources being used. I know there were a lot of pragmas introduced in the class that you suggested, and perhaps their inclusion may become useful or necessary with bigger programs, but for this one, keeping things simple seems to be successful.
