@@ -1,0 +1,3 @@
+<pragmas>
+<pragma file="q5_kernel.cpp" line="29" pragmaType="unroll" parentfunction="q5_unroll" factor="-1" skip_exit_check="0"/>
+</pragmas>

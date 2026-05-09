@@ -1,0 +1,402 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+Tool Version Limit: 2024.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:01; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 471.293 MB.
+INFO: [HLS 200-10] Analyzing design file 'q5_kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.6 seconds. CPU system time: 0.86 seconds. Elapsed time: 1.55 seconds; current allocated memory: 471.293 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,403 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 892 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 892 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 892 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 577 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,217 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,218 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_partition_unroll_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_51_1' (q5_kernel.cpp:51:19) in function 'q5_partition_unroll' completely with a factor of 64 (q5_kernel.cpp:45:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 1. (q5_kernel.cpp:45:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. (q5_kernel.cpp:45:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Complete partitioning on dimension 1. (q5_kernel.cpp:45:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Complete partitioning on dimension 1. (q5_kernel.cpp:45:0)
+INFO: [HLS 214-248] Applying array_partition to 'E': Complete partitioning on dimension 1. (q5_kernel.cpp:45:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.06 seconds. CPU system time: 0.8 seconds. Elapsed time: 9.06 seconds; current allocated memory: 471.293 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 471.293 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 471.293 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 471.293 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.48 seconds; current allocated memory: 494.742 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.6 seconds; current allocated memory: 494.742 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'q5_partition_unroll' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'q5_partition_unroll' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.11 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.7 seconds; current allocated memory: 494.742 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 495.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'q5_partition_unroll' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_32' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_33' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_34' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_35' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_36' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_37' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_38' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_39' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_40' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_41' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_42' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_43' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_44' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_45' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_46' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_47' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_48' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_49' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_50' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_51' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_52' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_53' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_54' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_55' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_56' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_57' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_58' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_59' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_60' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_61' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_62' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/A_63' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_32' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_33' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_34' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_35' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_36' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_37' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_38' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_39' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_40' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_41' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_42' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_43' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_44' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_45' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_46' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_47' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_48' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_49' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_50' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_51' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_52' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_53' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_54' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_55' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_56' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_57' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_58' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_59' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_60' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_61' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_62' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/B_63' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_44' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_45' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_46' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_47' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_48' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_49' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_50' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_51' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_52' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_53' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_54' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_55' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_56' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_57' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_58' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_59' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_60' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_61' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_62' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/C_63' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_44' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_45' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_46' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_47' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_48' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_49' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_50' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_51' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_52' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_53' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_54' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_55' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_56' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_57' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_58' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_59' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_60' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_61' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_62' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/D_63' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_44' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_45' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_46' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_47' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_48' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_49' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_50' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_51' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_52' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_53' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_54' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_55' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_56' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_57' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_58' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_59' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_60' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_61' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_62' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'q5_partition_unroll/E_63' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'q5_partition_unroll' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'q5_partition_unroll' is 6336 from HDL expression: (ap_start == 1'b1)
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 128 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'q5_partition_unroll'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.67 seconds. CPU system time: 0.19 seconds. Elapsed time: 3.82 seconds; current allocated memory: 500.703 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.74 seconds. CPU system time: 0.1 seconds. Elapsed time: 0.86 seconds; current allocated memory: 514.586 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 23.13 seconds. CPU system time: 0.1 seconds. Elapsed time: 23.23 seconds; current allocated memory: 532.480 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for q5_partition_unroll.
+INFO: [VLOG 209-307] Generating Verilog RTL for q5_partition_unroll.
+INFO: [HLS 200-789] **** Estimated Fmax: 246.91 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:44; Allocated memory: 61.188 MB.
+INFO: [HLS 200-1510] Running: close_project 

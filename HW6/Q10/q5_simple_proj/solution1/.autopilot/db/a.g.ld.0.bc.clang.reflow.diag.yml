@@ -1,0 +1,10 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_10_1
+  - String:          '> at '
+  - LoopLoc:         'q5_kernel.cpp:10:22'
+  - String:          ' '
+...

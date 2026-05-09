@@ -1,0 +1,30 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/scratch/emettner/fpga-tachep-studies/HW6/Q10/run_q5.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="q5_unroll" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=q5_unroll" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="q5_kernel.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="q5_unroll" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="q5_kernel.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="q5_partition_unroll" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=A complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="q5_kernel.cpp:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="q5_partition_unroll" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=B complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="q5_kernel.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="q5_partition_unroll" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=C complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="q5_kernel.cpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="q5_partition_unroll" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=D complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="q5_kernel.cpp:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="q5_partition_unroll" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=E complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="q5_kernel.cpp:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="q5_partition_unroll" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="q5_kernel.cpp:27:0" msg_body="Unrolling loop 'VITIS_LOOP_28_1' (q5_kernel.cpp:28:22) in function 'q5_unroll' completely with a factor of 64">
+        <args Factor="64" LoopLoc="q5_kernel.cpp:28:22" LoopName="VITIS_LOOP_28_1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

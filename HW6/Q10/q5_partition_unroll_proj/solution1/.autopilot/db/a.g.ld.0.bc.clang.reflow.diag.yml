@@ -1,0 +1,106 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: q5_kernel.cpp, Line: 45, Column: 0 }
+Function:        _Z19q5_partition_unrollPiS_S_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_51_1
+  - String:          ''' ('
+  - LoopLoc:         'q5_kernel.cpp:51:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          q5_partition_unroll
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: q5_kernel.cpp, Line: 45, Column: 0 }
+Function:        _Z19q5_partition_unrollPiS_S_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          A
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: q5_kernel.cpp, Line: 45, Column: 0 }
+Function:        _Z19q5_partition_unrollPiS_S_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          B
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: q5_kernel.cpp, Line: 45, Column: 0 }
+Function:        _Z19q5_partition_unrollPiS_S_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          C
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: q5_kernel.cpp, Line: 45, Column: 0 }
+Function:        _Z19q5_partition_unrollPiS_S_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          D
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: q5_kernel.cpp, Line: 45, Column: 0 }
+Function:        _Z19q5_partition_unrollPiS_S_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          E
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

@@ -1,0 +1,15 @@
+/scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_simple_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp:198:5: warning: Added loop label VITIS_LOOP_10_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 64; i++) {
+    ^~~
+    VITIS_LOOP_10_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_simple_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp:198:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_simple_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp:216:5: warning: Added loop label VITIS_LOOP_28_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 64; i++) {
+    ^~~
+    VITIS_LOOP_28_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_simple_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp:216:5: note: FIX-IT applied suggested code changes
+/scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_simple_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp:239:2: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 64; i++) {
+ ^~~
+ VITIS_LOOP_51_1: 
+/scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_simple_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp:239:2: note: FIX-IT applied suggested code changes

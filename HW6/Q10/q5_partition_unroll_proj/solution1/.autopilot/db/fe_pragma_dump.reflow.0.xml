@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="q5_kernel.cpp" line="52" pragmaType="unroll" parentfunction="q5_partition_unroll" factor="-1" skip_exit_check="0"/>
+<pragma file="q5_kernel.cpp" line="46" pragmaType="array_partition" parentfunction="q5_partition_unroll" dim="1" factor="0" mode="complete" dynamic="0" variable="A"/>
+<pragma file="q5_kernel.cpp" line="47" pragmaType="array_partition" parentfunction="q5_partition_unroll" dim="1" factor="0" mode="complete" dynamic="0" variable="B"/>
+<pragma file="q5_kernel.cpp" line="48" pragmaType="array_partition" parentfunction="q5_partition_unroll" dim="1" factor="0" mode="complete" dynamic="0" variable="C"/>
+<pragma file="q5_kernel.cpp" line="49" pragmaType="array_partition" parentfunction="q5_partition_unroll" dim="1" factor="0" mode="complete" dynamic="0" variable="D"/>
+<pragma file="q5_kernel.cpp" line="50" pragmaType="array_partition" parentfunction="q5_partition_unroll" dim="1" factor="0" mode="complete" dynamic="0" variable="E"/>
+</pragmas>

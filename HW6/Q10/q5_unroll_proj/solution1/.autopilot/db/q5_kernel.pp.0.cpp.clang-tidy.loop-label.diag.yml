@@ -1,0 +1,31 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_unroll_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_10_1:  '
+    FileOffset:      10
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_unroll_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          9935
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_10_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_1:  '
+    FileOffset:      28
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_unroll_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          10387
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_51_1:  '
+    FileOffset:      51
+    FilePath:        q5_kernel.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW6/Q10/q5_unroll_proj/solution1/.autopilot/db/q5_kernel.pp.0.cpp
+        Offset:          10953
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_51_1: '
+...

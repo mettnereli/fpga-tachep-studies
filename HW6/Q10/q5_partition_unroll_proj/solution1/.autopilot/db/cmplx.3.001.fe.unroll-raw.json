@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "q5_kernel.cpp",
+    "fileloc": 39,
+    "instructions": 1403,
+    "loads": {
+      "T": 384
+    },
+    "name": "q5_partition_unroll",
+    "stores": {
+      "T": 192
+    },
+    "total_instructions": 1403
+  }
+}
