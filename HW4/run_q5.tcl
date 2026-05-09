@@ -16,13 +16,12 @@ proc run_one {project_name top_name} {
     close_project
 }
 
-run_one hw4_q5_simple q5_simple
-run_one hw4_q5_interface q5_interface
-run_one hw4_q5_pipeline q5_pipeline
-run_one hw4_q5_no_partition q5_no_partition
-run_one hw4_q5_complete_partition q5_complete_partition
-run_one hw4_q5_cyclic_partition q5_cyclic_partition
-run_one hw4_q5_block_partition q5_block_partition
-run_one hw4_q5_reshape q5_reshape
+run_one q5_simple_proj q5_simple
+run_one q5_bram_interface_proj q5_bram_interface
+run_one q5_pipeline_proj q5_pipeline
+run_one q5_complete_partition_proj q5_complete_partition
+run_one q5_cyclic_partition_proj q5_cyclic_partition
+run_one q5_block_partition_proj q5_block_partition
+run_one q5_reshape_proj q5_reshape
 
 exit
