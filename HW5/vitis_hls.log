@@ -1,0 +1,225 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat May  9 09:25:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'emettner' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 6.1.166-1.el9.elrepo.x86_64) on Sat May 09 09:26:03 CDT 2026
+INFO: [HLS 200-10] In directory '/scratch/emettner/fpga-tachep-studies/HW5'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hw5_ex1.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset hw5_ex1_proj 
+INFO: [HLS 200-10] Creating and opening project '/scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj'.
+INFO: [HLS 200-1510] Running: set_top hw5_ex1 
+INFO: [HLS 200-1510] Running: add_files hw5_ex1.cpp 
+INFO: [HLS 200-10] Adding design file 'hw5_ex1.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hw5_ex1_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hw5_ex1_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p-fsga2577-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p-fsga2577-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../hw5_ex1_tb.cpp in debug mode
+   Compiling ../../../../hw5_ex1.cpp in debug mode
+   Generating csim.exe
+384 0 0
+387 349 349
+278 360 360
+416 329 329
+294 348 348
+336 339 339
+387 405 405
+493 343 343
+150 355 355
+422 311 311
+363 271 271
+28 194 194
+191 93 93
+60 171 171
+264 250 250
+427 244 244
+41 298 298
+427 213 213
+173 279 279
+237 207 207
+212 272 272
+369 216 216
+68 289 289
+430 260 260
+283 248 248
+31 225 225
+363 172 172
+124 185 185
+68 109 109
+136 0 0
+Test passed !
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:02; Allocated memory: 0.180 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.16 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.19 seconds; current allocated memory: 325.207 MB.
+INFO: [HLS 200-10] Analyzing design file 'hw5_ex1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.04 seconds. CPU system time: 1.03 seconds. Elapsed time: 5.24 seconds; current allocated memory: 327.035 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 88 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 100 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 90 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 111 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_proj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'read_data(int*, int*)' into 'hw5_ex1(int*, int*)' (hw5_ex1.cpp:22:0)
+INFO: [HLS 214-178] Inlining function 'compute_blur(int*, int*)' into 'hw5_ex1(int*, int*)' (hw5_ex1.cpp:22:0)
+INFO: [HLS 214-178] Inlining function 'write_data(int*, int*)' into 'hw5_ex1(int*, int*)' (hw5_ex1.cpp:22:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_25_1> at hw5_ex1.cpp:25:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_5_1> at hw5_ex1.cpp:5:21 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_11_1> at hw5_ex1.cpp:11:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_17_1> at hw5_ex1.cpp:17:22 
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'temp1' due to pipeline pragma (hw5_ex1.cpp:23:9)
+INFO: [HLS 214-248] Applying array_partition to 'temp1': Cyclic partitioning with factor 3 on dimension 1. (hw5_ex1.cpp:23:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.84 seconds. CPU system time: 0.77 seconds. Elapsed time: 9.07 seconds; current allocated memory: 336.703 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 336.703 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 337.059 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 338.094 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.1 seconds; current allocated memory: 361.195 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 391.035 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw5_ex1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw5_ex1_Pipeline_VITIS_LOOP_25_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_25_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_25_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.17 seconds; current allocated memory: 391.969 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 391.969 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw5_ex1_Pipeline_VITIS_LOOP_5_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_5_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_5_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 392.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 392.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw5_ex1_Pipeline_VITIS_LOOP_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 392.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 392.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw5_ex1_Pipeline_VITIS_LOOP_17_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_17_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 392.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 392.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw5_ex1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 392.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 392.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw5_ex1_Pipeline_VITIS_LOOP_25_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw5_ex1_Pipeline_VITIS_LOOP_25_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 392.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw5_ex1_Pipeline_VITIS_LOOP_5_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw5_ex1_Pipeline_VITIS_LOOP_5_1' pipeline 'VITIS_LOOP_5_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw5_ex1_Pipeline_VITIS_LOOP_5_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 392.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw5_ex1_Pipeline_VITIS_LOOP_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw5_ex1_Pipeline_VITIS_LOOP_11_1' pipeline 'VITIS_LOOP_11_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_34ns_65_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_7ns_11_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_5ns_3ns_2_9_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw5_ex1_Pipeline_VITIS_LOOP_11_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 392.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw5_ex1_Pipeline_VITIS_LOOP_17_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw5_ex1_Pipeline_VITIS_LOOP_17_1' pipeline 'VITIS_LOOP_17_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw5_ex1_Pipeline_VITIS_LOOP_17_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 394.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw5_ex1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw5_ex1/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw5_ex1/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw5_ex1' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw5_ex1'.
+INFO: [RTMG 210-278] Implementing memory 'hw5_ex1_temp1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'hw5_ex1_temp2_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.16 seconds; current allocated memory: 395.090 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.31 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.36 seconds; current allocated memory: 397.898 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.53 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.56 seconds; current allocated memory: 400.613 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw5_ex1.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw5_ex1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 126.36 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:17; Allocated memory: 76.074 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 19.28 seconds. Total CPU system time: 3.1 seconds. Total elapsed time: 27.42 seconds; peak allocated memory: 400.812 MB.

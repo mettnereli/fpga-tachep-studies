@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/scratch/emettner/fpga-tachep-studies/HW5/run_hw5_ex1.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="hw5_ex1" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hw5_ex1" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw5_ex1.cpp:22:0" msg_body="Inlining function 'read_data(int*, int*)' into 'hw5_ex1(int*, int*)'">
+        <args Callee="read_data(int*, int*)" Callee-DebugLoc="File hw5_ex1.cpp Line 4 Column 0" Caller="hw5_ex1(int*, int*)" Caller-DebugLoc="File hw5_ex1.cpp Line 22 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw5_ex1.cpp:22:0" msg_body="Inlining function 'compute_blur(int*, int*)' into 'hw5_ex1(int*, int*)'">
+        <args Callee="compute_blur(int*, int*)" Callee-DebugLoc="File hw5_ex1.cpp Line 10 Column 0" Caller="hw5_ex1(int*, int*)" Caller-DebugLoc="File hw5_ex1.cpp Line 22 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="hw5_ex1.cpp:22:0" msg_body="Inlining function 'write_data(int*, int*)' into 'hw5_ex1(int*, int*)'">
+        <args Callee="write_data(int*, int*)" Callee-DebugLoc="File hw5_ex1.cpp Line 16 Column 0" Caller="hw5_ex1(int*, int*)" Caller-DebugLoc="File hw5_ex1.cpp Line 22 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="hw5_ex1.cpp:23:9" msg_body="array_partition dim=1 type=cyclic factor=3 variable=temp1 1 hw5_ex1 hw5_ex1.cpp:23:9 temp1">
+        <args PragmaFunction="hw5_ex1" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=temp1" PragmaType="array_partition" VarName="temp1" varLoc="hw5_ex1.cpp:23:9"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="hw5_ex1.cpp:23:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'temp1' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="temp1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="hw5_ex1.cpp:23:9" msg_body="Applying array_partition to 'temp1': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="temp1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

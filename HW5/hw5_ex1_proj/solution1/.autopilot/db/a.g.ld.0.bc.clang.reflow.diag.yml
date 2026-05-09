@@ -1,0 +1,142 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: hw5_ex1.cpp, Line: 22, Column: 0 }
+Function:        _Z7hw5_ex1PiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'read_data(int*, int*)'
+    DebugLoc:        { File: hw5_ex1.cpp, Line: 4, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hw5_ex1(int*, int*)'
+    DebugLoc:        { File: hw5_ex1.cpp, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: hw5_ex1.cpp, Line: 22, Column: 0 }
+Function:        _Z7hw5_ex1PiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'compute_blur(int*, int*)'
+    DebugLoc:        { File: hw5_ex1.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hw5_ex1(int*, int*)'
+    DebugLoc:        { File: hw5_ex1.cpp, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: hw5_ex1.cpp, Line: 22, Column: 0 }
+Function:        _Z7hw5_ex1PiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'write_data(int*, int*)'
+    DebugLoc:        { File: hw5_ex1.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hw5_ex1(int*, int*)'
+    DebugLoc:        { File: hw5_ex1.cpp, Line: 22, Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_25_1
+  - String:          '> at '
+  - LoopLoc:         'hw5_ex1.cpp:25:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_5_1
+  - String:          '> at '
+  - LoopLoc:         'hw5_ex1.cpp:5:21'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_11_1
+  - String:          '> at '
+  - LoopLoc:         'hw5_ex1.cpp:11:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_17_1
+  - String:          '> at '
+  - LoopLoc:         'hw5_ex1.cpp:17:22'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: hw5_ex1.cpp, Line: 23, Column: 9 }
+Function:        _Z7hw5_ex1PiS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=temp1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  hw5_ex1
+  - String:          ' '
+  - varLoc:          'hw5_ex1.cpp:23:9'
+  - String:          ' '
+  - VarName:         temp1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: hw5_ex1.cpp, Line: 23, Column: 9 }
+Function:        _Z7hw5_ex1PiS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            temp1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: hw5_ex1.cpp, Line: 23, Column: 9 }
+Function:        _Z7hw5_ex1PiS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          temp1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
