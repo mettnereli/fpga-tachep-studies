@@ -10,7 +10,7 @@ void sum(int A[N], int B[N]) {
     }
 }
 
-void sum(int A[N], int B[N]) {
+void subtract(int A[N], int B[N]) {
     for (int i = 0; i < N; i++) {
 #pragma HLS PIPELINE II=1
         sum[i] = A[i] - B[i];
