@@ -2,9 +2,9 @@
 
 | Version                       |         LUT |          FF |         DSP |        BRAM | Estimated Clock Period | Target Clock Period |     Latency |
 | ----------------------------- | ----------: | ----------: | ----------: | ----------: | ---------------------: | ------------------: | ----------: |
-| Simple                        | 184 | 16 |6 | 0 |            5.448 ns |               25 ns | 1.650 us |
-| UNROLL only                 | 1911 | 33 | 12 | 0 |            5.448 ns |               25 ns | 0.800 us |
-| Complete partition + UNROLL | 7552 | 0 | 384 | 0 |            4.050 ns |               25 ns | 0 us |
+| Simple                        |         184 | 16          | 6           | 0           |            5.448 ns    |               25 ns | 1.650 us    |
+| UNROLL only                   |        1911 | 33          | 12          | 0           |            5.448 ns    |               25 ns | 0.800 us    |
+| Complete partition + UNROLL   |        7552 | 0           | 384         | 0           |            4.050 ns    |               25 ns | 0 us        |
 
 
 The simple function has the lowest resource usage and the higest latency, while the complete partition combined with UNROLL has the highest resource usage but lowest (no) latency. Using UNROLL with partition increases resource usage but halves the latency compared to not using it - no increase in clock timing, though. Only with complete partition and UNROLL does the clock timing increase. I suspect this is because, while using UNROLL opens up the opportunity for parallel computation, it is only when partitioning the arrays that HLS can access the parallel functions in memory. Using the two together proves the most efficient if resources allows.
