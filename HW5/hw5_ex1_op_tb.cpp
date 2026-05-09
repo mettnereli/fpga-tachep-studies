@@ -27,7 +27,7 @@ int main () {
 
   get_randoms(input, N);
 
-  hw5_ex1(input, output);
+  hw5_ex1_op(input, output);
   get_expected(input, temp);
 
   int retval = 0;

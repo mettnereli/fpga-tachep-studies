@@ -13,6 +13,6 @@ using namespace std;
 void read_data(int *in_r, int *out_r);
 void compute_blur(int *in_c, int *out_c);
 void write_data(int *in_w, int *out_w);
-void hw5_ex1(int *A, int *B);
+void hw5_ex1_op(int *A, int *B);
 
 #endif

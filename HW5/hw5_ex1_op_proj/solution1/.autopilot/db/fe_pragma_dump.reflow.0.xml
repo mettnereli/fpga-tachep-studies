@@ -1,0 +1,11 @@
+<pragmas>
+<pragma file="hw5_ex1_op.cpp" line="5" pragmaType="inline" parentfunction="read_data" off="1" region="0" recursive="0"/>
+<pragma file="hw5_ex1_op.cpp" line="7" pragmaType="pipeline" parentfunction="read_data" off="0" ii="1" rewind="0" style=""/>
+<pragma file="hw5_ex1_op.cpp" line="29" pragmaType="interface" parentfunction="hw5_ex1_op" mode="ap_memory" port="A" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="hw5_ex1_op.cpp" line="30" pragmaType="interface" parentfunction="hw5_ex1_op" mode="ap_memory" port="B" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="hw5_ex1_op.cpp" line="35" pragmaType="array_partition" parentfunction="hw5_ex1_op" dim="1" factor="3" mode="cyclic" dynamic="0" variable="temp1"/>
+<pragma file="hw5_ex1_op.cpp" line="21" pragmaType="inline" parentfunction="write_data" off="1" region="0" recursive="0"/>
+<pragma file="hw5_ex1_op.cpp" line="23" pragmaType="pipeline" parentfunction="write_data" off="0" ii="1" rewind="0" style=""/>
+<pragma file="hw5_ex1_op.cpp" line="13" pragmaType="inline" parentfunction="compute_blur" off="1" region="0" recursive="0"/>
+<pragma file="hw5_ex1_op.cpp" line="15" pragmaType="pipeline" parentfunction="compute_blur" off="0" ii="1" rewind="0" style=""/>
+</pragmas>

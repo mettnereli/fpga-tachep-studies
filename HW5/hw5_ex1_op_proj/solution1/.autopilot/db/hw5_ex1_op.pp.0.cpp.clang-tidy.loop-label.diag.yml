@@ -1,0 +1,31 @@
+---
+MainSourceFile:  /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_op_proj/solution1/.autopilot/db/hw5_ex1_op.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_6_1:  '
+    FileOffset:      6
+    FilePath:        hw5_ex1_op.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_op_proj/solution1/.autopilot/db/hw5_ex1_op.pp.0.cpp
+        Offset:          956111
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_6_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_14_1:  '
+    FileOffset:      14
+    FilePath:        hw5_ex1_op.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_op_proj/solution1/.autopilot/db/hw5_ex1_op.pp.0.cpp
+        Offset:          956271
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_14_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_22_1:  '
+    FileOffset:      22
+    FilePath:        hw5_ex1_op.cpp
+    Replacements:    
+      - FilePath:        /scratch/emettner/fpga-tachep-studies/HW5/hw5_ex1_op_proj/solution1/.autopilot/db/hw5_ex1_op.pp.0.cpp
+        Offset:          956467
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_22_1: '
+...

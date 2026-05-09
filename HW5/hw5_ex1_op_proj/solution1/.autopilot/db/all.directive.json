@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "hw5_ex1_op",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "hw5_ex1_op"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/scratch/emettner/fpga-tachep-studies/HW5/run_hw5_ex1_op.tcl",
+    "sourceLine": 13,
+    "success": true
+  }
+]

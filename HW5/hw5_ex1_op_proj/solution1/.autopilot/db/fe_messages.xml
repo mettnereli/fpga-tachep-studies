@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_blur" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_blur" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/scratch/emettner/fpga-tachep-studies/HW5/run_hw5_ex1_op.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="hw5_ex1_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hw5_ex1_op" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hw5_ex1_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=A" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hw5_ex1_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=bram port=B" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="hw5_ex1_op.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hw5_ex1_op" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp1 cyclic factor=3 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="hw5_ex1_op.cpp:33:6" msg_body="Applying array_partition to 'temp1': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="temp1"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

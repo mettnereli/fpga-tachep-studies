@@ -1,0 +1,142 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hw5_ex1_op'
+================================================================
++ General Information: 
+    * Date:           Sat May  9 10:28:40 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        hw5_ex1_op_proj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p-fsga2577-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |       Modules       | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |            |     |
+    |       & Loops       | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |     LUT    | URAM|
+    +---------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+    |+ hw5_ex1_op         |     -|  10.34|      108|  2.700e+03|         -|      109|     -|        no|     -|  4 (~0%)|  441 (~0%)|  1155 (~0%)|    -|
+    | + read_data         |     -|  15.78|       32|    800.000|         -|       32|     -|        no|     -|        -|   26 (~0%)|   136 (~0%)|    -|
+    |  o VITIS_LOOP_6_1   |     -|  18.25|       30|    750.000|         2|        1|    30|       yes|     -|        -|          -|           -|    -|
+    | + compute_blur      |     -|  10.34|       39|    975.000|         -|       39|     -|        no|     -|  4 (~0%)|  265 (~0%)|   631 (~0%)|    -|
+    |  o VITIS_LOOP_14_1  |     -|  18.25|       37|    925.000|        11|        1|    28|       yes|     -|        -|          -|           -|    -|
+    | + write_data        |     -|  16.77|       32|    800.000|         -|       32|     -|        no|     -|        -|   13 (~0%)|    71 (~0%)|    -|
+    |  o VITIS_LOOP_22_1  |     -|  18.25|       30|    750.000|         2|        1|    30|       yes|     -|        -|          -|           -|    -|
+    +---------------------+------+-------+---------+-----------+----------+---------+------+----------+------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* BRAM
++-----------+------------+---------------+
+| Interface | Data Width | Address Width |
++-----------+------------+---------------+
+| A_PORTA   | 32         | 32            |
+| B_PORTA   | 32         | 32            |
++-----------+------------+---------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | int*     |
+| B        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| A        | A_PORTA      | interface |
+| B        | B_PORTA      | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------+-----+--------+---------------+-----------+----------+---------+
+| Name                        | DSP | Pragma | Variable      | Op        | Impl     | Latency |
++-----------------------------+-----+--------+---------------+-----------+----------+---------+
+| + hw5_ex1_op                | 4   |        |               |           |          |         |
+|  + read_data                | 0   |        |               |           |          |         |
+|    icmp_ln6_fu_142_p2       |     |        | icmp_ln6      | seteq     | auto     | 0       |
+|    add_ln6_fu_148_p2        |     |        | add_ln6       | add       | fabric   | 0       |
+|    add_ln6_1_fu_196_p2      |     |        | add_ln6_1     | add       | fabric   | 0       |
+|    add_ln6_2_fu_163_p2      |     |        | add_ln6_2     | add       | fabric   | 0       |
+|    icmp_ln6_1_fu_169_p2     |     |        | icmp_ln6_1    | setlt     | auto     | 0       |
+|    select_ln6_fu_175_p3     |     |        | select_ln6    | select    | auto_sel | 0       |
+|  + compute_blur             | 4   |        |               |           |          |         |
+|    icmp_ln14_fu_185_p2      |     |        | icmp_ln14     | seteq     | auto     | 0       |
+|    mul_5ns_7ns_11_1_1_U7    |     |        | mul_ln14      | mul       | auto     | 0       |
+|    urem_5ns_3ns_2_9_1_U5    |     |        | urem_ln14     | urem      | auto     | 8       |
+|    add_ln16_fu_258_p2       |     |        | add_ln16      | add       | fabric   | 0       |
+|    mul_5ns_7ns_11_1_1_U8    |     |        | mul_ln16      | mul       | auto     | 0       |
+|    sparsemux_7_2_32_1_1_U9  |     |        | tmp           | sparsemux | auto     | 0       |
+|    sparsemux_7_2_32_1_1_U10 |     |        | tmp_1         | sparsemux | auto     | 0       |
+|    add_ln16_1_fu_197_p2     |     |        | add_ln16_1    | add       | fabric   | 0       |
+|    mul_5ns_7ns_11_1_1_U6    |     |        | mul_ln16_1    | mul       | auto     | 0       |
+|    sparsemux_7_2_32_1_1_U11 |     |        | tmp_2         | sparsemux | auto     | 0       |
+|    mul_32s_34ns_65_1_1_U4   | 4   |        | mul_ln16_2    | mul       | auto     | 0       |
+|    sub_ln16_fu_374_p2       |     |        | sub_ln16      | sub       | fabric   | 0       |
+|    select_ln16_fu_408_p3    |     |        | select_ln16   | select    | auto_sel | 0       |
+|    sub_ln16_1_fu_416_p2     |     |        | sub_ln16_1    | sub       | fabric   | 0       |
+|    select_ln16_1_fu_422_p3  |     |        | select_ln16_1 | select    | auto_sel | 0       |
+|  + write_data               | 0   |        |               |           |          |         |
+|    icmp_ln22_fu_72_p2       |     |        | icmp_ln22     | seteq     | auto     | 0       |
+|    add_ln22_fu_78_p2        |     |        | add_ln22      | add       | fabric   | 0       |
++-----------------------------+-----+--------+---------------+-----------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------+--------------+------+------+------+--------+----------+------+---------+------------------+
+| Name         | Usage        | Type | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|              |              |      |      |      |        |          |      |         | Banks            |
++--------------+--------------+------+------+------+--------+----------+------+---------+------------------+
+| + hw5_ex1_op |              |      | 0    | 0    |        |          |      |         |                  |
+|   temp1_U    | ram_1p array |      |      |      |        | temp1    | auto | 1       | 32, 10, 1        |
+|   temp1_1_U  | ram_1p array |      |      |      |        | temp1_1  | auto | 1       | 32, 10, 1        |
+|   temp1_2_U  | ram_1p array |      |      |      |        | temp1_2  | auto | 1       | 32, 10, 1        |
+|   temp2_U    | ram_1p array |      |      |      |        | temp2    | auto | 1       | 31, 30, 1        |
++--------------+--------------+------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------+----------------------------------------+
+| Type            | Options                              | Location                               |
++-----------------+--------------------------------------+----------------------------------------+
+| inline          | off                                  | hw5_ex1_op.cpp:5 in read_data          |
+| pipeline        | II=1                                 | hw5_ex1_op.cpp:7 in read_data          |
+| inline          | off                                  | hw5_ex1_op.cpp:13 in compute_blur      |
+| pipeline        | II=1                                 | hw5_ex1_op.cpp:15 in compute_blur      |
+| inline          | off                                  | hw5_ex1_op.cpp:21 in write_data        |
+| pipeline        | II=1                                 | hw5_ex1_op.cpp:23 in write_data        |
+| interface       | mode=bram port=A                     | hw5_ex1_op.cpp:29 in hw5_ex1_op, A     |
+| interface       | mode=bram port=B                     | hw5_ex1_op.cpp:30 in hw5_ex1_op, B     |
+| array_partition | variable=temp1 cyclic factor=3 dim=1 | hw5_ex1_op.cpp:35 in hw5_ex1_op, temp1 |
++-----------------+--------------------------------------+----------------------------------------+
+
+

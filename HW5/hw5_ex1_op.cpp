@@ -25,22 +25,15 @@ void write_data(int in_w[N], int out_w[N]) {
     }
 }
 
-void hw5_ex1(int A[N], int B[N]) {
+void hw5_ex1_op(int A[N], int B[N]) {
+#pragma HLS INTERFACE mode=bram port=A
+#pragma HLS INTERFACE mode=bram port=B
 
-#pragma HLS STABLE variable=A
 
     int temp1[N], temp2[N];
 
-    for (size_t i = 0; i < N; i++) 
-      temp2[i]=0;
-
 #pragma HLS ARRAY_PARTITION variable=temp1 cyclic factor=3 dim=1
-#pragma HLS ARRAY_PARTITION variable=temp2 complete dim=1
 
-
-#pragma HLS ALLOCATION instances=add limit=2 operation
-
-#pragma HLS DATAFLOW
     read_data(A, temp1);
     compute_blur(temp1, temp2);
     write_data(temp2, B);

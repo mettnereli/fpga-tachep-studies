@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vitis HLS Report for 'read_data'
+================================================================
+* Date:           Sat May  9 10:28:39 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        hw5_ex1_op_proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p-fsga2577-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  25.00 ns|  2.466 ns|     6.75 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       32|       32|  0.800 us|  0.800 us|   31|   31|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_6_1  |       30|       30|         2|          1|          1|    30|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.46>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%phi_urem = alloca i32 1"   --->   Operation 5 'alloca' 'phi_urem' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 6 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [hw5_ex1_op.cpp:6]   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.38ns)   --->   "%store_ln6 = store i5 0, i5 %i" [hw5_ex1_op.cpp:6]   --->   Operation 9 'store' 'store_ln6' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 10 [1/1] (0.38ns)   --->   "%store_ln0 = store i11 0, i11 %phi_mul"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 11 [1/1] (0.38ns)   --->   "%store_ln0 = store i5 0, i5 %phi_urem"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln6 = br void %for.inc" [hw5_ex1_op.cpp:6]   --->   Operation 12 'br' 'br_ln6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%phi_urem_load = load i5 %phi_urem" [hw5_ex1_op.cpp:6]   --->   Operation 13 'load' 'phi_urem_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_2 = load i5 %i" [hw5_ex1_op.cpp:6]   --->   Operation 14 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.70ns)   --->   "%icmp_ln6 = icmp_eq  i5 %i_2, i5 30" [hw5_ex1_op.cpp:6]   --->   Operation 15 'icmp' 'icmp_ln6' <Predicate = true> <Delay = 0.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.70ns)   --->   "%add_ln6 = add i5 %i_2, i5 1" [hw5_ex1_op.cpp:6]   --->   Operation 16 'add' 'add_ln6' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln6 = br i1 %icmp_ln6, void %for.inc.split, void %for.end" [hw5_ex1_op.cpp:6]   --->   Operation 17 'br' 'br_ln6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln6 = zext i5 %i_2" [hw5_ex1_op.cpp:6]   --->   Operation 18 'zext' 'zext_ln6' <Predicate = (!icmp_ln6)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln6 = trunc i5 %phi_urem_load" [hw5_ex1_op.cpp:6]   --->   Operation 19 'trunc' 'trunc_ln6' <Predicate = (!icmp_ln6)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%A_addr = getelementptr i32 %A, i64 0, i64 %zext_ln6" [hw5_ex1_op.cpp:8]   --->   Operation 20 'getelementptr' 'A_addr' <Predicate = (!icmp_ln6)> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (0.69ns)   --->   "%A_load = load i5 %A_addr" [hw5_ex1_op.cpp:8]   --->   Operation 21 'load' 'A_load' <Predicate = (!icmp_ln6)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 30> <RAM>
+ST_1 : Operation 22 [1/1] (0.66ns)   --->   "%switch_ln8 = switch i2 %trunc_ln6, void %arrayidx22.case.2, i2 0, void %arrayidx22.case.0, i2 1, void %arrayidx22.case.1" [hw5_ex1_op.cpp:8]   --->   Operation 22 'switch' 'switch_ln8' <Predicate = (!icmp_ln6)> <Delay = 0.66>
+ST_1 : Operation 23 [1/1] (0.70ns)   --->   "%add_ln6_2 = add i5 %phi_urem_load, i5 1" [hw5_ex1_op.cpp:6]   --->   Operation 23 'add' 'add_ln6_2' <Predicate = (!icmp_ln6)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.70ns)   --->   "%icmp_ln6_1 = icmp_ult  i5 %add_ln6_2, i5 3" [hw5_ex1_op.cpp:6]   --->   Operation 24 'icmp' 'icmp_ln6_1' <Predicate = (!icmp_ln6)> <Delay = 0.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.27ns)   --->   "%select_ln6 = select i1 %icmp_ln6_1, i5 %add_ln6_2, i5 0" [hw5_ex1_op.cpp:6]   --->   Operation 25 'select' 'select_ln6' <Predicate = (!icmp_ln6)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.38ns)   --->   "%store_ln6 = store i5 %add_ln6, i5 %i" [hw5_ex1_op.cpp:6]   --->   Operation 26 'store' 'store_ln6' <Predicate = (!icmp_ln6)> <Delay = 0.38>
+ST_1 : Operation 27 [1/1] (0.38ns)   --->   "%store_ln6 = store i5 %select_ln6, i5 %phi_urem" [hw5_ex1_op.cpp:6]   --->   Operation 27 'store' 'store_ln6' <Predicate = (!icmp_ln6)> <Delay = 0.38>
+ST_1 : Operation 47 [1/1] (0.38ns)   --->   "%ret_ln10 = ret" [hw5_ex1_op.cpp:10]   --->   Operation 47 'ret' 'ret_ln10' <Predicate = (icmp_ln6)> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 1.39>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%phi_mul_load = load i11 %phi_mul" [hw5_ex1_op.cpp:6]   --->   Operation 28 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%specpipeline_ln7 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0" [hw5_ex1_op.cpp:7]   --->   Operation 29 'specpipeline' 'specpipeline_ln7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%speclooptripcount_ln6 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 30, i64 30, i64 30" [hw5_ex1_op.cpp:6]   --->   Operation 30 'speclooptripcount' 'speclooptripcount_ln6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specloopname_ln6 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [hw5_ex1_op.cpp:6]   --->   Operation 31 'specloopname' 'specloopname_ln6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.73ns)   --->   "%add_ln6_1 = add i11 %phi_mul_load, i11 43" [hw5_ex1_op.cpp:6]   --->   Operation 32 'add' 'add_ln6_1' <Predicate = true> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tmp = partselect i4 @_ssdm_op_PartSelect.i4.i11.i32.i32, i11 %phi_mul_load, i32 7, i32 10" [hw5_ex1_op.cpp:6]   --->   Operation 33 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln6_1 = zext i4 %tmp" [hw5_ex1_op.cpp:6]   --->   Operation 34 'zext' 'zext_ln6_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/2] (0.69ns)   --->   "%A_load = load i5 %A_addr" [hw5_ex1_op.cpp:8]   --->   Operation 35 'load' 'A_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 30> <RAM>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%out_r_0_addr = getelementptr i32 %out_r_0, i64 0, i64 %zext_ln6_1" [hw5_ex1_op.cpp:8]   --->   Operation 36 'getelementptr' 'out_r_0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%out_r_1_addr = getelementptr i32 %out_r_1, i64 0, i64 %zext_ln6_1" [hw5_ex1_op.cpp:8]   --->   Operation 37 'getelementptr' 'out_r_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%out_r_2_addr = getelementptr i32 %out_r_2, i64 0, i64 %zext_ln6_1" [hw5_ex1_op.cpp:8]   --->   Operation 38 'getelementptr' 'out_r_2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.69ns)   --->   "%store_ln8 = store i32 %A_load, i4 %out_r_1_addr" [hw5_ex1_op.cpp:8]   --->   Operation 39 'store' 'store_ln8' <Predicate = (trunc_ln6 == 1)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln8 = br void %arrayidx22.exit" [hw5_ex1_op.cpp:8]   --->   Operation 40 'br' 'br_ln8' <Predicate = (trunc_ln6 == 1)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.69ns)   --->   "%store_ln8 = store i32 %A_load, i4 %out_r_0_addr" [hw5_ex1_op.cpp:8]   --->   Operation 41 'store' 'store_ln8' <Predicate = (trunc_ln6 == 0)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln8 = br void %arrayidx22.exit" [hw5_ex1_op.cpp:8]   --->   Operation 42 'br' 'br_ln8' <Predicate = (trunc_ln6 == 0)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.69ns)   --->   "%store_ln8 = store i32 %A_load, i4 %out_r_2_addr" [hw5_ex1_op.cpp:8]   --->   Operation 43 'store' 'store_ln8' <Predicate = (trunc_ln6 != 0 & trunc_ln6 != 1)> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln8 = br void %arrayidx22.exit" [hw5_ex1_op.cpp:8]   --->   Operation 44 'br' 'br_ln8' <Predicate = (trunc_ln6 != 0 & trunc_ln6 != 1)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.38ns)   --->   "%store_ln6 = store i11 %add_ln6_1, i11 %phi_mul" [hw5_ex1_op.cpp:6]   --->   Operation 45 'store' 'store_ln6' <Predicate = true> <Delay = 0.38>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln6 = br void %for.inc" [hw5_ex1_op.cpp:6]   --->   Operation 46 'br' 'br_ln6' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 25.000ns, clock uncertainty: 6.750ns.
+
+ <State 1>: 2.466ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'phi_urem' [11]  (0.387 ns)
+	'load' operation 5 bit ('phi_urem_load', hw5_ex1_op.cpp:6) on local variable 'phi_urem' [14]  (0.000 ns)
+	'add' operation 5 bit ('add_ln6_2', hw5_ex1_op.cpp:6) [45]  (0.707 ns)
+	'icmp' operation 1 bit ('icmp_ln6_1', hw5_ex1_op.cpp:6) [46]  (0.707 ns)
+	'select' operation 5 bit ('select_ln6', hw5_ex1_op.cpp:6) [47]  (0.278 ns)
+	'store' operation 0 bit ('store_ln6', hw5_ex1_op.cpp:6) of variable 'select_ln6', hw5_ex1_op.cpp:6 on local variable 'phi_urem' [50]  (0.387 ns)
+
+ <State 2>: 1.398ns
+The critical path consists of the following:
+	'load' operation 32 bit ('A_load', hw5_ex1_op.cpp:8) on array 'A' [30]  (0.699 ns)
+	'store' operation 0 bit ('store_ln8', hw5_ex1_op.cpp:8) of variable 'A_load', hw5_ex1_op.cpp:8 on array 'out_r_0' [39]  (0.699 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,56 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 2 3",
+    "file": "hw5_ex1_op.cpp",
+    "fileloc": 28,
+    "instructions": 13,
+    "name": "hw5_ex1_op",
+    "total_instructions": 66
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "hw5_ex1_op.cpp",
+    "fileloc": 4,
+    "instructions": 14,
+    "loads": {
+      "L": 1
+    },
+    "name": "read_data",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 14
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "hw5_ex1_op.cpp",
+    "fileloc": 12,
+    "instructions": 25,
+    "loads": {
+      "L": 3
+    },
+    "name": "compute_blur",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 25
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "hw5_ex1_op.cpp",
+    "fileloc": 20,
+    "instructions": 14,
+    "loads": {
+      "L": 1
+    },
+    "name": "write_data",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 14
+  }
+}

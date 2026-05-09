@@ -1,0 +1,38 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../hw5_ex1_op_tb.cpp in debug mode
+   Compiling ../../../../hw5_ex1_op.cpp in debug mode
+   Generating csim.exe
+384 0 0
+387 349 349
+278 360 360
+416 329 329
+294 348 348
+336 339 339
+387 405 405
+493 343 343
+150 355 355
+422 311 311
+363 271 271
+28 194 194
+191 93 93
+60 171 171
+264 250 250
+427 244 244
+41 298 298
+427 213 213
+173 279 279
+237 207 207
+212 272 272
+369 216 216
+68 289 289
+430 260 260
+283 248 248
+31 225 225
+363 172 172
+124 185 185
+68 109 109
+136 0 0
+Test passed !
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
